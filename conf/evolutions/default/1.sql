@@ -6,7 +6,8 @@ CREATE  TABLE IF NOT EXISTS vereador (
   name VARCHAR(45) NOT NULL ,
   party VARCHAR(45) NOT NULL ,
   nome_parlamentar VARCHAR(45) NULL ,
-  PRIMARY KEY (id) );
+  PRIMARY KEY (id),
+  CONSTRAINT v_u_name UNIQUE (name) );
 
 
 
@@ -17,13 +18,14 @@ CREATE  TABLE IF NOT EXISTS vereador (
 CREATE  TABLE IF NOT EXISTS projeto_lei (
   id INT NOT NULL AUTO_INCREMENT,
   numero INT NOT NULL ,
-  tipo VARCHAR(3) NOT NULL ,
+  tipo VARCHAR(10) NOT NULL ,
   data TIMESTAMP NOT NULL ,
   ementa TEXT NULL ,
   tipo_norma VARCHAR(45) NULL ,
   numero_norma INT NULL ,
   data_norma VARCHAR(45) NULL ,
-  PRIMARY KEY (id) );
+  PRIMARY KEY (id),
+  CONSTRAINT pl_u_pl UNIQUE (numero, tipo, data) );
 
 
 
@@ -50,8 +52,10 @@ CREATE  TABLE IF NOT EXISTS promovente (
 
 CREATE  TABLE IF NOT EXISTS comissoes (
   id INT NOT NULL AUTO_INCREMENT,
-  nome TEXT NULL ,
-  PRIMARY KEY (id) );
+  nome TEXT NOT NULL ,
+  short VARCHAR(10) NULL,
+  PRIMARY KEY (id),
+  UNIQUE (nome) );
 
 
 
@@ -82,8 +86,9 @@ CREATE  TABLE IF NOT EXISTS projeto_lei_has_comissoes (
 
 CREATE  TABLE IF NOT EXISTS keyword (
   id INT NOT NULL AUTO_INCREMENT,
-  tag VARCHAR(45) NULL ,
-  PRIMARY KEY (id) );
+  tag VARCHAR(255) NOT NULL ,
+  PRIMARY KEY (id),
+  UNIQUE  (tag) );
 
 
 
@@ -114,10 +119,11 @@ CREATE  TABLE IF NOT EXISTS projeto_lei_has_keyword (
 
 CREATE  TABLE IF NOT EXISTS vote_session (
   id INT NOT NULL AUTO_INCREMENT,
-  data TIMESTAMP NULL ,
-  numero INT NULL ,
-  tipo VARCHAR(45) NULL ,
-  PRIMARY KEY (id) );
+  data TIMESTAMP NOT NULL ,
+  numero INT NOT NULL ,
+  tipo VARCHAR(45) NOT NULL ,
+  PRIMARY KEY (id),
+  CONSTRAINT s_u UNIQUE (data, numero, tipo)  );
 
 
 
