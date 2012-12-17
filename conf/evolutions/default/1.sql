@@ -52,7 +52,7 @@ CREATE  TABLE IF NOT EXISTS promovente (
 
 CREATE  TABLE IF NOT EXISTS comissoes (
   id INT NOT NULL AUTO_INCREMENT,
-  nome TEXT NOT NULL ,
+  nome VARCHAR(255) NOT NULL ,
   short VARCHAR(10) NULL,
   PRIMARY KEY (id),
   UNIQUE (nome) );
