@@ -19,7 +19,7 @@ import java.util.Date
 
 object Application extends Controller {
 
-  val xmlVotes = scala.xml.XML.load(getClass.getResource("/cmsp-data/Votacoes_2012_merge.xml"))
+  val xmlVotes = scala.xml.XML.load(getClass.getResource("/data/Votacoes_2012_merge.xml"))
 
   val PROP_REGEX = "^([a-zA-Z]{1,3}) ?([0-9]{1,4}) ?/([0-9]{4}), DO EXECUTIVO".r
   val format = new java.text.SimpleDateFormat("dd/MM/yyyy")
@@ -33,7 +33,7 @@ object Application extends Controller {
 	  allCatch opt {format.parse(value)}
 	}
 
-	val file = Source.fromURL(getClass.getResource("/cmsp-data/pl-2012.txt"))(scala.io.Codec.ISO8859)
+	val file = Source.fromURL(getClass.getResource("/data/pl-2012.txt"))(scala.io.Codec.ISO8859)
 	var cnt = 0
 	var fail = 0
 	for (line <- file.getLines.take(100)) {
