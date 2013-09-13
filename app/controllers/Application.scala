@@ -33,7 +33,7 @@ object Application extends Controller {
 	  allCatch opt {format.parse(value)}
 	}
 
-	val file = Source.fromURL(getClass.getResource("/data/pl-2012.txt"))(scala.io.Codec.ISO8859)
+	val file = Source.fromURL(getClass.getResource("/data/small-set.txt"))(scala.io.Codec.ISO8859)
 	var cnt = 0
 	var fail = 0
 	for (line <- file.getLines.take(100)) {
