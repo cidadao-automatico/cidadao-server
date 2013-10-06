@@ -133,4 +133,14 @@ object Application extends Controller {
     Ok(lawid)
   }*/
 
+  //GET
+  def regionList() = Action {
+
+  }
+
+  //GET
+  def tagList() = Action {
+
+  }
+
 }

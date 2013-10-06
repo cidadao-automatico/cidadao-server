@@ -12,7 +12,8 @@ object ApplicationBuild extends Build {
     jdbc,
     anorm,
 	"mysql" % "mysql-connector-java" % "5.1.18",
-  "securesocial" %% "securesocial" % "master-SNAPSHOT" exclude("org.scala-stm", "scala-stm_2.10.0")
+  "securesocial" %% "securesocial" % "master-SNAPSHOT" exclude("org.scala-stm", "scala-stm_2.10.0"),
+  "com.codahale" % "jerkson_2.9.1" % "0.5.0"
   )
 
 
