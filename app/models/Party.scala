@@ -1,12 +1,20 @@
 package models
 
+import play.api.db._
+import play.api.Play.current
+
+import java.util.Date
+
+import anorm._
+import anorm.SqlParser._
+
 case class Party (id: Pk[Long], name: String, homePageUrl: String)
 
 object Party {	
 
 	val simple = {
 		(get[Pk[Long]]("id") ~
-			get[Long]("name") ~
+			get[String]("name") ~
 			get[String]("home_page_url")
 			) map {
 			case id ~ name ~ home_page_url =>

@@ -1,5 +1,13 @@
 package models
 
+import play.api.db._
+import play.api.Play.current
+
+import java.util.Date
+
+import anorm._
+import anorm.SqlParser._
+
 case class CongressmanInfo (userId: Long, partyId: Long, stateName: String, homePageUrl: String)
 
 object CongressmanInfo {	

@@ -1,5 +1,13 @@
 package models
 
+import play.api.db._
+import play.api.Play.current
+
+import java.util.Date
+
+import anorm._
+import anorm.SqlParser._
+
 case class Vote (userId: Long, lawProposalId: Long, rate: Int)
 
 object Vote {	
@@ -7,10 +15,10 @@ object Vote {
 	val simple = {
 		(get[Long]("user_id") ~
 			get[Long]("law_proposal_id") ~
-			get[String]("home_page_url")
+			get[Int]("rate")
 			) map {
-			case user_id ~ law_proposal_id ~ home_page_url =>
-			Vote(user_id, law_proposal_id, home_page_url)
+			case user_id ~ law_proposal_id ~ rate =>
+			 Vote(user_id, law_proposal_id, rate)
 		}
 	}
 

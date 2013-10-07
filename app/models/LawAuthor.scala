@@ -1,5 +1,13 @@
 package models
 
+import play.api.db._
+import play.api.Play.current
+
+import java.util.Date
+
+import anorm._
+import anorm.SqlParser._
+
 case class LawAuthor (id: Pk[Long], name: String)
 
 object LawAuthor {	
@@ -19,7 +27,7 @@ object LawAuthor {
 		}
   	}
 
-  	def save(){
+  	def save(name: String){
   		DB.withConnection{ implicit connection => 
   			SQL("""
   				INSERT INTO law_authors(name)

@@ -1,5 +1,13 @@
 package models
 
+import play.api.db._
+import play.api.Play.current
+
+import java.util.Date
+
+import anorm._
+import anorm.SqlParser._
+
 case class LawRegion (id: Pk[Long], description: String, typeName: String, parentRegionId: Long)
 
 object LawRegion {	
@@ -8,20 +16,20 @@ object LawRegion {
 		(get[Pk[Long]]("id") ~			
       get[String]("description") ~
       get[String]("type_name") ~
-      get[String]("region_parent_id") ~
+      get[Long]("region_parent_id")
 			) map {
 			case id ~ description ~ type_name ~ region_parent_id =>
 			LawRegion(id, description, type_name, region_parent_id)
 		}
 	}
 
-	def all(): Seq[LawRegion] = {
+	def findAll(): Seq[LawRegion] = {
 		DB.withConnection { implicit connection =>
 	  		SQL("select * from law_regions").as(LawRegion.simple *)
 		}
   	}
 
-  	def save(){
+  	def save(description: String){
   		DB.withConnection{ implicit connection => 
   			SQL("""
   				INSERT INTO law_regions(description)

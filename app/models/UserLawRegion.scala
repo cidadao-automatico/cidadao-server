@@ -1,13 +1,21 @@
 package models
 
+import play.api.db._
+import play.api.Play.current
+
+import java.util.Date
+
+import anorm._
+import anorm.SqlParser._
+
 case class UserLawRegion (id: Pk[Long], userId: Long, lawRegionId: Long)
 
 object UserLawRegion {  
 
   val simple = {
     (get[Pk[Long]]("id") ~      
-      get[String]("user_id") ~
-      get[String]("law_region_id")
+      get[Long]("user_id") ~
+      get[Long]("law_region_id")
       ) map {
       case id ~ user_id ~ law_region_id =>
       UserLawRegion(id, user_id, law_region_id)

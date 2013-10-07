@@ -1,5 +1,13 @@
 package models
 
+import play.api.db._
+import play.api.Play.current
+
+import java.util.Date
+
+import anorm._
+import anorm.SqlParser._
+
 case class User (id: Pk[Long], firstName: String, lastName: String, email: String, oauthId: String, 
 			countryName:String, stateName:String, docId: String, typeCode: Int)
 
@@ -18,10 +26,10 @@ object User {
 			get[String]("country_name") ~ 
 			get[String]("state_name") ~ 
 			get[String]("doc_id") ~ 
-			get[Int]("type_code") ~ 
+			get[Int]("type_code")
 			) map {
-			case id ~ name ~ first_name ~ last_name ~ email ~ oauth_id ~ country_name ~ state_name ~ doc_id ~ type_code =>
-			User(id,name,short,first_name,last_name,email,oauth_id,country_name,state_name,doc_id,type_code)
+			case id ~ first_name ~ last_name ~ email ~ oauth_id ~ country_name ~ state_name ~ doc_id ~ type_code =>
+			User(id,first_name,last_name,email,oauth_id,country_name,state_name,doc_id,type_code)
 		}
 	}
 
@@ -30,6 +38,14 @@ object User {
 	  		SQL("select * from users").as(User.simple *)
 		}
   	}
+
+  	def findById(id: Long): Option[User] = {
+		DB.withConnection { implicit connection =>
+			SQL("select * from users where id={id}").on(
+				'id -> id
+				).as(User.simple singleOpt)
+		}
+	}	
 
   	def save(firstName: String, lastName: String, email: String, oauthId: String, 
 			countryName:String, stateName:String, docId: String, typeCode: Int){
@@ -51,6 +67,10 @@ object User {
   				'type_code -> typeCode
   				).executeInsert()
   		}
+  	}
+
+  	def recommendLaws(): Seq[LawProposal] = {
+  		LawProposal.all()
   	}
 
 }
