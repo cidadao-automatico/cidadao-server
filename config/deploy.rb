@@ -27,7 +27,14 @@ role :db,  "julgamento.clipesebandas.com.br", :primary => true # This is where R
 
 # if you want to clean up old releases on each deploy uncomment this:
 after "deploy:update_code", "deploy:cleanup"
-#after "deploy:cleanup", "play:run"
+after "deploy:cleanup", "deploy:update_shared_symlinks"
+
+
+namespace :deploy do
+  task :update_shared_symlinks do    
+    run "ln -s #{File.join(deploy_to, "shared/config/application.conf")} #{File.join(release_path, "/conf/application.conf")}"
+  end
+end
 
 # namespace :play do
 #   task :run do    
