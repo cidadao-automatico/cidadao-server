@@ -17,8 +17,6 @@ import scala.util.control.Exception._
 
 import java.util.Date
 
-import com.codahale.jerkson.Json
-
 object Application extends Controller {
 
  //  val xmlVotes = scala.xml.XML.load(getClass.getResource("/data/Votacoes_2012_merge.xml"))
@@ -137,12 +135,12 @@ object Application extends Controller {
 
   //GET
   def regionList() = Action {
-     Ok(Json.generate(LawRegion.findAll()))
+     Ok(toJson(LawRegion.findAll()))
   }
 
   //GET
   def tagList() = Action {
-     Ok(Json.generate(Tag.findAll()))
+     Ok(toJson(Tag.findAll()))
   }
 
 }

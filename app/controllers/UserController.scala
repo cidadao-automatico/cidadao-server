@@ -17,13 +17,11 @@ import scala.util.control.Exception._
 
 import java.util.Date
 
-import com.codahale.jerkson.Json
-
 object UserController extends Controller {
 
   //GET
 	def show(user_id: Long) = Action { implicit request =>
-      Ok(Json.generate(User.findById(user_id)))
+      Ok(toJson(User.findById(user_id)))
 	}
 
     //GET
@@ -32,7 +30,7 @@ object UserController extends Controller {
     user match {
       case Some(user) => 
         var lawRecommender = new LawRecommender()
-        Ok(Json.generate(lawRecommender.recommendLawsForUser(user)))
+        Ok(toJson(lawRecommender.recommendLawsForUser(user)))
       case _ => Ok("")
     }
 			
@@ -40,11 +38,11 @@ object UserController extends Controller {
 
   //POST
   def addLawRegion(user_id: Long, region_id: Long) = Action{
-    Ok(Json.generate(User.findById(1)))
+    Ok(toJson(User.findById(1)))
   }
   
   //POST
   def addTag(user_id: Long, tag_id: Long) = Action{
-    Ok(Json.generate(User.findById(1)))
+    Ok(toJson(User.findById(1)))
   }
 }

@@ -2,6 +2,10 @@ package models
 
 import play.api.db._
 import play.api.Play.current
+import play.api.libs.json._
+import play.api.libs.json.util._
+import play.api.libs.json.Writes._
+import play.api.libs.functional.syntax._
 
 import java.util.Date
 
@@ -12,6 +16,15 @@ case class LawProposal (id: Pk[Long], authorId: Long, typeId: Long, statusId: Lo
   url: String, createdAt: Date, stdCode: String)
 
 object LawProposal {	
+
+  implicit object PkFormat extends Format[Pk[Long]] {
+        def reads(json: JsValue): JsResult[Pk[Long]] = JsSuccess (
+            json.asOpt[Long].map(id => Id(id)).getOrElse(NotAssigned)
+        )
+        def writes(id: Pk[Long]): JsValue = id.map(JsNumber(_)).getOrElse(JsNull)
+  }
+
+  implicit val lawProposalWrites = Json.writes[LawProposal]
 
 	val simple = {
 		(get[Pk[Long]]("id") ~
@@ -52,24 +65,28 @@ object LawProposal {
     }
   }
 
-  def save(user: User, lawPriority: LawPriority, lawAuthor: LawAuthor, lawRegion: LawRegion, lawType: LawType, lawStatus: LawStatus, url: String, createdAt: Date, stdCode: String){
-    DB.withConnection{ implicit connection => 
-     SQL("""
-      INSERT INTO law_proposals(id, law_author_id, law_type_id, law_status_id, law_priority_id, law_region_id, law_url, created_at, std_code)
-      VALUES({id}, {law_author_id}, {law_type_id}, {law_status_id}, {law_priority_id}, {law_region_id}, {law_url}, {created_at}, {std_code})
-      """)
-     .on(
-      'id -> user.id,
-      'law_author_id -> lawAuthor.id,
-      'law_type_id -> lawType.id,
-      'law_status_id -> lawStatus.id,
-      'law_priority_id -> lawPriority.id,
-      'law_region_id -> lawRegion.id,
-      'law_url -> url,
-      'created_at -> createdAt,
-      'std_code -> stdCode
-      ).executeInsert()
+  def save(lawPriority: Option[LawPriority], lawAuthor: Option[LawAuthor], lawRegion: Option[LawRegion], 
+           lawType: Option[LawType], lawStatus: Option[LawStatus], url: String, createdAt: Date, stdCode: String){
+    (lawPriority, lawAuthor, lawRegion, lawType, lawStatus) match {
+      case (Some(lawPriority), Some(lawAuthor), Some(lawRegion), Some(lawType), Some(lawStatus)) =>
+        DB.withConnection{ implicit connection => 
+         SQL("""
+          INSERT INTO law_proposals(law_author_id, law_type_id, law_status_id, law_priority_id, law_region_id, law_url, created_at, std_code)
+          VALUES({law_author_id}, {law_type_id}, {law_status_id}, {law_priority_id}, {law_region_id}, {law_url}, {created_at}, {std_code})
+          """)
+         .on(
+          'law_author_id -> lawAuthor.id,
+          'law_type_id -> lawType.id,
+          'law_status_id -> lawStatus.id,
+          'law_priority_id -> lawPriority.id,
+          'law_region_id -> lawRegion.id,
+          'law_url -> url,
+          'created_at -> createdAt,
+          'std_code -> stdCode
+          ).executeInsert()
+        }
     }
+    
   }
 
 }

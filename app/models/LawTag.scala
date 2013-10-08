@@ -2,6 +2,10 @@ package models
 
 import play.api.db._
 import play.api.Play.current
+import play.api.libs.json._
+import play.api.libs.json.util._
+import play.api.libs.json.Writes._
+import play.api.libs.functional.syntax._
 
 import java.util.Date
 
@@ -11,6 +15,15 @@ import anorm.SqlParser._
 case class LawTag(tag_id: Long, law_proposal_id: Long)
 
 object LawTag {
+
+	implicit object PkFormat extends Format[Pk[Long]] {
+        def reads(json: JsValue): JsResult[Pk[Long]] = JsSuccess (
+            json.asOpt[Long].map(id => Id(id)).getOrElse(NotAssigned)
+        )
+        def writes(id: Pk[Long]): JsValue = id.map(JsNumber(_)).getOrElse(JsNull)
+  }
+
+  implicit val lawTagWrites = Json.writes[LawTag]  
 
  val simple = {
  	(get[Long]("tag_id") ~

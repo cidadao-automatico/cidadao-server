@@ -9,15 +9,12 @@ import play.api.libs.concurrent.Promise
 import play.api.libs.Jsonp
 
 import models._
-import utils.ModelJson._
 
 import anorm.NotAssigned
 
 import scala.util.control.Exception._
 
 import java.util.Date
-
-import com.codahale.jerkson.Json
 
 object VoteController extends Controller {
 
