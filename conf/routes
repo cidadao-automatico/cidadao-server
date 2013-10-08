@@ -5,7 +5,44 @@
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
-GET		/pl/:lawid/votes				controllers.Application.getVotes(lawid: String, callback: Option[String])
-GET		/load						controllers.Application.loadPL
-GET		/tag						controllers.Application.getTags(callback: Option[String])
-GET		/pl							controllers.Application.getPLs(page: Option[Int], callback: Option[String])
+#GET		/pl/:lawid/votes				controllers.Application.getVotes(lawid: String, callback: Option[String])
+#GET		/load						controllers.Application.loadPL
+#GET		/tag						controllers.Application.getTags(callback: Option[String])
+#GET		/pl							controllers.Application.getPLs(page: Option[Int], callback: Option[String])
+
+#New routes start here
+
+GET     /user/:user_id/show				 controllers.UserController.show(user_id: Long)
+GET     /user/:user_id/recommend_laws    controllers.UserController.recommendLaws(user_id: Long)
+POST    /user/:user_id/region/:region_id controllers.UserController.addLawRegion(user_id: Long, region_id: Long)
+POST    /user/:user_id/tag/:tag_id       controllers.UserController.addTag(user_id: Long, tag_id: Long)
+
+GET     /law_proposal/:law_id/show       controllers.LawProposalController.show(law_id: Long)
+GET     /law_proposal/random             controllers.LawProposalController.randomLaw
+POST    /law_proposal/:law_id/vote       controllers.VoteController.vote(law_id: Long)
+
+GET     /law_regions                     controllers.Application.regionList  
+GET     /tag_list                        controllers.Application.tagList
+
+#New routes end here
+
+# Login page
+GET     /login                      securesocial.controllers.LoginPage.login
+GET     /logout                     securesocial.controllers.LoginPage.logout
+
+# User Registration and password handling 
+#GET     /signup                     securesocial.controllers.Registration.startSignUp
+#POST    /signup                     securesocial.controllers.Registration.handleStartSignUp
+#GET     /signup/:token              securesocial.controllers.Registration.signUp(token)
+#POST    /signup/:token              securesocial.controllers.Registration.handleSignUp(token)
+#GET     /reset                      securesocial.controllers.Registration.startResetPassword
+#POST    /reset                      securesocial.controllers.Registration.handleStartResetPassword
+#GET     /reset/:token               securesocial.controllers.Registration.resetPassword(token)
+#POST    /reset/:token               securesocial.controllers.Registration.handleResetPassword(token)
+#GET     /password                   securesocial.controllers.PasswordChange.page
+#POST    /password                   securesocial.controllers.PasswordChange.handlePasswordChange
+
+# Providers entry points
+GET     /authenticate/:provider     securesocial.controllers.ProviderController.authenticate(provider)
+POST    /authenticate/:provider     securesocial.controllers.ProviderController.authenticateByPost(provider)
+GET     /not-authorized             securesocial.controllers.ProviderController.notAuthorized
