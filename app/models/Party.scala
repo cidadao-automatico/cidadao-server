@@ -54,4 +54,16 @@ object Party {
   		}
   	}
 
+    def deleteById(id: Long)
+  {
+    DB.withConnection{ implicit connection => 
+      SQL("""
+        DELETE FROM parties
+        WHERE id={id}
+        """)
+      .on(
+        'id -> id
+        ).executeInsert()
+    } 
+  }
 }

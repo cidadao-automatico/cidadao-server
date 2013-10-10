@@ -143,4 +143,7 @@ object Application extends Controller {
      Ok(toJson(Tag.findAll()))
   }
 
+  def newLogin() = Action{
+  	Redirect("/#/user_home")
+  }
 }

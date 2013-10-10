@@ -81,4 +81,16 @@ object LawRegion {
   		
   	}
 
+    def deleteById(id: Long)
+  {
+    DB.withConnection{ implicit connection => 
+      SQL("""
+        DELETE FROM law_regions
+        WHERE id={id}
+        """)
+      .on(
+        'id -> id
+        ).executeInsert()
+    } 
+  }
 }

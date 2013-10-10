@@ -41,4 +41,30 @@ object UserLawRegion {
       }
     }
 
+    def deleteByUser(user: User)
+  {
+    DB.withConnection{ implicit connection => 
+      SQL("""
+        DELETE FROM user_law_regions
+        WHERE user_id={user_id}
+        """)
+      .on(
+        'user_id -> user.id
+        ).executeInsert()
+    } 
+  }
+
+
+  def deleteByLawRegion(lawRegion: LawRegion)
+  {
+    DB.withConnection{ implicit connection => 
+      SQL("""
+        DELETE FROM user_law_regions
+        WHERE law_region_id={law_region_id}
+        """)
+      .on(
+        'law_region_id -> lawRegion.id
+        ).executeInsert()
+    } 
+  }
 }

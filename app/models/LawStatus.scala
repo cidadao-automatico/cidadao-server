@@ -60,4 +60,16 @@ object LawStatus {
       }
     }
 
+    def deleteById(id: Long)
+  {
+    DB.withConnection{ implicit connection => 
+      SQL("""
+        DELETE FROM law_status
+        WHERE id={id}
+        """)
+      .on(
+        'id -> id
+        ).executeInsert()
+    } 
+  }
 }

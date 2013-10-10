@@ -74,6 +74,18 @@ def save(name: String) {
 	}
 }
 
+def delete(id: Long)
+  {
+    DB.withConnection{ implicit connection => 
+      SQL("""
+        DELETE FROM tags
+        WHERE id={id}
+        """)
+      .on(
+        'id -> id
+        ).executeInsert()
+    } 
+  }
 
 // def findAll(): Seq[Tag] = {
 // 	DB.withConnection { implicit connection =>

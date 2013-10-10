@@ -50,5 +50,32 @@ def save(tag: Tag, user: User) {
 	}
 }
 
+def deleteByUser(user: User)
+  {
+    DB.withConnection{ implicit connection => 
+      SQL("""
+        DELETE FROM user_tags
+        WHERE user_id={user_id}
+        """)
+      .on(
+        'user_id -> user.id
+        ).executeInsert()
+    } 
+  }
+
+
+  def deleteByTag(tag: Tag)
+  {
+    DB.withConnection{ implicit connection => 
+      SQL("""
+        DELETE FROM user_tags
+        WHERE tag_id={tag_id}
+        """)
+      .on(
+        'tag_id -> tag.id
+        ).executeInsert()
+    } 
+  }
+
 
 }

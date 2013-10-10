@@ -51,4 +51,31 @@ def save(user: User, congressman: User) {
 }
 
 
+def deleteByUser(user: User)
+  {
+    DB.withConnection{ implicit connection => 
+      SQL("""
+        DELETE FROM user_representatives
+        WHERE user_id={user_id}
+        """)
+      .on(
+        'user_id -> user.id
+        ).executeInsert()
+    } 
+  }
+
+
+  def deleteByCongressman(congressman: User)
+  {
+    DB.withConnection{ implicit connection => 
+      SQL("""
+        DELETE FROM user_representatives
+        WHERE congressman_id={congressman_id}
+        """)
+      .on(
+        'congressman_id -> congressman.id
+        ).executeInsert()
+    } 
+  }
+
 }

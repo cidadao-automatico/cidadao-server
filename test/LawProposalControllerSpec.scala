@@ -24,12 +24,26 @@ class LawProposalControllerSpec extends Specification with Results {
   
   "LawProposalController" should {
 
+    trait trees extends After {                
+
+                def after = {
+                    User.deleteById(1)
+                    LawType.deleteById(1)
+                    LawStatus.deleteById(1)
+                    LawPriority.deleteById(1)
+                    LawRegion.deleteById(1)
+                    LawAuthor.deleteById(1)
+                    LawProposal.deleteById(1)
+                }
+            }
+
     "return a LawProposal object in JSON format" in {
         running(FakeApplication()) {
             var stdCode="PLasdasda"
             var createdAt=Calendar.getInstance().getTime()
             var url="http://asdasdasd"
-            User.save("Gustavo", "Salazar Torres", Option.apply("tavoaqp@gmail.com"), "912871983712","Facebook","Peru", "Lima", "Lima","29733722",User.NORMAL_TYPE)
+            //User.save("Gustavo", "Salazar Torres", Option.apply("tavoaqp@gmail.com"), "912871983712","Facebook",Option.apply("Peru"), Option.apply("Lima"), Option.apply("Lima"), Option.apply("29733722"),User.NORMAL_TYPE)
+            User.save("Gustavo", "Salazar Torres", Option("tavoaqp@gmail.com"), "912871983712","Facebook",Option("Peru"), Option("Lima"), Option("Lima"), Option("29733722"),User.NORMAL_TYPE)
             var user = User.findById(1)
             LawType.save("MUNICIPAL")
             var lawType=LawType.findById(1)
@@ -48,6 +62,8 @@ class LawProposalControllerSpec extends Specification with Results {
 
             status(response.get) must equalTo(200)
             contentAsString(response.get) must equalTo(lawProposalJson)
+
+
         }
     }
   }

@@ -63,5 +63,17 @@ def save(tag: Tag, lawProposal: LawProposal) {
 	}
 }
 
+def deleteById(id: Long)
+  {
+    DB.withConnection{ implicit connection => 
+      SQL("""
+        DELETE FROM law_tags
+        WHERE id={id}
+        """)
+      .on(
+        'id -> id
+        ).executeInsert()
+    } 
+  }
 
 }

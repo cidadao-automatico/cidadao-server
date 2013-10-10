@@ -58,4 +58,17 @@ object LawPriority {
   		}
   	}
 
+    def deleteById(id: Long)
+  {
+    DB.withConnection{ implicit connection => 
+      SQL("""
+        DELETE FROM law_priorities
+        WHERE id={id}
+        """)
+      .on(
+        'id -> id
+        ).executeInsert()
+    } 
+  }
+
 }
