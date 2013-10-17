@@ -17,32 +17,37 @@ import scala.util.control.Exception._
 
 import java.util.Date
 
-object UserController extends Controller {
+import securesocial.core.{Identity, Authorization}
+
+object UserController extends Controller with securesocial.core.SecureSocial {
 
   //GET
-	def show(user_id: Long) = Action { implicit request =>
-      Ok(toJson(User.findById(user_id)))
-	}
+  def show() = SecuredAction { implicit request =>
+    
+    request.user match {
+     case user: Identity => Ok(toJson(User.findByEmail(user.email)))
+   }
+  }
 
-    //GET
+  //GET
   def recommendLaws(user_id: Long) = Action { implicit request =>
-    var user=User.findById(user_id)
+    var user = User.findById(user_id)
     user match {
-      case Some(user) => 
+      case Some(user) =>
         var lawRecommender = new LawRecommender()
         Ok(toJson(lawRecommender.recommendLawsForUser(user)))
       case _ => Ok("")
     }
-			
-	}
+
+  }
 
   //POST
-  def addLawRegion(user_id: Long, region_id: Long) = Action{
+  def addLawRegion(user_id: Long, region_id: Long) = Action {
     Ok(toJson(User.findById(1)))
   }
-  
+
   //POST
-  def addTag(user_id: Long, tag_id: Long) = Action{
+  def addTag(user_id: Long, tag_id: Long) = Action {
     Ok(toJson(User.findById(1)))
   }
 }

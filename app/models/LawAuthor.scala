@@ -12,64 +12,58 @@ import java.util.Date
 import anorm._
 import anorm.SqlParser._
 
-case class LawAuthor (id: Pk[Long], name: String)
+case class LawAuthor(id: Pk[Long], name: String)
 
-object LawAuthor {	
+object LawAuthor {
 
   implicit object PkFormat extends Format[Pk[Long]] {
-        def reads(json: JsValue): JsResult[Pk[Long]] = JsSuccess (
-            json.asOpt[Long].map(id => Id(id)).getOrElse(NotAssigned)
-        )
-        def writes(id: Pk[Long]): JsValue = id.map(JsNumber(_)).getOrElse(JsNull)
+    def reads(json: JsValue): JsResult[Pk[Long]] = JsSuccess(
+      json.asOpt[Long].map(id => Id(id)).getOrElse(NotAssigned))
+    def writes(id: Pk[Long]): JsValue = id.map(JsNumber(_)).getOrElse(JsNull)
   }
 
   implicit val authorWrites = Json.writes[LawAuthor]
 
-	val simple = {
-		(get[Pk[Long]]("id") ~			
-      get[String]("name")
-			) map {
-			case id ~ name =>
-			LawAuthor(id,name)
-		}
-	}
-
-	def all(): Seq[LawAuthor] = {
-		DB.withConnection { implicit connection =>
-	  		SQL("select * from law_authors").as(LawAuthor.simple *)
-		}
+  val simple = {
+    (get[Pk[Long]]("id") ~
+      get[String]("name")) map {
+        case id ~ name =>
+          LawAuthor(id, name)
+      }
   }
 
-  def findById(id: Long) : Option[LawAuthor] ={
-   DB.withConnection { implicit connection =>
-        SQL("select * from law_authors where id={id}").on(
-          'id -> id
-          ).as(LawAuthor.simple singleOpt)
-    } 
+  def all(): Seq[LawAuthor] = {
+    DB.withConnection { implicit connection =>
+      SQL("select * from law_authors").as(LawAuthor.simple *)
+    }
   }
 
-	def save(name: String){
-		DB.withConnection{ implicit connection => 
-			SQL("""
+  def findById(id: Long): Option[LawAuthor] = {
+    DB.withConnection { implicit connection =>
+      SQL("select * from law_authors where id={id}").on(
+        'id -> id).as(LawAuthor.simple singleOpt)
+    }
+  }
+
+  def save(name: String) {
+    DB.withConnection { implicit connection =>
+      SQL("""
 				INSERT INTO law_authors(name)
 				VALUES({name})
 				""")
-			.on(
-        'name -> name
-				).executeInsert()
-		}
-	}
+        .on(
+          'name -> name).executeInsert()
+    }
+  }
 
-  def deleteById(id: Long)
-  {
-    DB.withConnection{ implicit connection => 
+  def deleteById(id: Long) {
+    DB.withConnection { implicit connection =>
       SQL("""
         DELETE FROM law_authors
         WHERE id={id}
         """)
-      .on(
-        'id -> id
-        ).executeInsert()
-    } 
+        .on(
+          'id -> id).executeInsert()
+    }
   }
 }

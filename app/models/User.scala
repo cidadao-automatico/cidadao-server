@@ -14,156 +14,143 @@ import anorm.SqlParser._
 
 // import securesocial.core._
 
-case class User (id: Pk[Long], firstName: String, lastName: String, email: Option[String], oauthId: String, oauthProvider: String, 
-			countryName:Option[String], stateName:Option[String], cityName:Option[String], docId: Option[String], typeCode: Int)
+case class User(id: Pk[Long], firstName: String, lastName: String, email: Option[String], oauthId: String, oauthProvider: String,
+  countryName: Option[String], stateName: Option[String], cityName: Option[String], docId: Option[String], typeCode: Int)
 
 object User {
-	
-	val NORMAL_TYPE:Int=1
-	
-	val CONGRESS_TYPE:Int=2
 
-	implicit object PkFormat extends Format[Pk[Long]] {
-        def reads(json: JsValue): JsResult[Pk[Long]] = JsSuccess (
-            json.asOpt[Long].map(id => Id(id)).getOrElse(NotAssigned)
-        )
-        def writes(id: Pk[Long]): JsValue = id.map(JsNumber(_)).getOrElse(JsNull)
+  val NORMAL_TYPE: Int = 1
+
+  val CONGRESS_TYPE: Int = 2
+
+  implicit object PkFormat extends Format[Pk[Long]] {
+    def reads(json: JsValue): JsResult[Pk[Long]] = JsSuccess(
+      json.asOpt[Long].map(id => Id(id)).getOrElse(NotAssigned))
+    def writes(id: Pk[Long]): JsValue = id.map(JsNumber(_)).getOrElse(JsNull)
   }
 
+  implicit val userWrites = Json.writes[User]
 
-	implicit val userWrites = Json.writes[User]
+  val simple = {
+    (get[Pk[Long]]("id") ~
+      get[String]("first_name") ~
+      get[String]("last_name") ~
+      get[Option[String]]("email") ~
+      get[String]("oauth_id") ~
+      get[String]("oauth_provider") ~
+      get[Option[String]]("country_name") ~
+      get[Option[String]]("state_name") ~
+      get[Option[String]]("city_name") ~
+      get[Option[String]]("doc_id") ~
+      get[Int]("type_code")) map {
+        case id ~ first_name ~ last_name ~ email ~ oauth_id ~ oauth_provider ~ country_name ~ state_name ~ city_name ~ doc_id ~ type_code =>
+          User(id, first_name, last_name, email, oauth_id, oauth_provider, country_name, state_name, city_name, doc_id, type_code)
+      }
+  }
 
-	val simple = {
-		(get[Pk[Long]]("id") ~
-			get[String]("first_name") ~
-			get[String]("last_name") ~
-			get[Option[String]]("email") ~ 
-			get[String]("oauth_id") ~ 
-			get[String]("oauth_provider") ~ 
-			get[Option[String]]("country_name") ~ 
-			get[Option[String]]("state_name") ~ 
-			get[Option[String]]("city_name") ~ 
-			get[Option[String]]("doc_id") ~ 
-			get[Int]("type_code")
-			) map {
-			case id ~ first_name ~ last_name ~ email ~ oauth_id ~ oauth_provider ~ country_name ~ state_name ~ city_name ~ doc_id ~ type_code =>
-			User(id,first_name,last_name,email,oauth_id,oauth_provider,country_name,state_name,city_name, doc_id,type_code)
-		}
-	}
+  def all(): Seq[User] = {
+    DB.withConnection { implicit connection =>
+      SQL("select * from users").as(User.simple *)
+    }
+  }
 
-	def all(): Seq[User] = {
-		DB.withConnection { implicit connection =>
-	  		SQL("select * from users").as(User.simple *)
-		}
-  	}
+  def findById(id: Long): Option[User] = {
+    DB.withConnection { implicit connection =>
+      SQL("select * from users where id={id}").on(
+        'id -> id).as(User.simple singleOpt)
+    }
+  }
 
-  	def findById(id: Long): Option[User] = {
-		DB.withConnection { implicit connection =>
-			SQL("select * from users where id={id}").on(
-				'id -> id
-				).as(User.simple singleOpt)
-		}
-	}	
+  def findByEmail(email: String): Option[User] = {
+    DB.withConnection { implicit connection =>
+      SQL("select * from users where email={email} LIMIT 1").on(
+        'email -> email).as(User.simple singleOpt)
+    }
+  }
 
-	def findByEmail(email: String): Option[User] = {
-		DB.withConnection { implicit connection =>
-			SQL("select * from users where email={email}").on(
-				'email -> email
-				).as(User.simple singleOpt)
-		}
-	}
+  def findByEmailAndOAuthId(email: String, oauth_id: String): Option[User] = {
+    DB.withConnection { implicit connection =>
+      SQL("select * from users where oauth_id={oauth_id} and email={email}").on(
+        'email -> email,
+        'oauth_id -> oauth_id).as(User.simple singleOpt)
+    }
+  }
 
-	def findByEmailAndOAuthId(email: String, oauth_id: String): Option[User] =	{
-		DB.withConnection { implicit connection =>
-			SQL("select * from users where oauth_id={oauth_id} and email={email}").on(
-				'email -> email,
-				'oauth_id -> oauth_id
-				).as(User.simple singleOpt)
-		}	
-	}
+  def findByOAuthId(oauth_id: String): Option[User] = {
+    DB.withConnection { implicit connection =>
+      SQL("select * from users where oauth_id={oauth_id}").on(
+        'oauth_id -> oauth_id).as(User.simple singleOpt)
+    }
+  }
 
-	def findByOAuthId(oauth_id: String): Option[User] =	{
-		DB.withConnection { implicit connection =>
-			SQL("select * from users where oauth_id={oauth_id}").on(
-				'oauth_id -> oauth_id
-				).as(User.simple singleOpt)
-		}	
-	}
-
-  	def save(firstName: String, lastName: String, email: Option[String], oauthId: String, oauthProvider: String, 
-			countryName:Option[String], stateName:Option[String], cityName: Option[String], docId: Option[String], typeCode: Int) : Option[User] = {
-  		DB.withConnection{ implicit connection => 
-  			val idOpt:Option[Long] = SQL("""
+  def save(firstName: String, lastName: String, email: Option[String], oauthId: String, oauthProvider: String,
+    countryName: Option[String], stateName: Option[String], cityName: Option[String], docId: Option[String], typeCode: Int): Option[User] = {
+    DB.withConnection { implicit connection =>
+      val idOpt: Option[Long] = SQL("""
   				INSERT INTO users(first_name, last_name, email, oauth_id, oauth_provider, country_name,
   					state_name, city_name, doc_id, type_code)
   				VALUES({first_name}, {last_name}, {email}, {oauth_id}, {oauth_provider}, {country_name}, {state_name},
   					{city_name},{doc_id}, {type_code})
   				""")
-  			.on(
-  				'first_name -> firstName,
-  				'last_name -> lastName,
-  				'email -> email,
-  				'oauth_id -> oauthId,
-  				'oauth_provider -> oauthProvider,
-  				'country_name -> countryName,
-  				'state_name-> stateName,
-  				'city_name-> cityName,
-  				'doc_id-> docId,
-  				'type_code -> typeCode
-  				).executeInsert()
+        .on(
+          'first_name -> firstName,
+          'last_name -> lastName,
+          'email -> email,
+          'oauth_id -> oauthId,
+          'oauth_provider -> oauthProvider,
+          'country_name -> countryName,
+          'state_name -> stateName,
+          'city_name -> cityName,
+          'doc_id -> docId,
+          'type_code -> typeCode).executeInsert()
 
-  			idOpt.map{ id => User(Id(id),firstName, lastName, email, oauthId, oauthProvider, countryName, stateName, cityName, docId, typeCode)}
-  		}
-  	}
+      idOpt.map { id => User(Id(id), firstName, lastName, email, oauthId, oauthProvider, countryName, stateName, cityName, docId, typeCode) }
+    }
+  }
 
-  	def updateById(id: Long, firstName: String, lastName: String, email: Option[String], oauthId: String, oauthProvider: String, 
-			countryName:Option[String], stateName:Option[String], cityName: Option[String], docId: Option[String], typeCode: Int) : Option[User] = {
-  		DB.withConnection{ implicit connection => 
-  			SQL("""
+  def updateById(id: Long, firstName: String, lastName: String, email: Option[String], oauthId: String, oauthProvider: String,
+    countryName: Option[String], stateName: Option[String], cityName: Option[String], docId: Option[String], typeCode: Int): Option[User] = {
+    DB.withConnection { implicit connection =>
+      SQL("""
   				UPDATE users SET first_name={first_name}, last_name={last_name}, email={email}, 
   					oauth_id={oauth_id}, oauth_provider={oauth_provider}, country_name={country_name},
   					state_name={state_name}, city_name={city_name}, doc_id={doc_id}, type_code={type_code}
   				WHERE id={id}
   				""")
-  			.on(
-  				'id -> id,
-  				'first_name -> firstName,
-  				'last_name -> lastName,
-  				'email -> email,
-  				'oauth_id -> oauthId,
-  				'oauth_provider -> oauthProvider,
-  				'country_name -> countryName,
-  				'state_name-> stateName,
-  				'city_name-> cityName,
-  				'doc_id-> docId,
-  				'type_code -> typeCode
-  				).executeUpdate()
+        .on(
+          'id -> id,
+          'first_name -> firstName,
+          'last_name -> lastName,
+          'email -> email,
+          'oauth_id -> oauthId,
+          'oauth_provider -> oauthProvider,
+          'country_name -> countryName,
+          'state_name -> stateName,
+          'city_name -> cityName,
+          'doc_id -> docId,
+          'type_code -> typeCode).executeUpdate()
 
-  			Option(User(Id(id),firstName, lastName, email, oauthId, oauthProvider, countryName, stateName, cityName, docId, typeCode))
-  		}
-  	}
+      Option(User(Id(id), firstName, lastName, email, oauthId, oauthProvider, countryName, stateName, cityName, docId, typeCode))
+    }
+  }
 
-
-def deleteById(id: Long)
-  {
-    DB.withConnection{ implicit connection => 
+  def deleteById(id: Long) {
+    DB.withConnection { implicit connection =>
       SQL("""
         DELETE FROM users
         WHERE id={id}
         """)
-      .on(
-        'id -> id
-        ).executeInsert()
-    } 
+        .on(
+          'id -> id).executeInsert()
+    }
   }
 
   def findByEmail(email: Option[String]): Option[User] = {
-	DB.withConnection { implicit connection =>
-		SQL("select * from users where email={email}").on(
-			'email -> email.get
-			).as(User.simple singleOpt)
-	}
-  	
+    DB.withConnection { implicit connection =>
+      SQL("select * from users where email={email} LIMIT 1").on(
+        'email -> email.get).as(User.simple singleOpt)
+    }
+
   }
 
 }
