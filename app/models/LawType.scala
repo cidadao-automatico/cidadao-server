@@ -45,14 +45,23 @@ object LawType {
     }
   }
 
-  def save(description: String) {
+  def findByDescription(description: Long): Option[LawType] = {
     DB.withConnection { implicit connection =>
-      SQL("""
+      SQL("select * from law_types where description={description}").on(
+        'description -> description).as(LawType.simple singleOpt)
+    }
+  }
+
+  def save(description: String): LawType = {
+    DB.withConnection { implicit connection =>
+      val idOpt: Option[Long] = SQL("""
   				INSERT INTO law_types(description)
   				VALUES({description})
   				""")
         .on(
           'description -> description).executeInsert()
+
+      idOpt.map { id => LawType(Id(id), description) }.get
     }
   }
 

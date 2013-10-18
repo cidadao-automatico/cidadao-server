@@ -6,7 +6,7 @@ GET		/newuser						 controllers.Application.newLogin
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
 #GET		/pl/:lawid/votes				controllers.Application.getVotes(lawid: String, callback: Option[String])
-#GET		/load						controllers.Application.loadPL
+GET		/load						controllers.Application.loadPL
 #GET		/tag						controllers.Application.getTags(callback: Option[String])
 #GET		/pl							controllers.Application.getPLs(page: Option[Int], callback: Option[String])
 
@@ -14,9 +14,9 @@ GET     /assets/*file               controllers.Assets.at(path="/public", file)
 #New routes start here
 
 GET     /user/show				 		 controllers.UserController.show()
-GET     /user/:user_id/recommend_laws    controllers.UserController.recommendLaws(user_id: Long)
-POST    /user/:user_id/region/:region_id controllers.UserController.addLawRegion(user_id: Long, region_id: Long)
-POST    /user/:user_id/tag/:tag_id       controllers.UserController.addTag(user_id: Long, tag_id: Long)
+GET     /user/recommend_laws    		 controllers.UserController.recommendLaws()
+POST    /user/region/:region_id 		 controllers.UserController.addLawRegion(region_id: Long)
+POST    /user/tag/:tag_id       		 controllers.UserController.addTag(tag_id: Long)
 
 GET     /law_proposal/:law_id/show       controllers.LawProposalController.show(law_id: Long)
 GET     /law_proposal/random             controllers.LawProposalController.randomLaw

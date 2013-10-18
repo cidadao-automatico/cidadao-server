@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<siglas>
+  <sigla tipoSigla="AA        " descricao="Autógrafo" ativa="True" genero="o"/>
+  <sigla tipoSigla="ADD       " descricao="Adendo" ativa="True" genero="o"/>
+  <sigla tipoSigla="APJ       " descricao="Anteprojeto" ativa="True" genero="o"/>
+  <sigla tipoSigla="ATC       " descricao="Ato Convocatório" ativa="True" genero="o"/>
+  <sigla tipoSigla="ATOP      " descricao="Ato do Presidente" ativa="False" genero="o"/>
+  <sigla tipoSigla="AV        " descricao="Aviso" ativa="True" genero="o"/>
+  <sigla tipoSigla="AVN       " descricao="Aviso (CN)" ativa="True" genero="o"/>
+  <sigla tipoSigla="CAC       " descricao="Comunicado de alteração do controle societário" ativa="True" genero="o"/>
+  <sigla tipoSigla="CAE       " descricao="Relatório de Atividades" ativa="True" genero="o"/>
+  <sigla tipoSigla="CAE       " descricao="Relatório" ativa="True" genero="o"/>
+  <sigla tipoSigla="CCN       " descricao="Consulta do Congresso Nacional" ativa="True" genero="a"/>
+  <sigla tipoSigla="COI       " descricao="Relatório do COI" ativa="True" genero="o"/>
+  <sigla tipoSigla="CON       " descricao="Consulta" ativa="True" genero="a"/>
+  <sigla tipoSigla="CST       " descricao="CST" ativa="False" genero="o"/>
+  <sigla tipoSigla="CVO       " descricao="Complementação de Voto" ativa="True" genero="a"/>
+  <sigla tipoSigla="CVR       " descricao="Contestação ao Voto do Relator" ativa="True" genero="a"/>
+  <sigla tipoSigla="DCR       " descricao="Denúncia por crime de responsabilidade" ativa="True" genero="a"/>
+  <sigla tipoSigla="DEC       " descricao="Decisão" ativa="True" genero="a"/>
+  <sigla tipoSigla="DEN       " descricao="Denúncia" ativa="True" genero="a"/>
+  <sigla tipoSigla="DIS       " descricao="Discurso" ativa="True" genero="o"/>
+  <sigla tipoSigla="DOC       " descricao="Documentos internos" ativa="True" genero="o"/>
+  <sigla tipoSigla="DTQ       " descricao="Destaque" ativa="True" genero="o"/>
+  <sigla tipoSigla="DVT       " descricao="Declaração de Voto" ativa="True" genero="a"/>
+  <sigla tipoSigla="EAG       " descricao="Emenda Substitutiva Aglutinativa Global" ativa="True" genero="a"/>
+  <sigla tipoSigla="EMA       " descricao="Emenda Aglutinativa de Plenário" ativa="True" genero="a"/>
+  <sigla tipoSigla="EMC       " descricao="Emenda na Comissão" ativa="True" genero="a"/>
+  <sigla tipoSigla="EMD       " descricao="Emenda" ativa="True" genero="a"/>
+  <sigla tipoSigla="EML       " descricao="Emenda à LDO" ativa="True" genero="a"/>
+  <sigla tipoSigla="EMO       " descricao="Emenda ao Orçamento" ativa="True" genero="a"/>
+  <sigla tipoSigla="EMP       " descricao="Emenda de Plenário" ativa="True" genero="a"/>
+  <sigla tipoSigla="EMR       " descricao="Emenda de Relator" ativa="True" genero="a"/>
+  <sigla tipoSigla="EMRP      " descricao="Emenda de Relator Parcial" ativa="True" genero="a"/>
+  <sigla tipoSigla="EMS       " descricao="Emenda/Substitutivo do Senado" ativa="True" genero="a"/>
+  <sigla tipoSigla="EPP       " descricao="Emenda ao Plano Plurianual" ativa="True" genero="a"/>
+  <sigla tipoSigla="ERD       " descricao="Emenda de Redação" ativa="True" genero="a"/>
+  <sigla tipoSigla="ERR       " descricao="Errata" ativa="True" genero="a"/>
+  <sigla tipoSigla="ESB       " descricao="Emenda ao Substitutivo" ativa="True" genero="a"/>
+  <sigla tipoSigla="ESP       " descricao="Emenda Substitutiva de Plenário" ativa="True" genero="a"/>
+  <sigla tipoSigla="EXP       " descricao="Exposição" ativa="False" genero="o"/>
+  <sigla tipoSigla="IAN       " descricao="IAN" ativa="False" genero="o"/>
+  <sigla tipoSigla="INA       " descricao="Indicação de Autoridade" ativa="True" genero="a"/>
+  <sigla tipoSigla="INC       " descricao="Indicação" ativa="True" genero="a"/>
+  <sigla tipoSigla="MAN       " descricao="Manifestação do Relator" ativa="True" genero="a"/>
+  <sigla tipoSigla="MCN       " descricao="Mensagem (CN)" ativa="True" genero="o"/>
+  <sigla tipoSigla="MMP       " descricao="Mensagem do Ministério Público da União." ativa="True" genero="a"/>
+  <sigla tipoSigla="MPV       " descricao="Medida Provisória" ativa="True" genero="a"/>
+  <sigla tipoSigla="MSC       " descricao="Mensagem" ativa="True" genero="a"/>
+  <sigla tipoSigla="MSF       " descricao="Mensagem (SF)" ativa="True" genero="a"/>
+  <sigla tipoSigla="MSG       " descricao="Mensagem (CN)" ativa="True" genero="a"/>
+  <sigla tipoSigla="MST       " descricao="Mensagem do Supremo Tribunal Federal" ativa="True" genero="a"/>
+  <sigla tipoSigla="MTC       " descricao="Mensagem do Tribunal de Contas da União" ativa="True" genero="a"/>
+  <sigla tipoSigla="NIC       " descricao="Norma Interna" ativa="True" genero="a"/>
+  <sigla tipoSigla="NINF      " descricao="Não Informada" ativa="False" genero="o"/>
+  <sigla tipoSigla="OBJ       " descricao="Objeto de Deliberação" ativa="True" genero="a"/>
+  <sigla tipoSigla="OF        " descricao="Ofício" ativa="True" genero="o"/>
+  <sigla tipoSigla="OF.       " descricao="Ofício Externo" ativa="True" genero="o"/>
+  <sigla tipoSigla="OFN       " descricao="Ofício (CN)" ativa="True" genero="o"/>
+  <sigla tipoSigla="OFS       " descricao="Ofício do Senado Federal" ativa="True" genero="o"/>
+  <sigla tipoSigla="OFT       " descricao="OFT" ativa="False" genero="o"/>
+  <sigla tipoSigla="P.C       " descricao="Parecer (CD)" ativa="True" genero="o"/>
+  <sigla tipoSigla="PAR       " descricao="Parecer de Comissão" ativa="True" genero="o"/>
+  <sigla tipoSigla="PARF      " descricao="Parecer de Comissão para Redação Final" ativa="True" genero="o"/>
+  <sigla tipoSigla="PCA       " descricao="PCA" ativa="False" genero="o"/>
+  <sigla tipoSigla="PDA       " descricao="PDA" ativa="False" genero="o"/>
+  <sigla tipoSigla="PDC       " descricao="Projeto de Decreto Legislativo" ativa="True" genero="o"/>
+  <sigla tipoSigla="PDN       " descricao="Projeto de Decreto Legislativo (CN)" ativa="True" genero="o"/>
+  <sigla tipoSigla="PDS       " descricao="Projeto de Decreto Legislativo (SF)" ativa="True" genero="o"/>
+  <sigla tipoSigla="PEA       " descricao="Parecer à Emenda Aglutinativa" ativa="True" genero="o"/>
+  <sigla tipoSigla="PEC       " descricao="Proposta de Emenda à Constituição" ativa="True" genero="a"/>
+  <sigla tipoSigla="PEP       " descricao="Parecer às Emendas de Plenario" ativa="True" genero="o"/>
+  <sigla tipoSigla="PES       " descricao="Parecer às emendas apresentadas ao Substitutivo do Relator" ativa="True" genero="o"/>
+  <sigla tipoSigla="PET       " descricao="Petição" ativa="True" genero="a"/>
+  <sigla tipoSigla="PFC       " descricao="Proposta de Fiscalização e Controle" ativa="True" genero="a"/>
+  <sigla tipoSigla="PL        " descricao="Projeto de Lei" ativa="True" genero="o"/>
+  <sigla tipoSigla="PLC       " descricao="Projeto de Lei da Câmara dos Deputados (SF)" ativa="True" genero="o"/>
+  <sigla tipoSigla="PLN       " descricao="Projeto de Lei (CN)" ativa="True" genero="o"/>
+  <sigla tipoSigla="PLOA      " descricao="Projeto de lei orçamentária Anual" ativa="False" genero="o"/>
+  <sigla tipoSigla="PLP       " descricao="Projeto de Lei Complementar" ativa="True" genero="o"/>
+  <sigla tipoSigla="PLS       " descricao="Projeto de Lei do Senado Federal" ativa="True" genero="o"/>
+  <sigla tipoSigla="PLV       " descricao="Projeto de Lei de Conversão" ativa="True" genero="o"/>
+  <sigla tipoSigla="PPP       " descricao="Parecer Proferido em Plenário" ativa="True" genero="o"/>
+  <sigla tipoSigla="PPP       " descricao="Parecer Proferido em Plenário - Notas Taquigráficas" ativa="True" genero="o"/>
+  <sigla tipoSigla="PPR       " descricao="Parecer Reformulado de Plenário" ativa="True" genero="o"/>
+  <sigla tipoSigla="PRA       " descricao="PRA" ativa="False" genero="o"/>
+  <sigla tipoSigla="PRC       " descricao="Projeto de Resolução" ativa="True" genero="o"/>
+  <sigla tipoSigla="PRF       " descricao="Projeto de Resolução do Senado Federal" ativa="True" genero="o"/>
+  <sigla tipoSigla="PRL       " descricao="Parecer do Relator" ativa="True" genero="o"/>
+  <sigla tipoSigla="PRN       " descricao="Projeto de Resolução do Congresso Nacional" ativa="True" genero="o"/>
+  <sigla tipoSigla="PRO       " descricao="Proposta" ativa="True" genero="a"/>
+  <sigla tipoSigla="PRP       " descricao="Parecer do Relator Parcial" ativa="True" genero="o"/>
+  <sigla tipoSigla="PRR       " descricao="Parecer Reformulado" ativa="True" genero="o"/>
+  <sigla tipoSigla="PRST      " descricao="Parecer à Redação para o Segundo Turno" ativa="True" genero="o"/>
+  <sigla tipoSigla="PRT       " descricao="Parecer Técnico" ativa="True" genero="o"/>
+  <sigla tipoSigla="PRV       " descricao="Parecer Vencedor" ativa="True" genero="o"/>
+  <sigla tipoSigla="PRVP      " descricao="Proposta de Redação do Vencido em Primeiro Turno" ativa="True" genero="o"/>
+  <sigla tipoSigla="PSS       " descricao="Parecer às Emendas ou ao Substitutivo do Senado - Notas Taquigráficas" ativa="True" genero="o"/>
+  <sigla tipoSigla="PSS       " descricao="Parecer às Emendas ou ao Substitutivo do Senado" ativa="True" genero="o"/>
+  <sigla tipoSigla="R.C       " descricao="Recurso do Congresso Nacional" ativa="True" genero="o"/>
+  <sigla tipoSigla="RAT       " descricao="Relatório Setorial" ativa="True" genero="o"/>
+  <sigla tipoSigla="RCM       " descricao="RCM" ativa="False" genero="o"/>
+  <sigla tipoSigla="RCP       " descricao="Requerimento de Instituição de CPI" ativa="True" genero="o"/>
+  <sigla tipoSigla="RDF       " descricao="Redação Final" ativa="True" genero="a"/>
+  <sigla tipoSigla="RDV       " descricao="Redação do Vencido" ativa="True" genero="a"/>
+  <sigla tipoSigla="REC       " descricao="Recurso" ativa="True" genero="o"/>
+  <sigla tipoSigla="REL       " descricao="Relatório" ativa="True" genero="a"/>
+  <sigla tipoSigla="REM       " descricao="Reclamação" ativa="True" genero="a"/>
+  <sigla tipoSigla="REP       " descricao="Representação" ativa="True" genero="a"/>
+  <sigla tipoSigla="REQ       " descricao="Requerimento" ativa="True" genero="o"/>
+  <sigla tipoSigla="RFP       " descricao="Refomulação de Parecer - art. 130, parágrafo único do RICD." ativa="False" genero="a"/>
+  <sigla tipoSigla="RIC       " descricao="Requerimento de Informação" ativa="True" genero="o"/>
+  <sigla tipoSigla="RIN       " descricao="Requerimento de Resolução Interna" ativa="True" genero="a"/>
+  <sigla tipoSigla="RLF       " descricao="Relatório Final" ativa="True" genero="o"/>
+  <sigla tipoSigla="RLP       " descricao="Relatório Prévio" ativa="True" genero="o"/>
+  <sigla tipoSigla="RLP(R)    " descricao="Relatório Prévio Reformulado" ativa="True" genero="o"/>
+  <sigla tipoSigla="RLP(V)    " descricao="Relatório Prévio Vencedor" ativa="True" genero="o"/>
+  <sigla tipoSigla="RPA       " descricao="Relatório Parcial" ativa="True" genero="o"/>
+  <sigla tipoSigla="RPL       " descricao="Relatório Preliminar" ativa="True" genero="o"/>
+  <sigla tipoSigla="RPLE      " descricao="Relatório Preliminar com Emendas" ativa="True" genero="o"/>
+  <sigla tipoSigla="RPR       " descricao="Representação" ativa="False" genero="a"/>
+  <sigla tipoSigla="RQA       " descricao="RQA" ativa="False" genero="o"/>
+  <sigla tipoSigla="RQC       " descricao="RQC" ativa="False" genero="o"/>
+  <sigla tipoSigla="RQN       " descricao="Requerimento do Congresso Nacional" ativa="False" genero="o"/>
+  <sigla tipoSigla="RQP       " descricao="Requerimento de Plenário" ativa="True" genero="o"/>
+  <sigla tipoSigla="RRC       " descricao="Relatório de Receita" ativa="True" genero="o"/>
+  <sigla tipoSigla="RRL       " descricao="Relatório do Relator" ativa="True" genero="o"/>
+  <sigla tipoSigla="RST       " descricao="Redação para o segundo turno" ativa="True" genero="a"/>
+  <sigla tipoSigla="RTV       " descricao="Mensagem de Rádio e Televisão" ativa="False" genero="a"/>
+  <sigla tipoSigla="SAP       " descricao="Subemenda Aglutinativa Substitutiva de Plenário" ativa="False" genero="a"/>
+  <sigla tipoSigla="SBE       " descricao="Subemenda" ativa="True" genero="a"/>
+  <sigla tipoSigla="SBT       " descricao="Substitutivo" ativa="True" genero="o"/>
+  <sigla tipoSigla="SDL       " descricao="Sugestão de Emenda à LDO - CLP" ativa="True" genero="a"/>
+  <sigla tipoSigla="SGM       " descricao="Ofício da Mesa" ativa="False" genero="o"/>
+  <sigla tipoSigla="SIT       " descricao="Solicitação de Informação ao TCU" ativa="True" genero="a"/>
+  <sigla tipoSigla="SLD       " descricao="Sugestão de Emenda à LDO - Comissões" ativa="True" genero="a"/>
+  <sigla tipoSigla="SOA       " descricao="Sugestão de Emenda ao Orçamento - CLP" ativa="True" genero="a"/>
+  <sigla tipoSigla="SOR       " descricao="Sugestão de Emenda ao Orçamento - Comissões" ativa="True" genero="a"/>
+  <sigla tipoSigla="SPA       " descricao="Sugestão de Emenda ao PPA - CLP" ativa="True" genero="a"/>
+  <sigla tipoSigla="SPA-R     " descricao="Sugestão de Emenda ao PPA - revisão (CLP)" ativa="True" genero="a"/>
+  <sigla tipoSigla="SPP       " descricao="Sugestão de Emenda ao PPA - Comissões" ativa="True" genero="a"/>
+  <sigla tipoSigla="SPP-R     " descricao="Sugestão de Emenda ao PPA - revisão (Comissões)" ativa="True" genero="o"/>
+  <sigla tipoSigla="SRAP      " descricao="Sugestão de Requerimento de Audiência Pública" ativa="False" genero="o"/>
+  <sigla tipoSigla="SRL       " descricao="Sugestão de Emenda a Relatório" ativa="True" genero="a"/>
+  <sigla tipoSigla="SSP       " descricao="Subemenda Substitutiva de Plenário" ativa="True" genero="a"/>
+  <sigla tipoSigla="STF       " descricao="Ofício" ativa="False" genero="o"/>
+  <sigla tipoSigla="SUC       " descricao="Sugestão a Projeto de Consolidação de Leis" ativa="True" genero="a"/>
+  <sigla tipoSigla="SUG       " descricao="Sugestão" ativa="True" genero="a"/>
+  <sigla tipoSigla="SUM       " descricao="Súmula" ativa="True" genero="a"/>
+  <sigla tipoSigla="TER       " descricao="Termo de Implementação" ativa="True" genero="o"/>
+  <sigla tipoSigla="TVR       " descricao="Ato de Concessão e Renovação de Concessão de Emissora de Rádio e Televisão" ativa="True" genero="a"/>
+  <sigla tipoSigla="VTS       " descricao="Voto em Separado" ativa="True" genero="o"/>
+</siglas>

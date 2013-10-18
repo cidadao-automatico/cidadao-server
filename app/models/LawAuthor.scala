@@ -45,14 +45,23 @@ object LawAuthor {
     }
   }
 
-  def save(name: String) {
+  def findByName(name: Long): Option[LawAuthor] = {
     DB.withConnection { implicit connection =>
-      SQL("""
+      SQL("select * from law_authors where name={name}").on(
+        'name -> name).as(LawAuthor.simple singleOpt)
+    }
+  }
+
+  def save(name: String) : LawAuthor = {
+    DB.withConnection { implicit connection =>
+      val idOpt: Option[Long] = SQL("""
 				INSERT INTO law_authors(name)
 				VALUES({name})
 				""")
         .on(
           'name -> name).executeInsert()
+
+      idOpt.map { id => LawAuthor(Id(id), name) }.get
     }
   }
 

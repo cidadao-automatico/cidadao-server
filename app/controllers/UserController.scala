@@ -30,24 +30,27 @@ object UserController extends Controller with securesocial.core.SecureSocial {
   }
 
   //GET
-  def recommendLaws(user_id: Long) = Action { implicit request =>
-    var user = User.findById(user_id)
-    user match {
-      case Some(user) =>
+  def recommendLaws() = SecuredAction { implicit request =>    
+
+    request.user match {
+      case user:Identity => 
         var lawRecommender = new LawRecommender()
-        Ok(toJson(lawRecommender.recommendLawsForUser(user)))
-      case _ => Ok("")
+        Ok(toJson(lawRecommender.recommendLawsForUser(user)))      
     }
 
   }
 
   //POST
-  def addLawRegion(user_id: Long, region_id: Long) = Action {
-    Ok(toJson(User.findById(1)))
+  def addLawRegion(region_id: Long) = SecuredAction { implicit request => 
+    request.user match {
+      case user: Identity => Ok(toJson(User.findById(1)))
+    }    
   }
 
   //POST
-  def addTag(user_id: Long, tag_id: Long) = Action {
-    Ok(toJson(User.findById(1)))
+  def addTag(tag_id: Long) = SecuredAction { implicit request =>
+    request.user match {
+      case user: Identity => Ok(toJson(User.findById(1)))
+    }    
   }
 }

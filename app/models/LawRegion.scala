@@ -18,6 +18,10 @@ case class LawRegion(id: Pk[Long] = NotAssigned, description: String, typeName: 
 
 object LawRegion {
 
+  val COUNTRY: String = "COUNTRY"
+  val STATE: String = "STATE"
+  val CITY: String = "CITY"
+
   implicit object PkFormat extends Format[Pk[Long]] {
     def reads(json: JsValue): JsResult[Pk[Long]] = JsSuccess(
       json.asOpt[Long].map(id => Id(id)).getOrElse(NotAssigned))
@@ -49,11 +53,19 @@ object LawRegion {
     }
   }
 
-  def save(description: String, typeName: String, parent: Option[LawRegion]) {
+  def findByDescription(description: String): Option[LawRegion] = {
+    DB.withConnection { implicit connection =>
+      SQL("select * from law_regions where description={description}").on(
+        'description -> description).as(LawRegion.simple singleOpt)
+    }
+  }
+
+  def save(description: String, typeName: String, parent: Option[LawRegion]) : LawRegion = {
+    var idOpt: Option[Long] = None
     parent match {
       case Some(parentRegion) =>
         DB.withConnection { implicit connection =>
-          SQL("""
+          idOpt = SQL("""
               INSERT INTO law_regions(description, type_name, region_parent_id)
               VALUES({description},{type_name},{region_parent_id})
               """)
@@ -61,18 +73,25 @@ object LawRegion {
               'description -> description,
               'type_name -> typeName,
               'region_parent_id -> parentRegion.id).executeInsert()
+
+          idOpt.map { id => LawRegion(Id(id), description, typeName, Option(parentRegion.id.get)) }.get
         }
       case _ =>
         DB.withConnection { implicit connection =>
-          SQL("""
+          idOpt = SQL("""
               INSERT INTO law_regions(description, type_name)
               VALUES({description}, {type_name})
               """)
             .on(
               'description -> description,
               'type_name -> typeName).executeInsert()
+
+          idOpt.map { id => LawRegion(Id(id), description, typeName, None) }.get
         }
     }
+
+
+    
 
   }
 

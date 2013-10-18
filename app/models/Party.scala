@@ -61,4 +61,12 @@ object Party {
           'id -> id).executeInsert()
     }
   }
+
+  def findByName(name: String): Option[Party] = {
+    DB.withConnection { implicit connection =>
+      SQL("select * from parties where name={name} LIMIT 1").on(
+        'name -> name).as(Party.simple singleOpt)
+    }
+
+  }
 }
