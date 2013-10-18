@@ -18,18 +18,18 @@ import java.util.Date
 
 object LawProposalController extends Controller {
 
-	def show(law_id: Long) = Action { implicit request =>
+  def show(law_id: Long) = Action { implicit request =>
     var lawProposal = LawProposal.findById(law_id)
     Ok(toJson(lawProposal.get))
     // lawProposal match{
     //   case Some(lawProposal) => Ok(toJson(lawProposal))
     //   case _ => Ok("")
     // }   
-   }
+  }
 
   def randomLaw() = Action { implicit request =>
-    LawProposal.findRandom().map{ lawProposal =>
-     Ok(toJson(lawProposal))
-     }.getOrElse(NotFound)
-   }
- }
+    LawProposal.findRandom().map { lawProposal =>
+      Ok(toJson(lawProposal))
+    }.getOrElse(NotFound)
+  }
+}

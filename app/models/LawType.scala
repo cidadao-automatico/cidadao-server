@@ -12,52 +12,67 @@ import java.util.Date
 import anorm._
 import anorm.SqlParser._
 
-case class LawType (id: Pk[Long], description: String)
+case class LawType(id: Pk[Long], description: String)
 
-object LawType {	
+object LawType {
 
   implicit object PkFormat extends Format[Pk[Long]] {
-        def reads(json: JsValue): JsResult[Pk[Long]] = JsSuccess (
-            json.asOpt[Long].map(id => Id(id)).getOrElse(NotAssigned)
-        )
-        def writes(id: Pk[Long]): JsValue = id.map(JsNumber(_)).getOrElse(JsNull)
+    def reads(json: JsValue): JsResult[Pk[Long]] = JsSuccess(
+      json.asOpt[Long].map(id => Id(id)).getOrElse(NotAssigned))
+    def writes(id: Pk[Long]): JsValue = id.map(JsNumber(_)).getOrElse(JsNull)
   }
 
-  implicit val lawTypeWrites = Json.writes[LawType]  
+  implicit val lawTypeWrites = Json.writes[LawType]
 
-	val simple = {
-		(get[Pk[Long]]("id") ~			
-      get[String]("description")
-			) map {
-			case id ~ description =>
-			LawType(id,description)
-		}
-	}
-
-	def all(): Seq[LawType] = {
-		DB.withConnection { implicit connection =>
-	  		SQL("select * from law_types").as(LawType.simple *)
-		}
+  val simple = {
+    (get[Pk[Long]]("id") ~
+      get[String]("description")) map {
+        case id ~ description =>
+          LawType(id, description)
+      }
   }
 
-  def findById(id: Long) : Option[LawType] ={
-   DB.withConnection { implicit connection =>
-        SQL("select * from law_types where id={id}").on(
-          'id -> id
-          ).as(LawType.simple singleOpt)
-    } 
+  def all(): Seq[LawType] = {
+    DB.withConnection { implicit connection =>
+      SQL("select * from law_types").as(LawType.simple *)
+    }
   }
 
-  	def save(description: String){
-  		DB.withConnection{ implicit connection => 
-  			SQL("""
+  def findById(id: Long): Option[LawType] = {
+    DB.withConnection { implicit connection =>
+      SQL("select * from law_types where id={id}").on(
+        'id -> id).as(LawType.simple singleOpt)
+    }
+  }
+
+  def findByDescription(description: Long): Option[LawType] = {
+    DB.withConnection { implicit connection =>
+      SQL("select * from law_types where description={description}").on(
+        'description -> description).as(LawType.simple singleOpt)
+    }
+  }
+
+  def save(description: String): LawType = {
+    DB.withConnection { implicit connection =>
+      val idOpt: Option[Long] = SQL("""
   				INSERT INTO law_types(description)
   				VALUES({description})
   				""")
-  			.on(
-          'description -> description
-  				).executeInsert()
-  		}
-  	}
+        .on(
+          'description -> description).executeInsert()
 
+      idOpt.map { id => LawType(Id(id), description) }.get
+    }
+  }
+
+  def deleteById(id: Long) {
+    DB.withConnection { implicit connection =>
+      SQL("""
+        DELETE FROM law_types
+        WHERE id={id}
+        """)
+        .on(
+          'id -> id).executeInsert()
+    }
+  }
 }

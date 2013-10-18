@@ -12,50 +12,57 @@ import java.util.Date
 import anorm._
 import anorm.SqlParser._
 
-case class LawPriority (id: Pk[Long], description: String)
+case class LawPriority(id: Pk[Long], description: String)
 
-object LawPriority {	
+object LawPriority {
 
   implicit object PkFormat extends Format[Pk[Long]] {
-        def reads(json: JsValue): JsResult[Pk[Long]] = JsSuccess (
-            json.asOpt[Long].map(id => Id(id)).getOrElse(NotAssigned)
-        )
-        def writes(id: Pk[Long]): JsValue = id.map(JsNumber(_)).getOrElse(JsNull)
+    def reads(json: JsValue): JsResult[Pk[Long]] = JsSuccess(
+      json.asOpt[Long].map(id => Id(id)).getOrElse(NotAssigned))
+    def writes(id: Pk[Long]): JsValue = id.map(JsNumber(_)).getOrElse(JsNull)
   }
 
-	val simple = {
-		(get[Pk[Long]]("id") ~			
-      get[String]("description")
-			) map {
-			case id ~ description =>
-			LawPriority(id,description)
-		}
-	}
-
-	def all(): Seq[LawPriority] = {
-		DB.withConnection { implicit connection =>
-	  		SQL("select * from law_priorities").as(LawPriority.simple *)
-		}
+  val simple = {
+    (get[Pk[Long]]("id") ~
+      get[String]("description")) map {
+        case id ~ description =>
+          LawPriority(id, description)
+      }
   }
 
-  def findById(id: Long) : Option[LawPriority] ={
-   DB.withConnection { implicit connection =>
-        SQL("select * from law_priorities where id={id}").on(
-          'id -> id
-          ).as(LawPriority.simple singleOpt)
-    } 
+  def all(): Seq[LawPriority] = {
+    DB.withConnection { implicit connection =>
+      SQL("select * from law_priorities").as(LawPriority.simple *)
+    }
   }
 
-  	def save(description: String){
-  		DB.withConnection{ implicit connection => 
-  			SQL("""
+  def findById(id: Long): Option[LawPriority] = {
+    DB.withConnection { implicit connection =>
+      SQL("select * from law_priorities where id={id}").on(
+        'id -> id).as(LawPriority.simple singleOpt)
+    }
+  }
+
+  def save(description: String) {
+    DB.withConnection { implicit connection =>
+      SQL("""
   				INSERT INTO law_priorities(description)
   				VALUES({description})
   				""")
-  			.on(
-          'description -> description
-  				).executeInsert()
-  		}
-  	}
+        .on(
+          'description -> description).executeInsert()
+    }
+  }
+
+  def deleteById(id: Long) {
+    DB.withConnection { implicit connection =>
+      SQL("""
+        DELETE FROM law_priorities
+        WHERE id={id}
+        """)
+        .on(
+          'id -> id).executeInsert()
+    }
+  }
 
 }

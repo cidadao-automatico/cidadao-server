@@ -1,0 +1,3560 @@
+[
+    {
+        "party": "DEM",
+        "state": "PR",
+        "name": "ABELARDO LUPION",
+        "id": "522187"
+    },
+    {
+        "party": "PRB",
+        "state": "BA",
+        "name": "ACELINO POP\u00d3",
+        "id": "530659"
+    },
+    {
+        "party": "PSD",
+        "state": "MG",
+        "name": "ADEMIR CAMILO",
+        "id": "521210"
+    },
+    {
+        "party": "PMDB",
+        "state": "RJ",
+        "name": "ADRIAN",
+        "id": "530135"
+    },
+    {
+        "party": "PR",
+        "state": "MG",
+        "name": "AELTON FREITAS",
+        "id": "525500"
+    },
+    {
+        "party": "PP",
+        "state": "RS",
+        "name": "AFONSO HAMM",
+        "id": "523068"
+    },
+    {
+        "party": "PP",
+        "state": "PB",
+        "name": "AGUINALDO RIBEIRO",
+        "id": "530093"
+    },
+    {
+        "party": "PMDB",
+        "state": "MA",
+        "name": "ALBERTO FILHO",
+        "id": "530059"
+    },
+    {
+        "party": "PSDB",
+        "state": "SP",
+        "name": "ALBERTO MOUR\u00c3O",
+        "id": "533312"
+    },
+    {
+        "party": "PMDB",
+        "state": "RS",
+        "name": "ALCEU MOREIRA",
+        "id": "530164"
+    },
+    {
+        "party": "PT",
+        "state": "RJ",
+        "name": "ALESSANDRO MOLON",
+        "id": "530130"
+    },
+    {
+        "party": "PTB",
+        "state": "PR",
+        "name": "ALEX CANZIANI",
+        "id": "522236"
+    },
+    {
+        "party": "DEM",
+        "state": "SP",
+        "name": "ALEXANDRE LEITE",
+        "id": "530196"
+    },
+    {
+        "party": "PSB",
+        "state": "RS",
+        "name": "ALEXANDRE ROSO",
+        "id": "530165"
+    },
+    {
+        "party": "PMDB",
+        "state": "RJ",
+        "name": "ALEXANDRE SANTOS",
+        "id": "522696"
+    },
+    {
+        "party": "PSDB",
+        "state": "PR",
+        "name": "ALFREDO KAEFER",
+        "id": "526687"
+    },
+    {
+        "party": "PV",
+        "state": "RJ",
+        "name": "ALFREDO SIRKIS",
+        "id": "530143"
+    },
+    {
+        "party": "PCdoB",
+        "state": "BA",
+        "name": "ALICE PORTUGAL",
+        "id": "520406"
+    },
+    {
+        "party": "PP",
+        "state": "SP",
+        "name": "ALINE CORR\u00caA",
+        "id": "528183"
+    },
+    {
+        "party": "PPS",
+        "state": "SE",
+        "name": "ALMEIDA LIMA",
+        "id": "530181"
+    },
+    {
+        "party": "PT",
+        "state": "BA",
+        "name": "AMAURI TEIXEIRA",
+        "id": "530020"
+    },
+    {
+        "party": "PR",
+        "state": "PE",
+        "name": "ANDERSON FERREIRA",
+        "id": "530104"
+    },
+    {
+        "party": "PSDB",
+        "state": "PA",
+        "name": "ANDR\u00c9 DIAS",
+        "id": "531759"
+    },
+    {
+        "party": "PDT",
+        "state": "CE",
+        "name": "ANDR\u00c9 FIGUEIREDO",
+        "id": "530033"
+    },
+    {
+        "party": "PSC",
+        "state": "SE",
+        "name": "ANDRE MOURA",
+        "id": "530182"
+    },
+    {
+        "party": "PT",
+        "state": "PR",
+        "name": "ANDRE VARGAS",
+        "id": "526610"
+    },
+    {
+        "party": "PMDB",
+        "state": "PR",
+        "name": "ANDR\u00c9 ZACHAROW",
+        "id": "522059"
+    },
+    {
+        "party": "PSDB",
+        "state": "RJ",
+        "name": "ANDREIA ZITO",
+        "id": "526874"
+    },
+    {
+        "party": "PDT",
+        "state": "TO",
+        "name": "\u00c2NGELO AGNOLIN",
+        "id": "530213"
+    },
+    {
+        "party": "PT",
+        "state": "PR",
+        "name": "ANGELO VANHONI",
+        "id": "526612"
+    },
+    {
+        "party": "PMDB",
+        "state": "CE",
+        "name": "AN\u00cdBAL GOMES",
+        "id": "520429"
+    },
+    {
+        "party": "PR",
+        "state": "RJ",
+        "name": "ANTHONY GAROTINHO",
+        "id": "530137"
+    },
+    {
+        "party": "PSC",
+        "state": "AC",
+        "name": "ANT\u00d4NIA L\u00daCIA",
+        "id": "530002"
+    },
+    {
+        "party": "PMDB",
+        "state": "MG",
+        "name": "ANT\u00d4NIO ANDRADE",
+        "id": "525539"
+    },
+    {
+        "party": "PSB",
+        "state": "CE",
+        "name": "ANTONIO BALHMANN",
+        "id": "530038"
+    },
+    {
+        "party": "PTB",
+        "state": "BA",
+        "name": "ANTONIO BRITO",
+        "id": "530024"
+    },
+    {
+        "party": "PRB",
+        "state": "SP",
+        "name": "ANTONIO BULH\u00d5ES",
+        "id": "528219"
+    },
+    {
+        "party": "DEM",
+        "state": "BA",
+        "name": "ANTONIO CARLOS MAGALH\u00c3ES NETO",
+        "id": "520342"
+    },
+    {
+        "party": "PSB",
+        "state": "SP",
+        "name": "ABELARDO CAMARINHA",
+        "id": "528580"
+    },
+    {
+        "party": "PSDB",
+        "state": "SP",
+        "name": "ANTONIO CARLOS MENDES THAME",
+        "id": "524132"
+    },
+    {
+        "party": "PSDB",
+        "state": "BA",
+        "name": "ANTONIO IMBASSAHY",
+        "id": "530031"
+    },
+    {
+        "party": "PV",
+        "state": "MG",
+        "name": "ANT\u00d4NIO ROBERTO",
+        "id": "525549"
+    },
+    {
+        "party": "PR",
+        "state": "MG",
+        "name": "ARACELY DE PAULA",
+        "id": "521241"
+    },
+    {
+        "party": "PSB",
+        "state": "CE",
+        "name": "ARIOSTO HOLANDA",
+        "id": "520520"
+    },
+    {
+        "party": "PT",
+        "state": "SP",
+        "name": "ARLINDO CHINAGLIA",
+        "id": "523540"
+    },
+    {
+        "party": "PSD",
+        "state": "GO",
+        "name": "ARMANDO VERG\u00cdLIO",
+        "id": "530057"
+    },
+    {
+        "party": "PTB",
+        "state": "SP",
+        "name": "ARNALDO FARIA DE S\u00c1",
+        "id": "523606"
+    },
+    {
+        "party": "PPS",
+        "state": "SP",
+        "name": "ARNALDO JARDIM",
+        "id": "528260"
+    },
+    {
+        "party": "PPS",
+        "state": "PA",
+        "name": "ARNALDO JORDY",
+        "id": "530092"
+    },
+    {
+        "party": "PTB",
+        "state": "CE",
+        "name": "ARNON BEZERRA",
+        "id": "520515"
+    },
+    {
+        "party": "PSD",
+        "state": "RJ",
+        "name": "AROLDE DE OLIVEIRA",
+        "id": "522534"
+    },
+    {
+        "party": "PP",
+        "state": "AL",
+        "name": "ARTHUR LIRA",
+        "id": "530004"
+    },
+    {
+        "party": "PMDB",
+        "state": "BA",
+        "name": "ARTHUR OLIVEIRA MAIA",
+        "id": "530025"
+    },
+    {
+        "party": "PT",
+        "state": "CE",
+        "name": "ARTUR BRUNO",
+        "id": "530034"
+    },
+    {
+        "party": "PMDB",
+        "state": "PA",
+        "name": "ASDRUBAL BENTES",
+        "id": "521603"
+    },
+    {
+        "party": "PT",
+        "state": "PI",
+        "name": "ASSIS CARVALHO",
+        "id": "530112"
+    },
+    {
+        "party": "PT",
+        "state": "PR",
+        "name": "ASSIS DO COUTO",
+        "id": "522071"
+    },
+    {
+        "party": "PCdoB",
+        "state": "RS",
+        "name": "ASSIS MELO",
+        "id": "530168"
+    },
+    {
+        "party": "PSD",
+        "state": "AM",
+        "name": "\u00c1TILA LINS",
+        "id": "520172"
+    },
+    {
+        "party": "PSB",
+        "state": "ES",
+        "name": "AUDIFAX",
+        "id": "530050"
+    },
+    {
+        "party": "PPS",
+        "state": "DF",
+        "name": "AUGUSTO CARVALHO",
+        "id": "530897"
+    },
+    {
+        "party": "DEM",
+        "state": "PE",
+        "name": "AUGUSTO COUTINHO",
+        "id": "530106"
+    },
+    {
+        "party": "PRTB",
+        "state": "RJ",
+        "name": "AUREO",
+        "id": "530141"
+    },
+    {
+        "party": "PT",
+        "state": "RJ",
+        "name": "BENEDITA DA SILVA",
+        "id": "530131"
+    },
+    {
+        "party": "PMDB",
+        "state": "PB",
+        "name": "BENJAMIN MARANH\u00c3O",
+        "id": "530097"
+    },
+    {
+        "party": "PSDB",
+        "state": "RR",
+        "name": "BERINHO BANTIM",
+        "id": "530157"
+    },
+    {
+        "party": "PR",
+        "state": "MG",
+        "name": "BERNARDO SANTANA DE VASCONCELLOS",
+        "id": "530074"
+    },
+    {
+        "party": "PT",
+        "state": "PA",
+        "name": "BETO FARO",
+        "id": "526207"
+    },
+    {
+        "party": "PP",
+        "state": "SP",
+        "name": "BETO MANSUR",
+        "id": "528887"
+    },
+    {
+        "party": "PT",
+        "state": "MS",
+        "name": "BIFFI",
+        "id": "521434"
+    },
+    {
+        "party": "PT",
+        "state": "RS",
+        "name": "BOHN GASS",
+        "id": "530161"
+    },
+    {
+        "party": "PSDB",
+        "state": "MG",
+        "name": "BONIF\u00c1CIO DE ANDRADA",
+        "id": "531197"
+    },
+    {
+        "party": "PDT",
+        "state": "RJ",
+        "name": "BRIZOLA NETO",
+        "id": "532458"
+    },
+    {
+        "party": "PSDB",
+        "state": "SP",
+        "name": "BRUNA FURLAN",
+        "id": "530211"
+    },
+    {
+        "party": "PSDB",
+        "state": "PE",
+        "name": "BRUNO ARA\u00daJO",
+        "id": "526364"
+    },
+    {
+        "party": "PMDB",
+        "state": "ES",
+        "name": "CAMILO COLA",
+        "id": "530941"
+    },
+    {
+        "party": "PT",
+        "state": "SP",
+        "name": "C\u00c2NDIDO VACCAREZZA",
+        "id": "528280"
+    },
+    {
+        "party": "PSDB",
+        "state": "MG",
+        "name": "CARLAILE PEDROSA",
+        "id": "530077"
+    },
+    {
+        "party": "PT",
+        "state": "SP",
+        "name": "CARLINHOS ALMEIDA",
+        "id": "530187"
+    },
+    {
+        "party": "PSDB",
+        "state": "GO",
+        "name": "CARLOS ALBERTO LER\u00c9IA",
+        "id": "520852"
+    },
+    {
+        "party": "PMDB",
+        "state": "MT",
+        "name": "CARLOS BEZERRA",
+        "id": "526056"
+    },
+    {
+        "party": "PSC",
+        "state": "PE",
+        "name": "CARLOS EDUARDO CADOCA",
+        "id": "521814"
+    },
+    {
+        "party": "PP",
+        "state": "RO",
+        "name": "CARLOS MAGNO",
+        "id": "530149"
+    },
+    {
+        "party": "PSDB",
+        "state": "SP",
+        "name": "CARLOS SAMPAIO",
+        "id": "524095"
+    },
+    {
+        "party": "PSD",
+        "state": "AM",
+        "name": "CARLOS SOUZA",
+        "id": "520162"
+    },
+    {
+        "party": "PT",
+        "state": "SP",
+        "name": "CARLOS ZARATTINI",
+        "id": "528288"
+    },
+    {
+        "party": "PPS",
+        "state": "SC",
+        "name": "CARMEN ZANOTTO",
+        "id": "533130"
+    },
+    {
+        "party": "PTB",
+        "state": "AL",
+        "name": "CELIA ROCHA",
+        "id": "530005"
+    },
+    {
+        "party": "PMDB",
+        "state": "SC",
+        "name": "CELSO MALDANER",
+        "id": "528009"
+    },
+    {
+        "party": "PSDB",
+        "state": "ES",
+        "name": "CESAR COLNAGO",
+        "id": "530052"
+    },
+    {
+        "party": "PSD",
+        "state": "TO",
+        "name": "C\u00c9SAR HALUM",
+        "id": "530215"
+    },
+    {
+        "party": "PSOL",
+        "state": "RJ",
+        "name": "CHICO ALENCAR",
+        "id": "522329"
+    },
+    {
+        "party": "PT",
+        "state": "RJ",
+        "name": "CHICO D'ANGELO",
+        "id": "532346"
+    },
+    {
+        "party": "PCdoB",
+        "state": "CE",
+        "name": "CHICO LOPES",
+        "id": "524985"
+    },
+    {
+        "party": "PP",
+        "state": "PR",
+        "name": "CIDA BORGHETTI",
+        "id": "530116"
+    },
+    {
+        "party": "DEM",
+        "state": "BA",
+        "name": "CLAUDIO CAJADO",
+        "id": "520340"
+    },
+    {
+        "party": "PT",
+        "state": "PA",
+        "name": "CL\u00c1UDIO PUTY",
+        "id": "530088"
+    },
+    {
+        "party": "PRB",
+        "state": "MA",
+        "name": "CLEBER VERDE",
+        "id": "525375"
+    },
+    {
+        "party": "PSC",
+        "state": "MA",
+        "name": "COSTA FERREIRA",
+        "id": "531071"
+    },
+    {
+        "party": "PT",
+        "state": "AP",
+        "name": "DALVA FIGUEIREDO",
+        "id": "524733"
+    },
+    {
+        "party": "PDT",
+        "state": "PB",
+        "name": "DAMI\u00c3O FELICIANO",
+        "id": "521713"
+    },
+    {
+        "party": "PCdoB",
+        "state": "BA",
+        "name": "DANIEL ALMEIDA",
+        "id": "520407"
+    },
+    {
+        "party": "PMDB",
+        "state": "CE",
+        "name": "DANILO FORTE",
+        "id": "530035"
+    },
+    {
+        "party": "PSD",
+        "state": "RS",
+        "name": "DANRLEI DE DEUS HINTERHOLZ",
+        "id": "530163"
+    },
+    {
+        "party": "PMDB",
+        "state": "RS",
+        "name": "DARC\u00cdSIO PERONDI",
+        "id": "523144"
+    },
+    {
+        "party": "DEM",
+        "state": "AP",
+        "name": "DAVI ALCOLUMBRE",
+        "id": "520221"
+    },
+    {
+        "party": "PR",
+        "state": "MA",
+        "name": "DAVI ALVES SILVA J\u00daNIOR",
+        "id": "531069"
+    },
+    {
+        "party": "PT",
+        "state": "SC",
+        "name": "D\u00c9CIO LIMA",
+        "id": "528021"
+    },
+    {
+        "party": "PCdoB",
+        "state": "SP",
+        "name": "DELEGADO PROT\u00d3GENES",
+        "id": "530212"
+    },
+    {
+        "party": "PSC",
+        "state": "RJ",
+        "name": "DELEY",
+        "id": "532150"
+    },
+    {
+        "party": "PT",
+        "state": "SP",
+        "name": "DEVANIR RIBEIRO",
+        "id": "523570"
+    },
+    {
+        "party": "PSD",
+        "state": "MG",
+        "name": "DIEGO ANDRADE",
+        "id": "530073"
+    },
+    {
+        "party": "PP",
+        "state": "PR",
+        "name": "DILCEU SPERAFICO",
+        "id": "522042"
+    },
+    {
+        "party": "PP",
+        "state": "MG",
+        "name": "DIMAS FABIANO",
+        "id": "530063"
+    },
+    {
+        "party": "PPS",
+        "state": "SP",
+        "name": "DIMAS RAMALHO",
+        "id": "523769"
+    },
+    {
+        "party": "PT",
+        "state": "MA",
+        "name": "DOMINGOS DUTRA",
+        "id": "525386"
+    },
+    {
+        "party": "PSB",
+        "state": "CE",
+        "name": "DOMINGOS NETO",
+        "id": "530040"
+    },
+    {
+        "party": "PSDB",
+        "state": "MG",
+        "name": "DOMINGOS S\u00c1VIO",
+        "id": "530079"
+    },
+    {
+        "party": "PR",
+        "state": "RJ",
+        "name": "DR. ADILSON SOARES",
+        "id": "526835"
+    },
+    {
+        "party": "PV",
+        "state": "RJ",
+        "name": "DR. ALUIZIO",
+        "id": "530144"
+    },
+    {
+        "party": "PMN",
+        "state": "RJ",
+        "name": "DR. CARLOS ALBERTO",
+        "id": "532384"
+    },
+    {
+        "party": "PSL",
+        "state": "MG",
+        "name": "DR. GRILO",
+        "id": "530072"
+    },
+    {
+        "party": "PDT",
+        "state": "ES",
+        "name": "DR. JORGE SILVA",
+        "id": "530048"
+    },
+    {
+        "party": "PSD",
+        "state": "RJ",
+        "name": "DR. PAULO C\u00c9SAR",
+        "id": "527378"
+    },
+    {
+        "party": "PT",
+        "state": "PR",
+        "name": "DR. ROSINHA",
+        "id": "522070"
+    },
+    {
+        "party": "PSB",
+        "state": "SP",
+        "name": "DR. UBIALI",
+        "id": "533383"
+    },
+    {
+        "party": "PSDB",
+        "state": "SP",
+        "name": "DUARTE NOGUEIRA",
+        "id": "528229"
+    },
+    {
+        "party": "PMDB",
+        "state": "SP",
+        "name": "EDINHO ARA\u00daJO",
+        "id": "530190"
+    },
+    {
+        "party": "PMDB",
+        "state": "SC",
+        "name": "EDINHO BEZ",
+        "id": "523304"
+    },
+    {
+        "party": "PMDB",
+        "state": "RR",
+        "name": "EDIO LOPES",
+        "id": "527657"
+    },
+    {
+        "party": "PTC",
+        "state": "MA",
+        "name": "EDIVALDO HOLANDA JUNIOR",
+        "id": "530060"
+    },
+    {
+        "party": "PSC",
+        "state": "PR",
+        "name": "EDMAR ARRUDA",
+        "id": "530119"
+    },
+    {
+        "party": "PMDB",
+        "state": "RJ",
+        "name": "EDSON EZEQUIEL",
+        "id": "522608"
+    },
+    {
+        "party": "PSD",
+        "state": "BA",
+        "name": "EDSON PIMENTA",
+        "id": "530032"
+    },
+    {
+        "party": "PT",
+        "state": "RJ",
+        "name": "EDSON SANTOS",
+        "id": "527013"
+    },
+    {
+        "party": "PSB",
+        "state": "CE",
+        "name": "EDSON SILVA",
+        "id": "530039"
+    },
+    {
+        "party": "PSDB",
+        "state": "MG",
+        "name": "EDUARDO AZEREDO",
+        "id": "530080"
+    },
+    {
+        "party": "PSDB",
+        "state": "MG",
+        "name": "EDUARDO BARBOSA",
+        "id": "521405"
+    },
+    {
+        "party": "PMDB",
+        "state": "RJ",
+        "name": "EDUARDO CUNHA",
+        "id": "522260"
+    },
+    {
+        "party": "PP",
+        "state": "PE",
+        "name": "EDUARDO DA FONTE",
+        "id": "526389"
+    },
+    {
+        "party": "PSDB",
+        "state": "TO",
+        "name": "EDUARDO GOMES",
+        "id": "524218"
+    },
+    {
+        "party": "PSD",
+        "state": "PR",
+        "name": "EDUARDO SCIARRA",
+        "id": "522190"
+    },
+    {
+        "party": "DEM",
+        "state": "PB",
+        "name": "EFRAIM FILHO",
+        "id": "526284"
+    },
+    {
+        "party": "PMDB",
+        "state": "PA",
+        "name": "ELCIONE BARBALHO",
+        "id": "526158"
+    },
+    {
+        "party": "PSD",
+        "state": "SP",
+        "name": "ELEUSES PAIVA",
+        "id": "533309"
+    },
+    {
+        "party": "DEM",
+        "state": "SP",
+        "name": "ELI CORREA FILHO",
+        "id": "530199"
+    },
+    {
+        "party": "PT",
+        "state": "RJ",
+        "name": "ELIANE ROLIM",
+        "id": "532347"
+    },
+    {
+        "party": "PSD",
+        "state": "MT",
+        "name": "ELIENE LIMA",
+        "id": "526068"
+    },
+    {
+        "party": "PMDB",
+        "state": "RS",
+        "name": "ELISEU PADILHA",
+        "id": "533082"
+    },
+    {
+        "party": "PSDB",
+        "state": "SP",
+        "name": "EMANUEL FERNANDES",
+        "id": "528412"
+    },
+    {
+        "party": "PT",
+        "state": "BA",
+        "name": "EMILIANO JOS\u00c9",
+        "id": "530660"
+    },
+    {
+        "party": "PDT",
+        "state": "RS",
+        "name": "ENIO BACCI",
+        "id": "523088"
+    },
+    {
+        "party": "PT",
+        "state": "DF",
+        "name": "ERIKA KOKAY",
+        "id": "530044"
+    },
+    {
+        "party": "PSC",
+        "state": "BA",
+        "name": "ERIVELTON SANTANA",
+        "id": "530027"
+    },
+    {
+        "party": "PTB",
+        "state": "MG",
+        "name": "EROS BIONDINI",
+        "id": "530070"
+    },
+    {
+        "party": "PP",
+        "state": "SC",
+        "name": "ESPERIDI\u00c3O AMIN",
+        "id": "530169"
+    },
+    {
+        "party": "PT",
+        "state": "CE",
+        "name": "EUDES XAVIER",
+        "id": "524943"
+    },
+    {
+        "party": "PCdoB",
+        "state": "AP",
+        "name": "EVANDRO MILHOMEN",
+        "id": "520258"
+    },
+    {
+        "party": "PSD",
+        "state": "RN",
+        "name": "F\u00c1BIO FARIA",
+        "id": "527539"
+    },
+    {
+        "party": "PV",
+        "state": "MG",
+        "name": "F\u00c1BIO RAMALHO",
+        "id": "525627"
+    },
+    {
+        "party": "DEM",
+        "state": "BA",
+        "name": "F\u00c1BIO SOUTO",
+        "id": "520353"
+    },
+    {
+        "party": "PMDB",
+        "state": "MS",
+        "name": "FABIO TRAD",
+        "id": "530082"
+    },
+    {
+        "party": "PT",
+        "state": "RN",
+        "name": "F\u00c1TIMA BEZERRA",
+        "id": "522825"
+    },
+    {
+        "party": "PMDB",
+        "state": "AP",
+        "name": "F\u00c1TIMA PELAES",
+        "id": "524709"
+    },
+    {
+        "party": "PSD",
+        "state": "RJ",
+        "name": "FELIPE BORNIER",
+        "id": "527042"
+    },
+    {
+        "party": "DEM",
+        "state": "RN",
+        "name": "FELIPE MAIA",
+        "id": "527540"
+    },
+    {
+        "party": "PDT",
+        "state": "BA",
+        "name": "F\u00c9LIX MENDON\u00c7A J\u00daNIOR",
+        "id": "530017"
+    },
+    {
+        "party": "PSB",
+        "state": "PE",
+        "name": "FERNANDO COELHO FILHO",
+        "id": "526411"
+    },
+    {
+        "party": "PT",
+        "state": "PE",
+        "name": "FERNANDO FERRO",
+        "id": "521798"
+    },
+    {
+        "party": "PSDB",
+        "state": "PR",
+        "name": "FERNANDO FRANCISCHINI",
+        "id": "530125"
+    },
+    {
+        "party": "PMDB",
+        "state": "RJ",
+        "name": "FERNANDO JORD\u00c3O",
+        "id": "532149"
+    },
+    {
+        "party": "PT",
+        "state": "RS",
+        "name": "FERNANDO MARRONI",
+        "id": "532966"
+    },
+    {
+        "party": "PSD",
+        "state": "BA",
+        "name": "FERNANDO TORRES",
+        "id": "530028"
+    },
+    {
+        "party": "PSC",
+        "state": "RJ",
+        "name": "FILIPE PEREIRA",
+        "id": "527045"
+    },
+    {
+        "party": "PDT",
+        "state": "GO",
+        "name": "FL\u00c1VIA MORAIS",
+        "id": "530053"
+    },
+    {
+        "party": "PMDB",
+        "state": "AC",
+        "name": "FLAVIANO MELO",
+        "id": "524512"
+    },
+    {
+        "party": "PSD",
+        "state": "RR",
+        "name": "FRANCISCO ARA\u00daJO",
+        "id": "532929"
+    },
+    {
+        "party": "PMDB",
+        "state": "MA",
+        "name": "FRANCISCO ESC\u00d3RCIO",
+        "id": "531070"
+    },
+    {
+        "party": "PR",
+        "state": "RJ",
+        "name": "FRANCISCO FLORIANO",
+        "id": "530139"
+    },
+    {
+        "party": "PT",
+        "state": "AM",
+        "name": "FRANCISCO PRACIANO",
+        "id": "524640"
+    },
+    {
+        "party": "PMDB",
+        "state": "SP",
+        "name": "GABRIEL CHALITA",
+        "id": "530201"
+    },
+    {
+        "party": "PT",
+        "state": "MG",
+        "name": "GABRIEL GUIMAR\u00c3ES",
+        "id": "530067"
+    },
+    {
+        "party": "PMDB",
+        "state": "CE",
+        "name": "GENECIAS NORONHA",
+        "id": "530037"
+    },
+    {
+        "party": "PRB",
+        "state": "MG",
+        "name": "GEORGE HILTON",
+        "id": "525638"
+    },
+    {
+        "party": "PMDB",
+        "state": "MS",
+        "name": "GERALDO RESENDE",
+        "id": "521466"
+    },
+    {
+        "party": "PT",
+        "state": "BA",
+        "name": "GERALDO SIM\u00d5ES",
+        "id": "524817"
+    },
+    {
+        "party": "PSD",
+        "state": "MG",
+        "name": "GERALDO THADEU",
+        "id": "521216"
+    },
+    {
+        "party": "PR",
+        "state": "PR",
+        "name": "GIACOBO",
+        "id": "522180"
+    },
+    {
+        "party": "PT",
+        "state": "MG",
+        "name": "GILMAR MACHADO",
+        "id": "521065"
+    },
+    {
+        "party": "PDT",
+        "state": "RS",
+        "name": "GIOVANI CHERINI",
+        "id": "530159"
+    },
+    {
+        "party": "PDT",
+        "state": "PA",
+        "name": "GIOVANNI QUEIROZ",
+        "id": "526179"
+    },
+    {
+        "party": "PMDB",
+        "state": "MS",
+        "name": "GIROTO",
+        "id": "530083"
+    },
+    {
+        "party": "PSB",
+        "state": "AL",
+        "name": "GIVALDO CARIMB\u00c3O",
+        "id": "520124"
+    },
+    {
+        "party": "PP",
+        "state": "AC",
+        "name": "GLADSON CAMELI",
+        "id": "524520"
+    },
+    {
+        "party": "PSB",
+        "state": "RJ",
+        "name": "GLAUBER BRAGA",
+        "id": "527072"
+    },
+    {
+        "party": "PSB",
+        "state": "PE",
+        "name": "GONZAGA PATRIOTA",
+        "id": "521901"
+    },
+    {
+        "party": "PR",
+        "state": "CE",
+        "name": "GORETE PEREIRA",
+        "id": "520468"
+    },
+    {
+        "party": "PSD",
+        "state": "SP",
+        "name": "GUILHERME CAMPOS",
+        "id": "528487"
+    },
+    {
+        "party": "PSD",
+        "state": "SP",
+        "name": "GUILHERME MUSSI",
+        "id": "530203"
+    },
+    {
+        "party": "PRB",
+        "state": "SE",
+        "name": "HELENO SILVA",
+        "id": "530178"
+    },
+    {
+        "party": "PSD",
+        "state": "MA",
+        "name": "H\u00c9LIO SANTOS",
+        "id": "530061"
+    },
+    {
+        "party": "PV",
+        "state": "AC",
+        "name": "HENRIQUE AFONSO",
+        "id": "520015"
+    },
+    {
+        "party": "PMDB",
+        "state": "RN",
+        "name": "HENRIQUE EDUARDO ALVES",
+        "id": "522840"
+    },
+    {
+        "party": "PT",
+        "state": "RS",
+        "name": "HENRIQUE FONTANA",
+        "id": "523097"
+    },
+    {
+        "party": "PR",
+        "state": "AM",
+        "name": "HENRIQUE OLIVEIRA",
+        "id": "530010"
+    },
+    {
+        "party": "PMDB",
+        "state": "PR",
+        "name": "HERMES PARCIANELLO",
+        "id": "522119"
+    },
+    {
+        "party": "PSD",
+        "state": "GO",
+        "name": "HEULER CRUVINEL",
+        "id": "530056"
+    },
+    {
+        "party": "PSD",
+        "state": "MT",
+        "name": "HOMERO PEREIRA",
+        "id": "526079"
+    },
+    {
+        "party": "PSC",
+        "state": "RJ",
+        "name": "HUGO LEAL",
+        "id": "527082"
+    },
+    {
+        "party": "PMDB",
+        "state": "PB",
+        "name": "HUGO MOTTA",
+        "id": "530096"
+    },
+    {
+        "party": "PSD",
+        "state": "PI",
+        "name": "HUGO NAPOLE\u00c3O",
+        "id": "530115"
+    },
+    {
+        "party": "PR",
+        "state": "PE",
+        "name": "INOC\u00caNCIO OLIVEIRA",
+        "id": "521856"
+    },
+    {
+        "party": "PP",
+        "state": "PI",
+        "name": "IRACEMA PORTELLA",
+        "id": "530111"
+    },
+    {
+        "party": "PSD",
+        "state": "TO",
+        "name": "IRAJ\u00c1 ABREU",
+        "id": "530216"
+    },
+    {
+        "party": "PMDB",
+        "state": "GO",
+        "name": "\u00cdRIS DE ARA\u00daJO",
+        "id": "525279"
+    },
+    {
+        "party": "PSOL",
+        "state": "SP",
+        "name": "IVAN VALENTE",
+        "id": "523546"
+    },
+    {
+        "party": "PR",
+        "state": "DF",
+        "name": "IZALCI",
+        "id": "525097"
+    },
+    {
+        "party": "PR",
+        "state": "MG",
+        "name": "JAIME MARTINS",
+        "id": "521243"
+    },
+    {
+        "party": "PP",
+        "state": "RJ",
+        "name": "JAIR BOLSONARO",
+        "id": "522255"
+    },
+    {
+        "party": "DEM",
+        "state": "MG",
+        "name": "JAIRO ATA\u00cdDE",
+        "id": "531199"
+    },
+    {
+        "party": "PCdoB",
+        "state": "RJ",
+        "name": "JANDIRA FEGHALI",
+        "id": "530146"
+    },
+    {
+        "party": "PSB",
+        "state": "AP",
+        "name": "JANETE CAPIBERIBE",
+        "id": "520257"
+    },
+    {
+        "party": "PT",
+        "state": "SP",
+        "name": "JANETE ROCHA PIET\u00c1",
+        "id": "528531"
+    },
+    {
+        "party": "PRP",
+        "state": "BA",
+        "name": "J\u00c2NIO NATAL",
+        "id": "530030"
+    },
+    {
+        "party": "PMN",
+        "state": "DF",
+        "name": "JAQUELINE RORIZ",
+        "id": "530047"
+    },
+    {
+        "party": "PSOL",
+        "state": "RJ",
+        "name": "JEAN WYLLYS",
+        "id": "530145"
+    },
+    {
+        "party": "PSD",
+        "state": "SP",
+        "name": "JEFFERSON CAMPOS",
+        "id": "523964"
+    },
+    {
+        "party": "PP",
+        "state": "RS",
+        "name": "JER\u00d4NIMO GOERGEN",
+        "id": "530158"
+    },
+    {
+        "party": "PT",
+        "state": "PI",
+        "name": "JESUS RODRIGUES",
+        "id": "530113"
+    },
+    {
+        "party": "PRB",
+        "state": "RR",
+        "name": "JHONATAN DE JESUS",
+        "id": "530152"
+    },
+    {
+        "party": "PT",
+        "state": "SP",
+        "name": "JILMAR TATTO",
+        "id": "528540"
+    },
+    {
+        "party": "PCdoB",
+        "state": "MG",
+        "name": "J\u00d4 MORAES",
+        "id": "525831"
+    },
+    {
+        "party": "PCdoB",
+        "state": "CE",
+        "name": "JO\u00c3O ANANIAS",
+        "id": "530041"
+    },
+    {
+        "party": "PMDB",
+        "state": "PR",
+        "name": "JO\u00c3O ARRUDA",
+        "id": "530118"
+    },
+    {
+        "party": "DEM",
+        "state": "MG",
+        "name": "JO\u00c3O BITTAR",
+        "id": "531198"
+    },
+    {
+        "party": "PSDB",
+        "state": "GO",
+        "name": "JO\u00c3O CAMPOS",
+        "id": "520857"
+    },
+    {
+        "party": "PR",
+        "state": "BA",
+        "name": "JO\u00c3O CARLOS BACELAR",
+        "id": "524833"
+    },
+    {
+        "party": "PDT",
+        "state": "SP",
+        "name": "JO\u00c3O DADO",
+        "id": "528553"
+    },
+    {
+        "party": "PSD",
+        "state": "AL",
+        "name": "JO\u00c3O LYRA",
+        "id": "530006"
+    },
+    {
+        "party": "PMDB",
+        "state": "MG",
+        "name": "JO\u00c3O MAGALH\u00c3ES",
+        "id": "521109"
+    },
+    {
+        "party": "PR",
+        "state": "RN",
+        "name": "JO\u00c3O MAIA",
+        "id": "527550"
+    },
+    {
+        "party": "PT",
+        "state": "SP",
+        "name": "JO\u00c3O PAULO CUNHA",
+        "id": "523543"
+    },
+    {
+        "party": "PT",
+        "state": "PE",
+        "name": "JO\u00c3O PAULO LIMA",
+        "id": "530101"
+    },
+    {
+        "party": "PP",
+        "state": "SC",
+        "name": "JO\u00c3O PIZZOLATTI",
+        "id": "523257"
+    },
+    {
+        "party": "PMDB",
+        "state": "AL",
+        "name": "JOAQUIM BELTR\u00c3O",
+        "id": "524585"
+    },
+    {
+        "party": "PSB",
+        "state": "SP",
+        "name": "JONAS DONIZETTE",
+        "id": "530200"
+    },
+    {
+        "party": "PSD",
+        "state": "SC",
+        "name": "JORGE BOEIRA",
+        "id": "523277"
+    },
+    {
+        "party": "PTB",
+        "state": "PE",
+        "name": "JORGE CORTE REAL",
+        "id": "530102"
+    },
+    {
+        "party": "DEM",
+        "state": "SP",
+        "name": "JORGE TADEU MUDALEN",
+        "id": "528578"
+    },
+    {
+        "party": "PSDB",
+        "state": "SC",
+        "name": "JORGINHO MELLO",
+        "id": "530176"
+    },
+    {
+        "party": "PT",
+        "state": "CE",
+        "name": "JOS\u00c9 AIRTON",
+        "id": "525000"
+    },
+    {
+        "party": "PTB",
+        "state": "PE",
+        "name": "JOS\u00c9 AUGUSTO MAIA",
+        "id": "530103"
+    },
+    {
+        "party": "PSD",
+        "state": "BA",
+        "name": "JOS\u00c9 CARLOS ARA\u00daJO",
+        "id": "520332"
+    },
+    {
+        "party": "PTB",
+        "state": "PE",
+        "name": "JOS\u00c9 CHAVES",
+        "id": "521816"
+    },
+    {
+        "party": "PT",
+        "state": "SP",
+        "name": "JOS\u00c9 DE FILIPPI",
+        "id": "530189"
+    },
+    {
+        "party": "PT",
+        "state": "CE",
+        "name": "JOS\u00c9 GUIMAR\u00c3ES",
+        "id": "525011"
+    },
+    {
+        "party": "PHS",
+        "state": "MG",
+        "name": "JOS\u00c9 HUMBERTO",
+        "id": "530075"
+    },
+    {
+        "party": "PP",
+        "state": "CE",
+        "name": "JOS\u00c9 LINHARES",
+        "id": "520409"
+    },
+    {
+        "party": "PT",
+        "state": "SP",
+        "name": "JOS\u00c9 MENTOR",
+        "id": "523548"
+    },
+    {
+        "party": "PSD",
+        "state": "BA",
+        "name": "JOS\u00c9 NUNES",
+        "id": "530029"
+    },
+    {
+        "party": "PP",
+        "state": "RS",
+        "name": "JOS\u00c9 OT\u00c1VIO GERMANO",
+        "id": "523061"
+    },
+    {
+        "party": "PMDB",
+        "state": "PA",
+        "name": "JOS\u00c9 PRIANTE",
+        "id": "530091"
+    },
+    {
+        "party": "PR",
+        "state": "BA",
+        "name": "JOS\u00c9 ROCHA",
+        "id": "520341"
+    },
+    {
+        "party": "PSB",
+        "state": "RS",
+        "name": "JOSE ST\u00c9DILE",
+        "id": "530166"
+    },
+    {
+        "party": "PT",
+        "state": "BA",
+        "name": "JOSEPH BANDEIRA",
+        "id": "530662"
+    },
+    {
+        "party": "PT",
+        "state": "BA",
+        "name": "JOSIAS GOMES",
+        "id": "530021"
+    },
+    {
+        "party": "PTB",
+        "state": "PA",
+        "name": "JOSU\u00c9 BENGTSON",
+        "id": "530090"
+    },
+    {
+        "party": "PTB",
+        "state": "GO",
+        "name": "JOVAIR ARANTES",
+        "id": "520853"
+    },
+    {
+        "party": "DEM",
+        "state": "MT",
+        "name": "J\u00daLIO CAMPOS",
+        "id": "530087"
+    },
+    {
+        "party": "PSD",
+        "state": "PI",
+        "name": "J\u00daLIO CESAR",
+        "id": "522014"
+    },
+    {
+        "party": "PSB",
+        "state": "MG",
+        "name": "J\u00daLIO DELGADO",
+        "id": "521209"
+    },
+    {
+        "party": "PMDB",
+        "state": "TO",
+        "name": "J\u00daNIOR COIMBRA",
+        "id": "530214"
+    },
+    {
+        "party": "PSD",
+        "state": "SP",
+        "name": "JUNJI ABE",
+        "id": "530198"
+    },
+    {
+        "party": "PSDB",
+        "state": "BA",
+        "name": "JUTAHY JUNIOR",
+        "id": "520403"
+    },
+    {
+        "party": "PSB",
+        "state": "SP",
+        "name": "KEIKO OTA",
+        "id": "530202"
+    },
+    {
+        "party": "DEM",
+        "state": "MG",
+        "name": "LAEL VARELLA",
+        "id": "521230"
+    },
+    {
+        "party": "PR",
+        "state": "SE",
+        "name": "LAERCIO OLIVEIRA",
+        "id": "528134"
+    },
+    {
+        "party": "PSB",
+        "state": "TO",
+        "name": "LAUREZ MOREIRA",
+        "id": "529134"
+    },
+    {
+        "party": "PSC",
+        "state": "ES",
+        "name": "LAURIETE",
+        "id": "530049"
+    },
+    {
+        "party": "PP",
+        "state": "TO",
+        "name": "L\u00c1ZARO BOTELHO",
+        "id": "529135"
+    },
+    {
+        "party": "PMDB",
+        "state": "GO",
+        "name": "LEANDRO VILELA",
+        "id": "520774"
+    },
+    {
+        "party": "PMDB",
+        "state": "ES",
+        "name": "LELO COIMBRA",
+        "id": "525239"
+    },
+    {
+        "party": "PT",
+        "state": "MG",
+        "name": "LEONARDO MONTEIRO",
+        "id": "521068"
+    },
+    {
+        "party": "PMDB",
+        "state": "RJ",
+        "name": "LEONARDO PICCIANI",
+        "id": "522398"
+    },
+    {
+        "party": "PMDB",
+        "state": "MG",
+        "name": "LEONARDO QUINT\u00c3O",
+        "id": "525771"
+    },
+    {
+        "party": "PSB",
+        "state": "PR",
+        "name": "LEOPOLDO MEYER",
+        "id": "530123"
+    },
+    {
+        "party": "PSD",
+        "state": "RJ",
+        "name": "LILIAM S\u00c1",
+        "id": "530136"
+    },
+    {
+        "party": "PR",
+        "state": "MG",
+        "name": "LINCOLN PORTELA",
+        "id": "521137"
+    },
+    {
+        "party": "DEM",
+        "state": "PA",
+        "name": "LIRA MAIA",
+        "id": "526195"
+    },
+    {
+        "party": "PTdoB",
+        "state": "MA",
+        "name": "LOURIVAL MENDES",
+        "id": "530062"
+    },
+    {
+        "party": "PT",
+        "state": "SC",
+        "name": "LUCI CHOINACKI",
+        "id": "530170"
+    },
+    {
+        "party": "PCdoB",
+        "state": "PE",
+        "name": "LUCIANA SANTOS",
+        "id": "530110"
+    },
+    {
+        "party": "PR",
+        "state": "RR",
+        "name": "LUCIANO CASTRO",
+        "id": "523023"
+    },
+    {
+        "party": "PR",
+        "state": "PA",
+        "name": "L\u00daCIO VALE",
+        "id": "526213"
+    },
+    {
+        "party": "PMDB",
+        "state": "BA",
+        "name": "LUCIO VIEIRA LIMA",
+        "id": "530026"
+    },
+    {
+        "party": "PP",
+        "state": "RS",
+        "name": "LUIS CARLOS HEINZE",
+        "id": "523066"
+    },
+    {
+        "party": "PTdoB",
+        "state": "MG",
+        "name": "LUIS TIB\u00c9",
+        "id": "530081"
+    },
+    {
+        "party": "PT",
+        "state": "BA",
+        "name": "LUIZ ALBERTO",
+        "id": "520290"
+    },
+    {
+        "party": "PP",
+        "state": "BA",
+        "name": "LUIZ ARG\u00d4LO",
+        "id": "530015"
+    },
+    {
+        "party": "PSDB",
+        "state": "AP",
+        "name": "LUIZ CARLOS",
+        "id": "530014"
+    },
+    {
+        "party": "DEM",
+        "state": "PR",
+        "name": "LUIZ CARLOS SETIM",
+        "id": "532006"
+    },
+    {
+        "party": "PT",
+        "state": "PB",
+        "name": "LUIZ COUTO",
+        "id": "521703"
+    },
+    {
+        "party": "PP",
+        "state": "MG",
+        "name": "LUIZ FERNANDO FARIA",
+        "id": "525797"
+    },
+    {
+        "party": "PSDB",
+        "state": "SP",
+        "name": "LUIZ FERNANDO MACHADO",
+        "id": "530209"
+    },
+    {
+        "party": "PSDB",
+        "state": "PR",
+        "name": "LUIZ NISHIMORI",
+        "id": "532007"
+    },
+    {
+        "party": "PSB",
+        "state": "RS",
+        "name": "LUIZ NO\u00c9",
+        "id": "533021"
+    },
+    {
+        "party": "PMDB",
+        "state": "DF",
+        "name": "LUIZ PITIMAN",
+        "id": "530045"
+    },
+    {
+        "party": "PSB",
+        "state": "SP",
+        "name": "LUIZA ERUNDINA",
+        "id": "523941"
+    },
+    {
+        "party": "PTB",
+        "state": "GO",
+        "name": "MAGDA MOFATTO",
+        "id": "534002"
+    },
+    {
+        "party": "PDT",
+        "state": "ES",
+        "name": "MANATO",
+        "id": "520647"
+    },
+    {
+        "party": "DEM",
+        "state": "MS",
+        "name": "MANDETTA",
+        "id": "530084"
+    },
+    {
+        "party": "PMDB",
+        "state": "PB",
+        "name": "MANOEL JUNIOR",
+        "id": "526317"
+    },
+    {
+        "party": "PSD",
+        "state": "CE",
+        "name": "MANOEL SALVIANO",
+        "id": "520518"
+    },
+    {
+        "party": "PCdoB",
+        "state": "RS",
+        "name": "MANUELA D'\u00c1VILA",
+        "id": "527897"
+    },
+    {
+        "party": "PSDB",
+        "state": "SP",
+        "name": "MARA GABRILLI",
+        "id": "530207"
+    },
+    {
+        "party": "PMDB",
+        "state": "MS",
+        "name": "MAR\u00c7AL FILHO",
+        "id": "526015"
+    },
+    {
+        "party": "PSD",
+        "state": "SP",
+        "name": "MARCELO AGUIAR",
+        "id": "530192"
+    },
+    {
+        "party": "PMDB",
+        "state": "PI",
+        "name": "MARCELO CASTRO",
+        "id": "521987"
+    },
+    {
+        "party": "PDT",
+        "state": "RJ",
+        "name": "MARCELO MATOS",
+        "id": "530128"
+    },
+    {
+        "party": "PSDB",
+        "state": "AC",
+        "name": "MARCIO BITTAR",
+        "id": "530003"
+    },
+    {
+        "party": "PT",
+        "state": "SE",
+        "name": "M\u00c1RCIO MAC\u00caDO",
+        "id": "530180"
+    },
+    {
+        "party": "PRB",
+        "state": "BA",
+        "name": "M\u00c1RCIO MARINHO",
+        "id": "524874"
+    },
+    {
+        "party": "PP",
+        "state": "MG",
+        "name": "M\u00c1RCIO REINALDO MOREIRA",
+        "id": "521013"
+    },
+    {
+        "party": "PT",
+        "state": "RS",
+        "name": "MARCO MAIA",
+        "id": "523098"
+    },
+    {
+        "party": "PT",
+        "state": "RS",
+        "name": "MARCON",
+        "id": "530162"
+    },
+    {
+        "party": "PDT",
+        "state": "BA",
+        "name": "MARCOS MEDRADO",
+        "id": "524876"
+    },
+    {
+        "party": "PSD",
+        "state": "MG",
+        "name": "MARCOS MONTES",
+        "id": "525821"
+    },
+    {
+        "party": "PDT",
+        "state": "RO",
+        "name": "MARCOS ROG\u00c9RIO",
+        "id": "532900"
+    },
+    {
+        "party": "PSDB",
+        "state": "MG",
+        "name": "MARCUS PESTANA",
+        "id": "530078"
+    },
+    {
+        "party": "PT",
+        "state": "GO",
+        "name": "MARINA SANTANNA",
+        "id": "531025"
+    },
+    {
+        "party": "PMDB",
+        "state": "RO",
+        "name": "MARINHA RAUPP",
+        "id": "522922"
+    },
+    {
+        "party": "PSC",
+        "state": "MG",
+        "name": "M\u00c1RIO DE OLIVEIRA",
+        "id": "525834"
+    },
+    {
+        "party": "PMDB",
+        "state": "PI",
+        "name": "MARLLOS SAMPAIO",
+        "id": "530114"
+    },
+    {
+        "party": "PR",
+        "state": "AL",
+        "name": "MAUR\u00cdCIO QUINTELLA LESSA",
+        "id": "520128"
+    },
+    {
+        "party": "PR",
+        "state": "BA",
+        "name": "MAUR\u00cdCIO TRINDADE",
+        "id": "524882"
+    },
+    {
+        "party": "PMDB",
+        "state": "CE",
+        "name": "MAURO BENEVIDES",
+        "id": "520437"
+    },
+    {
+        "party": "PMDB",
+        "state": "MG",
+        "name": "MAURO LOPES",
+        "id": "521107"
+    },
+    {
+        "party": "PMDB",
+        "state": "SC",
+        "name": "MAURO MARIANI",
+        "id": "528067"
+    },
+    {
+        "party": "PSB",
+        "state": "RO",
+        "name": "MAURO NAZIF",
+        "id": "527629"
+    },
+    {
+        "party": "DEM",
+        "state": "PE",
+        "name": "MENDON\u00c7A FILHO",
+        "id": "530105"
+    },
+    {
+        "party": "DEM",
+        "state": "SE",
+        "name": "MENDON\u00c7A PRADO",
+        "id": "523410"
+    },
+    {
+        "party": "PT",
+        "state": "MG",
+        "name": "MIGUEL CORR\u00caA",
+        "id": "525846"
+    },
+    {
+        "party": "PR",
+        "state": "SP",
+        "name": "MILTON MONTI",
+        "id": "523624"
+    },
+    {
+        "party": "PT",
+        "state": "PA",
+        "name": "MIRIQUINHO BATISTA",
+        "id": "530089"
+    },
+    {
+        "party": "PDT",
+        "state": "RJ",
+        "name": "MIRO TEIXEIRA",
+        "id": "522296"
+    },
+    {
+        "party": "PP",
+        "state": "SP",
+        "name": "MISSION\u00c1RIO JOS\u00c9 OLIMPIO",
+        "id": "530184"
+    },
+    {
+        "party": "PMDB",
+        "state": "PR",
+        "name": "MOACIR MICHELETTO",
+        "id": "522106"
+    },
+    {
+        "party": "PSD",
+        "state": "RO",
+        "name": "MOREIRA MENDES",
+        "id": "527640"
+    },
+    {
+        "party": "PMDB",
+        "state": "RO",
+        "name": "NATAN DONADON",
+        "id": "522928"
+    },
+    {
+        "party": "PT",
+        "state": "PI",
+        "name": "NAZARENO FONTELES",
+        "id": "531922"
+    },
+    {
+        "party": "PR",
+        "state": "RJ",
+        "name": "NEILTON MULIM",
+        "id": "527347"
+    },
+    {
+        "party": "PMDB",
+        "state": "RJ",
+        "name": "NELSON BORNIER",
+        "id": "532148"
+    },
+    {
+        "party": "PSDB",
+        "state": "RS",
+        "name": "NELSON MARCHEZAN JUNIOR",
+        "id": "530167"
+    },
+    {
+        "party": "PTB",
+        "state": "SP",
+        "name": "NELSON MARQUEZELLI",
+        "id": "523597"
+    },
+    {
+        "party": "PP",
+        "state": "PR",
+        "name": "NELSON MEURER",
+        "id": "522040"
+    },
+    {
+        "party": "PSC",
+        "state": "PR",
+        "name": "NELSON PADOVANI",
+        "id": "530120"
+    },
+    {
+        "party": "PT",
+        "state": "BA",
+        "name": "NELSON PELLEGRINO",
+        "id": "520301"
+    },
+    {
+        "party": "PMDB",
+        "state": "MG",
+        "name": "NEWTON CARDOSO",
+        "id": "530071"
+    },
+    {
+        "party": "PT",
+        "state": "SP",
+        "name": "NEWTON LIMA",
+        "id": "530188"
+    },
+    {
+        "party": "PSD",
+        "state": "MA",
+        "name": "NICE LOB\u00c3O",
+        "id": "520930"
+    },
+    {
+        "party": "PMDB",
+        "state": "PB",
+        "name": "NILDA GONDIM",
+        "id": "530094"
+    },
+    {
+        "party": "PSDB",
+        "state": "MT",
+        "name": "NILSON LEIT\u00c3O",
+        "id": "534005"
+    },
+    {
+        "party": "PTB",
+        "state": "RO",
+        "name": "NILTON CAPIXABA",
+        "id": "530151"
+    },
+    {
+        "party": "PT",
+        "state": "MG",
+        "name": "ODAIR CUNHA",
+        "id": "521038"
+    },
+    {
+        "party": "PSD",
+        "state": "SC",
+        "name": "ONOFRE SANTO AGOSTINI",
+        "id": "530175"
+    },
+    {
+        "party": "DEM",
+        "state": "RS",
+        "name": "ONYX LORENZONI",
+        "id": "523198"
+    },
+    {
+        "party": "PCdoB",
+        "state": "PI",
+        "name": "OSMAR J\u00daNIOR",
+        "id": "526575"
+    },
+    {
+        "party": "PMDB",
+        "state": "PR",
+        "name": "OSMAR SERRAGLIO",
+        "id": "522117"
+    },
+    {
+        "party": "PMDB",
+        "state": "RS",
+        "name": "OSMAR TERRA",
+        "id": "523150"
+    },
+    {
+        "party": "PSDB",
+        "state": "RJ",
+        "name": "OTAVIO LEITE",
+        "id": "527369"
+    },
+    {
+        "party": "PRB",
+        "state": "SP",
+        "name": "OTONIEL LIMA",
+        "id": "530183"
+    },
+    {
+        "party": "PDT",
+        "state": "BA",
+        "name": "OZIEL OLIVEIRA",
+        "id": "530016"
+    },
+    {
+        "party": "PT",
+        "state": "MG",
+        "name": "PADRE JO\u00c3O",
+        "id": "530068"
+    },
+    {
+        "party": "PT",
+        "state": "RO",
+        "name": "PADRE TON",
+        "id": "530150"
+    },
+    {
+        "party": "PTB",
+        "state": "PI",
+        "name": "PAES LANDIM",
+        "id": "522008"
+    },
+    {
+        "party": "PSB",
+        "state": "PE",
+        "name": "PASTOR EURICO",
+        "id": "530108"
+    },
+    {
+        "party": "PSC",
+        "state": "SP",
+        "name": "PASTOR MARCO FELICIANO ",
+        "id": "530191"
+    },
+    {
+        "party": "DEM",
+        "state": "AM",
+        "name": "PAUDERNEY AVELINO",
+        "id": "530011"
+    },
+    {
+        "party": "PSDB",
+        "state": "MG",
+        "name": "PAULO ABI-ACKEL",
+        "id": "525873"
+    },
+    {
+        "party": "DEM",
+        "state": "RR",
+        "name": "PAULO CESAR QUARTIERO",
+        "id": "530155"
+    },
+    {
+        "party": "PR",
+        "state": "RJ",
+        "name": "PAULO FEIJ\u00d3",
+        "id": "532214"
+    },
+    {
+        "party": "PSB",
+        "state": "ES",
+        "name": "PAULO FOLETTO",
+        "id": "530051"
+    },
+    {
+        "party": "PR",
+        "state": "SP",
+        "name": "PAULO FREIRE",
+        "id": "530194"
+    },
+    {
+        "party": "PSD",
+        "state": "BA",
+        "name": "PAULO MAGALH\u00c3ES",
+        "id": "520343"
+    },
+    {
+        "party": "PP",
+        "state": "SP",
+        "name": "PAULO MALUF",
+        "id": "528890"
+    },
+    {
+        "party": "PDT",
+        "state": "SP",
+        "name": "PAULO PEREIRA DA SILVA",
+        "id": "528881"
+    },
+    {
+        "party": "PMDB",
+        "state": "MG",
+        "name": "PAULO PIAU",
+        "id": "525878"
+    },
+    {
+        "party": "PT",
+        "state": "RS",
+        "name": "PAULO PIMENTA",
+        "id": "523094"
+    },
+    {
+        "party": "PDT",
+        "state": "PE",
+        "name": "PAULO RUBEM SANTIAGO",
+        "id": "531877"
+    },
+    {
+        "party": "PT",
+        "state": "SP",
+        "name": "PAULO TEIXEIRA",
+        "id": "528722"
+    },
+    {
+        "party": "PV",
+        "state": "RN",
+        "name": "PAULO WAGNER",
+        "id": "530148"
+    },
+    {
+        "party": "PMDB",
+        "state": "GO",
+        "name": "PEDRO CHAVES",
+        "id": "520787"
+    },
+    {
+        "party": "PT",
+        "state": "PE",
+        "name": "PEDRO EUG\u00caNIO",
+        "id": "526489"
+    },
+    {
+        "party": "PP",
+        "state": "MT",
+        "name": "PEDRO HENRY",
+        "id": "521507"
+    },
+    {
+        "party": "PMDB",
+        "state": "MA",
+        "name": "PEDRO NOVAIS",
+        "id": "520901"
+    },
+    {
+        "party": "PT",
+        "state": "SC",
+        "name": "PEDRO UCZAI",
+        "id": "530171"
+    },
+    {
+        "party": "PV",
+        "state": "SP",
+        "name": "PENNA",
+        "id": "530204"
+    },
+    {
+        "party": "PT",
+        "state": "RS",
+        "name": "PEPE VARGAS",
+        "id": "527813"
+    },
+    {
+        "party": "PCdoB",
+        "state": "AC",
+        "name": "PERP\u00c9TUA ALMEIDA",
+        "id": "520068"
+    },
+    {
+        "party": "PSDB",
+        "state": "MA",
+        "name": "PINTO ITAMARATY",
+        "id": "525428"
+    },
+    {
+        "party": "PT",
+        "state": "DF",
+        "name": "POLICARPO",
+        "id": "530896"
+    },
+    {
+        "party": "PMDB",
+        "state": "MA",
+        "name": "PROFESSOR SETIMO",
+        "id": "525474"
+    },
+    {
+        "party": "DEM",
+        "state": "TO",
+        "name": "PROFESSORA DORINHA SEABRA REZENDE ",
+        "id": "530217"
+    },
+    {
+        "party": "PMDB",
+        "state": "CE",
+        "name": "RAIMUND\u00c3O",
+        "id": "530036"
+    },
+    {
+        "party": "PSDB",
+        "state": "CE",
+        "name": "RAIMUNDO GOMES DE MATOS",
+        "id": "520511"
+    },
+    {
+        "party": "PSC",
+        "state": "PR",
+        "name": "RATINHO JUNIOR",
+        "id": "526627"
+    },
+    {
+        "party": "PMDB",
+        "state": "PE",
+        "name": "RAUL HENRY",
+        "id": "526493"
+    },
+    {
+        "party": "PSD",
+        "state": "RR",
+        "name": "RAUL LIMA",
+        "id": "530153"
+    },
+    {
+        "party": "PP",
+        "state": "AM",
+        "name": "REBECCA GARCIA",
+        "id": "524687"
+    },
+    {
+        "party": "PT",
+        "state": "MG",
+        "name": "REGINALDO LOPES",
+        "id": "521043"
+    },
+    {
+        "party": "PDT",
+        "state": "DF",
+        "name": "REGUFFE",
+        "id": "530042"
+    },
+    {
+        "party": "PSDB",
+        "state": "MS",
+        "name": "REINALDO AZAMBUJA",
+        "id": "530085"
+    },
+    {
+        "party": "PSD",
+        "state": "PR",
+        "name": "REINHOLD STEPHANES",
+        "id": "522109"
+    },
+    {
+        "party": "PMDB",
+        "state": "AL",
+        "name": "RENAN FILHO",
+        "id": "530007"
+    },
+    {
+        "party": "PP",
+        "state": "RS",
+        "name": "RENATO MOLLING",
+        "id": "527952"
+    },
+    {
+        "party": "PP",
+        "state": "MG",
+        "name": "RENZO BRAZ",
+        "id": "530064"
+    },
+    {
+        "party": "PSB",
+        "state": "MA",
+        "name": "RIBAMAR ALVES",
+        "id": "520978"
+    },
+    {
+        "party": "PT",
+        "state": "SP",
+        "name": "RICARDO BERZOINI",
+        "id": "523547"
+    },
+    {
+        "party": "PSD",
+        "state": "SP",
+        "name": "RICARDO IZAR",
+        "id": "530206"
+    },
+    {
+        "party": "PSDB",
+        "state": "SP",
+        "name": "RICARDO TRIPOLI",
+        "id": "528647"
+    },
+    {
+        "party": "PP",
+        "state": "GO",
+        "name": "ROBERTO BALESTRA",
+        "id": "520737"
+    },
+    {
+        "party": "PP",
+        "state": "BA",
+        "name": "ROBERTO BRITTO",
+        "id": "524907"
+    },
+    {
+        "party": "PV",
+        "state": "SP",
+        "name": "ROBERTO DE LUCENA",
+        "id": "530205"
+    },
+    {
+        "party": "PPS",
+        "state": "SP",
+        "name": "ROBERTO FREIRE",
+        "id": "530195"
+    },
+    {
+        "party": "PSD",
+        "state": "SP",
+        "name": "ROBERTO SANTIAGO",
+        "id": "528650"
+    },
+    {
+        "party": "PP",
+        "state": "PE",
+        "name": "ROBERTO TEIXEIRA",
+        "id": "530100"
+    },
+    {
+        "party": "PSDB",
+        "state": "MG",
+        "name": "RODRIGO DE CASTRO",
+        "id": "525903"
+    },
+    {
+        "party": "DEM",
+        "state": "RJ",
+        "name": "RODRIGO MAIA",
+        "id": "522553"
+    },
+    {
+        "party": "PT",
+        "state": "SE",
+        "name": "ROG\u00c9RIO CARVALHO",
+        "id": "530179"
+    },
+    {
+        "party": "PSDB",
+        "state": "RN",
+        "name": "ROG\u00c9RIO MARINHO",
+        "id": "532847"
+    },
+    {
+        "party": "PMDB",
+        "state": "SC",
+        "name": "ROG\u00c9RIO PENINHA MENDON\u00c7A",
+        "id": "530173"
+    },
+    {
+        "party": "PMDB",
+        "state": "SC",
+        "name": "ROMANNA REMOR",
+        "id": "533132"
+    },
+    {
+        "party": "PSB",
+        "state": "RJ",
+        "name": "ROM\u00c1RIO",
+        "id": "530142"
+    },
+    {
+        "party": "PSDB",
+        "state": "PB",
+        "name": "ROMERO RODRIGUES",
+        "id": "530098"
+    },
+    {
+        "party": "PMDB",
+        "state": "SC",
+        "name": "RONALDO BENEDET",
+        "id": "530172"
+    },
+    {
+        "party": "DEM",
+        "state": "GO",
+        "name": "RONALDO CAIADO",
+        "id": "520831"
+    },
+    {
+        "party": "PR",
+        "state": "DF",
+        "name": "RONALDO FONSECA",
+        "id": "530046"
+    },
+    {
+        "party": "PTB",
+        "state": "RS",
+        "name": "RONALDO NOGUEIRA",
+        "id": "533055"
+    },
+    {
+        "party": "PT",
+        "state": "RS",
+        "name": "RONALDO ZULKE",
+        "id": "530160"
+    },
+    {
+        "party": "PV",
+        "state": "PR",
+        "name": "ROSANE FERREIRA",
+        "id": "530124"
+    },
+    {
+        "party": "PMDB",
+        "state": "ES",
+        "name": "ROSE DE FREITAS",
+        "id": "520730"
+    },
+    {
+        "party": "PTdoB",
+        "state": "AL",
+        "name": "ROSINHA DA ADEFAL",
+        "id": "530009"
+    },
+    {
+        "party": "PPS",
+        "state": "PR",
+        "name": "RUBENS BUENO",
+        "id": "530121"
+    },
+    {
+        "party": "PT",
+        "state": "GO",
+        "name": "RUBENS OTONI",
+        "id": "520760"
+    },
+    {
+        "party": "PT",
+        "state": "BA",
+        "name": "RUI COSTA",
+        "id": "530023"
+    },
+    {
+        "party": "PSDB",
+        "state": "AL",
+        "name": "RUI PALMEIRA",
+        "id": "530008"
+    },
+    {
+        "party": "PSDB",
+        "state": "PB",
+        "name": "RUY CARNEIRO",
+        "id": "530099"
+    },
+    {
+        "party": "PTB",
+        "state": "AM",
+        "name": "SABINO CASTELO BRANCO",
+        "id": "524686"
+    },
+    {
+        "party": "PDT",
+        "state": "SP",
+        "name": "SALVADOR ZIMBALDI",
+        "id": "530185"
+    },
+    {
+        "party": "PP",
+        "state": "GO",
+        "name": "SANDES J\u00daNIOR",
+        "id": "520741"
+    },
+    {
+        "party": "PSB",
+        "state": "RN",
+        "name": "SANDRA ROSADO",
+        "id": "522843"
+    },
+    {
+        "party": "PPS",
+        "state": "PR",
+        "name": "SANDRO ALEX",
+        "id": "530122"
+    },
+    {
+        "party": "PMDB",
+        "state": "GO",
+        "name": "SANDRO MABEL",
+        "id": "520829"
+    },
+    {
+        "party": "PMDB",
+        "state": "MG",
+        "name": "SARAIVA FELIPE",
+        "id": "521130"
+    },
+    {
+        "party": "PV",
+        "state": "MA",
+        "name": "SARNEY FILHO",
+        "id": "520939"
+    },
+    {
+        "party": "PDT",
+        "state": "AP",
+        "name": "SEBASTI\u00c3O BALA ROCHA",
+        "id": "524745"
+    },
+    {
+        "party": "PT",
+        "state": "BA",
+        "name": "S\u00c9RGIO BARRADAS CARNEIRO",
+        "id": "530661"
+    },
+    {
+        "party": "PSD",
+        "state": "BA",
+        "name": "S\u00c9RGIO BRITO",
+        "id": "524918"
+    },
+    {
+        "party": "PSDB",
+        "state": "PE",
+        "name": "SERGIO GUERRA",
+        "id": "530109"
+    },
+    {
+        "party": "PTB",
+        "state": "RS",
+        "name": "S\u00c9RGIO MORAES",
+        "id": "527964"
+    },
+    {
+        "party": "PSB",
+        "state": "PE",
+        "name": "SEVERINO NINHO",
+        "id": "531879"
+    },
+    {
+        "party": "PT",
+        "state": "AC",
+        "name": "SIB\u00c1 MACHADO",
+        "id": "530001"
+    },
+    {
+        "party": "PSD",
+        "state": "AM",
+        "name": "SILAS C\u00c2MARA",
+        "id": "520152"
+    },
+    {
+        "party": "PTB",
+        "state": "PE",
+        "name": "SILVIO COSTA",
+        "id": "526509"
+    },
+    {
+        "party": "PP",
+        "state": "RJ",
+        "name": "SIM\u00c3O SESSIM",
+        "id": "522258"
+    },
+    {
+        "party": "PPS",
+        "state": "RJ",
+        "name": "STEPAN NERCESSIAN",
+        "id": "530140"
+    },
+    {
+        "party": "PDT",
+        "state": "ES",
+        "name": "SUELI VIDIGAL",
+        "id": "525230"
+    },
+    {
+        "party": "PSC",
+        "state": "PR",
+        "name": "TAKAYAMA",
+        "id": "522097"
+    },
+    {
+        "party": "PT",
+        "state": "AC",
+        "name": "TAUMATURGO LIMA",
+        "id": "530000"
+    },
+    {
+        "party": "PMDB",
+        "state": "RR",
+        "name": "TERESA SURITA",
+        "id": "530154"
+    },
+    {
+        "party": "PR",
+        "state": "SP",
+        "name": "TIRIRICA",
+        "id": "530193"
+    },
+    {
+        "party": "PP",
+        "state": "MG",
+        "name": "TONINHO PINHEIRO",
+        "id": "530065"
+    },
+    {
+        "party": "PSB",
+        "state": "SE",
+        "name": "VALADARES FILHO",
+        "id": "528107"
+    },
+    {
+        "party": "PR",
+        "state": "SP",
+        "name": "VALDEMAR COSTA NETO",
+        "id": "523758"
+    },
+    {
+        "party": "PMDB",
+        "state": "SC",
+        "name": "VALDIR COLATTO",
+        "id": "533129"
+    },
+    {
+        "party": "PSDB",
+        "state": "GO",
+        "name": "VALDIVINO DE OLIVEIRA",
+        "id": "530998"
+    },
+    {
+        "party": "PT",
+        "state": "BA",
+        "name": "VALMIR ASSUN\u00c7\u00c3O",
+        "id": "530019"
+    },
+    {
+        "party": "PT",
+        "state": "MS",
+        "name": "VANDER LOUBET",
+        "id": "521435"
+    },
+    {
+        "party": "PSDB",
+        "state": "SP",
+        "name": "VANDERLEI MACRIS",
+        "id": "533308"
+    },
+    {
+        "party": "PT",
+        "state": "SP",
+        "name": "VANDERLEI SIRAQUE",
+        "id": "533238"
+    },
+    {
+        "party": "PSDB",
+        "state": "SP",
+        "name": "VAZ DE LIMA",
+        "id": "530210"
+    },
+    {
+        "party": "PR",
+        "state": "CE",
+        "name": "VICENTE ARRUDA",
+        "id": "520521"
+    },
+    {
+        "party": "PT",
+        "state": "SP",
+        "name": "VICENTE CANDIDO",
+        "id": "530186"
+    },
+    {
+        "party": "PT",
+        "state": "SP",
+        "name": "VICENTINHO",
+        "id": "523577"
+    },
+    {
+        "party": "PDT",
+        "state": "RS",
+        "name": "VIEIRA DA CUNHA",
+        "id": "527766"
+    },
+    {
+        "party": "PRB",
+        "state": "PE",
+        "name": "VILALBA",
+        "id": "531878"
+    },
+    {
+        "party": "PP",
+        "state": "RS",
+        "name": "VILSON COVATTI",
+        "id": "527977"
+    },
+    {
+        "party": "PR",
+        "state": "AP",
+        "name": "VINICIUS GURGEL",
+        "id": "530013"
+    },
+    {
+        "party": "PRB",
+        "state": "RJ",
+        "name": "VITOR PAULO",
+        "id": "530126"
+    },
+    {
+        "party": "DEM",
+        "state": "MG",
+        "name": "VITOR PENIDO",
+        "id": "531196"
+    },
+    {
+        "party": "PT",
+        "state": "BA",
+        "name": "WALDENOR PEREIRA",
+        "id": "530022"
+    },
+    {
+        "party": "PP",
+        "state": "MA",
+        "name": "WALDIR MARANH\u00c3O",
+        "id": "525478"
+    },
+    {
+        "party": "PTB",
+        "state": "RJ",
+        "name": "WALNEY ROCHA",
+        "id": "530132"
+    },
+    {
+        "party": "PSD",
+        "state": "SP",
+        "name": "WALTER IHOSHI",
+        "id": "533313"
+    },
+    {
+        "party": "PSD",
+        "state": "MG",
+        "name": "WALTER TOSTA",
+        "id": "530076"
+    },
+    {
+        "party": "PSDB",
+        "state": "PA",
+        "name": "WANDENKOLK GON\u00c7ALVES",
+        "id": "526260"
+    },
+    {
+        "party": "PMDB",
+        "state": "RJ",
+        "name": "WASHINGTON REIS",
+        "id": "530134"
+    },
+    {
+        "party": "PT",
+        "state": "MG",
+        "name": "WELITON PRADO",
+        "id": "530069"
+    },
+    {
+        "party": "PR",
+        "state": "MT",
+        "name": "WELLINGTON FAGUNDES",
+        "id": "521528"
+    },
+    {
+        "party": "PR",
+        "state": "PB",
+        "name": "WELLINGTON ROBERTO",
+        "id": "521710"
+    },
+    {
+        "party": "PDT",
+        "state": "MA",
+        "name": "WEVERTON ROCHA",
+        "id": "531099"
+    },
+    {
+        "party": "PSDB",
+        "state": "SP",
+        "name": "WILLIAM DIB",
+        "id": "530208"
+    },
+    {
+        "party": "PMDB",
+        "state": "PB",
+        "name": "WILSON FILHO",
+        "id": "530095"
+    },
+    {
+        "party": "PMDB",
+        "state": "PA",
+        "name": "WLADIMIR COSTA",
+        "id": "521607"
+    },
+    {
+        "party": "PDT",
+        "state": "PE",
+        "name": "WOLNEY QUEIROZ",
+        "id": "526520"
+    },
+    {
+        "party": "PT",
+        "state": "PA",
+        "name": "Z\u00c9 GERALDO",
+        "id": "521592"
+    },
+    {
+        "party": "PDT",
+        "state": "MG",
+        "name": "Z\u00c9 SILVA",
+        "id": "530066"
+    },
+    {
+        "party": "PR",
+        "state": "MA",
+        "name": "Z\u00c9 VIEIRA",
+        "id": "525440"
+    },
+    {
+        "party": "PT",
+        "state": "PR",
+        "name": "ZECA DIRCEU",
+        "id": "530117"
+    },
+    {
+        "party": "PSDB",
+        "state": "PA",
+        "name": "ZENALDO COUTINHO",
+        "id": "521682"
+    },
+    {
+        "party": "PSC",
+        "state": "PA",
+        "name": "ZEQUINHA MARINHO",
+        "id": "521577"
+    },
+    {
+        "party": "PR",
+        "state": "RJ",
+        "name": "ZOINHO",
+        "id": "530138"
+    },
+    {
+        "party": "PSB",
+        "state": "MT",
+        "name": "CABO JULIANO RABELO",
+        "id": "531722"
+    },
+    {
+        "party": "PSDB",
+        "state": "MA",
+        "name": "CARLOS BRAND\u00c3O",
+        "id": "525372"
+    },
+    {
+        "party": "PSDB",
+        "state": "PA",
+        "name": "DUDIMAR PAXIUBA",
+        "id": "531760"
+    },
+    {
+        "party": "PT",
+        "state": "BA",
+        "name": "AFONSO FLORENCE",
+        "id": "530018"
+    },
+    {
+        "party": "PTB",
+        "state": "PB",
+        "name": "ARMANDO AB\u00cdLIO",
+        "id": "531823"
+    },
+    {
+        "party": "PMDB",
+        "state": "CE",
+        "name": "GERA ARRUDA",
+        "id": "530832"
+    },
+    {
+        "party": "PT",
+        "state": "ES",
+        "name": "IRINY LOPES",
+        "id": "520657"
+    },
+    {
+        "party": "PP",
+        "state": "BA",
+        "name": "JO\u00c3O LE\u00c3O",
+        "id": "520277"
+    },
+    {
+        "party": "PSC",
+        "state": "PB",
+        "name": "LEONARDO GADELHA",
+        "id": "531822"
+    },
+    {
+        "party": "PSDB",
+        "state": "GO",
+        "name": "LEONARDO VILELA",
+        "id": "520743"
+    },
+    {
+        "party": "PT",
+        "state": "RJ",
+        "name": "LUIZ S\u00c9RGIO",
+        "id": "522334"
+    },
+    {
+        "party": "PSDB",
+        "state": "SC",
+        "name": "MARCO TEBALDI",
+        "id": "530177"
+    },
+    {
+        "party": "PMDB",
+        "state": "CE",
+        "name": "M\u00c1RIO FEITOZA",
+        "id": "530829"
+    },
+    {
+        "party": "PP",
+        "state": "BA",
+        "name": "M\u00c1RIO NEGROMONTE",
+        "id": "520276"
+    },
+    {
+        "party": "PMDB",
+        "state": "PR",
+        "name": "OD\u00cdLIO BALBINOTTI",
+        "id": "531977"
+    },
+    {
+        "party": "PT",
+        "state": "RS",
+        "name": "PAULO FERREIRA",
+        "id": "532967"
+    },
+    {
+        "party": "PPS",
+        "state": "MA",
+        "name": "SIMPL\u00cdCIO ARA\u00daJO",
+        "id": "531124"
+    },
+    {
+        "party": "PSB",
+        "state": "MT",
+        "name": "VALTENIR PEREIRA",
+        "id": "526124"
+    },
+    {
+        "party": "PSDB",
+        "state": "SP",
+        "name": "WALTER FELDMAN",
+        "id": "533311"
+    },
+    {
+        "party": "PT",
+        "state": "BA",
+        "name": "ZEZ\u00c9U RIBEIRO",
+        "id": "520293"
+    },
+    {
+        "party": "PSDB",
+        "state": "SP",
+        "name": "EDSON APARECIDO",
+        "id": "528387"
+    },
+    {
+        "party": "PT",
+        "state": "DF",
+        "name": "MAGELA",
+        "id": "525086"
+    },
+    {
+        "party": "PMDB",
+        "state": "MA",
+        "name": "PAULO MARINHO JUNIOR",
+        "id": "5829167"
+    },
+    {
+        "party": "PT",
+        "state": "DF",
+        "name": "PAULO TADEU",
+        "id": "530043"
+    },
+    {
+        "party": "PMDB",
+        "state": "RJ",
+        "name": "PEDRO PAULO",
+        "id": "530133"
+    },
+    {
+        "party": "PMDB",
+        "state": "MA",
+        "name": "RICARDO ARCHER",
+        "id": "5829166"
+    },
+    {
+        "party": "PMDB",
+        "state": "RJ",
+        "name": "RODRIGO BETHLEM",
+        "id": "527425"
+    },
+    {
+        "party": "DEM",
+        "state": "SP",
+        "name": "RODRIGO GARCIA",
+        "id": "530197"
+    },
+    {
+        "party": "PSD",
+        "state": "RJ",
+        "name": "SERGIO ZVEITER",
+        "id": "530129"
+    },
+    {
+        "party": "PSC",
+        "state": "MG",
+        "name": "STEFANO AGUIAR",
+        "id": "531619"
+    },
+    {
+        "party": "PSB",
+        "state": "RJ",
+        "name": "ALEXANDRE CARDOSO",
+        "id": "522616"
+    },
+    {
+        "party": "PEN",
+        "state": "AL",
+        "name": "JO\u00c3O CALDAS",
+        "id": "5829170"
+    },
+    {
+        "party": "DEM",
+        "state": "PB",
+        "name": "MAJOR F\u00c1BIO",
+        "id": "5829172"
+    },
+    {
+        "party": "PSB",
+        "state": "SP",
+        "name": "M\u00c1RCIO FRAN\u00c7A",
+        "id": "528753"
+    },
+    {
+        "party": "PMDB",
+        "state": "MT",
+        "name": "PROFESSOR VICT\u00d3RIO GALLI",
+        "id": "5829174"
+    },
+    {
+        "party": "PRP",
+        "state": "PA",
+        "name": "VALRY MORAIS",
+        "id": "5829171"
+    },
+    {
+        "party": "PSB",
+        "state": "RS",
+        "name": "VICENTE SELISTRE",
+        "id": "5829173"
+    },
+    {
+        "party": "DEM",
+        "state": "RN",
+        "name": "BETINHO ROSADO",
+        "id": "522860"
+    },
+    {
+        "party": "PSB",
+        "state": "RS",
+        "name": "BETO ALBUQUERQUE",
+        "id": "523221"
+    },
+    {
+        "party": "PSDB",
+        "state": "SP",
+        "name": "CARLOS ROBERTO",
+        "id": "533314"
+    },
+    {
+        "party": "PRP",
+        "state": "RR",
+        "name": "CHICO DAS VERDURAS",
+        "id": "530156"
+    },
+    {
+        "party": "PSD",
+        "state": "AM",
+        "name": "DR. LUIZ FERNANDO",
+        "id": "5829179"
+    },
+    {
+        "party": "PSB",
+        "state": "MG",
+        "name": "ISAIAS SILVESTRE",
+        "id": "5829178"
+    },
+    {
+        "party": "PT",
+        "state": "RJ",
+        "name": "JORGE BITTAR",
+        "id": "522344"
+    },
+    {
+        "party": "PSDB",
+        "state": "AL",
+        "name": "ALEXANDRE TOLEDO",
+        "id": "5829169"
+    },
+    {
+        "party": "PT",
+        "state": "RO",
+        "name": "ANSELMO DE JESUS",
+        "id": "5829189"
+    },
+    {
+        "party": "PMDB",
+        "state": "RJ",
+        "name": "CELSO JACOB",
+        "id": "5829219"
+    },
+    {
+        "party": "PMDB",
+        "state": "BA",
+        "name": "COLBERT MARTINS",
+        "id": "5829196"
+    },
+    {
+        "party": "PV",
+        "state": "RJ",
+        "name": "EURICO J\u00daNIOR",
+        "id": "5829187"
+    },
+    {
+        "party": "PMDB",
+        "state": "SE",
+        "name": "FABIO REIS",
+        "id": "5829193"
+    },
+    {
+        "party": "PMDB",
+        "state": "RJ",
+        "name": "FERNANDO LOPES",
+        "id": "5829210"
+    },
+    {
+        "party": "PT",
+        "state": "SP",
+        "name": "FRANCISCO CHAGAS",
+        "id": "5829213"
+    },
+    {
+        "party": "PMN",
+        "state": "AL",
+        "name": "FRANCISCO TEN\u00d3RIO",
+        "id": "5829181"
+    },
+    {
+        "party": "PPS",
+        "state": "MG",
+        "name": "HUMBERTO SOUTO",
+        "id": "5829180"
+    },
+    {
+        "party": "PT",
+        "state": "SP",
+        "name": "IARA BERNARDI",
+        "id": "5829192"
+    },
+    {
+        "party": "PT",
+        "state": "SP",
+        "name": "JOS\u00c9 GENO\u00cdNO",
+        "id": "5829191"
+    },
+    {
+        "party": "PMDB",
+        "state": "TO",
+        "name": "LEOMAR QUINTANILHA",
+        "id": "5829215"
+    },
+    {
+        "party": "DEM",
+        "state": "BA",
+        "name": "LUIZ DE DEUS",
+        "id": "5829183"
+    },
+    {
+        "party": "PR",
+        "state": "RJ",
+        "name": "MANUEL ROSA NECA",
+        "id": "5829188"
+    },
+    {
+        "party": "PMDB",
+        "state": "PR",
+        "name": "MARCELO ALMEIDA",
+        "id": "5829218"
+    },
+    {
+        "party": "PMDB",
+        "state": "BA",
+        "name": "MARCELO GUIMAR\u00c3ES FILHO",
+        "id": "5829214"
+    },
+    {
+        "party": "DEM",
+        "state": "RR",
+        "name": "MARCIO JUNQUEIRA ",
+        "id": "5829212"
+    },
+    {
+        "party": "PT",
+        "state": "MG",
+        "name": "MARGARIDA SALOM\u00c3O",
+        "id": "5829184"
+    },
+    {
+        "party": "PDT",
+        "state": "MG",
+        "name": "M\u00c1RIO HERINGER",
+        "id": "5829216"
+    },
+    {
+        "party": "PT",
+        "state": "MG",
+        "name": "NILM\u00c1RIO MIRANDA",
+        "id": "5829185"
+    },
+    {
+        "party": "PSDB",
+        "state": "PA",
+        "name": "NILSON PINTO",
+        "id": "521683"
+    },
+    {
+        "party": "PRB",
+        "state": "PR",
+        "name": "OLIVEIRA FILHO",
+        "id": "5829195"
+    },
+    {
+        "party": "PMDB",
+        "state": "TO",
+        "name": "OSVALDO REIS",
+        "id": "5829194"
+    },
+    {
+        "party": "PT",
+        "state": "AL",
+        "name": "PAUL\u00c3O",
+        "id": "5829182"
+    },
+    {
+        "party": "PMDB",
+        "state": "CE",
+        "name": "PAULO HENRIQUE LUSTOSA",
+        "id": "5829217"
+    },
+    {
+        "party": "PSC",
+        "state": "PR",
+        "name": "PROFESSOR S\u00c9RGIO DE OLIVEIRA",
+        "id": "5829177"
+    },
+    {
+        "party": "PP",
+        "state": "MG",
+        "name": "RENATO ANDRADE",
+        "id": "5829186"
+    },
+    {
+        "party": "PSDB",
+        "state": "RR",
+        "name": "URZENI ROCHA",
+        "id": "5829190"
+    },
+    {
+        "party": "PMDB",
+        "state": "MS",
+        "name": "AKIRA OTSUBO",
+        "id": "5829225"
+    },
+    {
+        "party": "PR",
+        "state": "TO",
+        "name": "GOIACIARA CRUZ",
+        "id": "5829226"
+    },
+    {
+        "party": "PT",
+        "state": "CE",
+        "name": "IL\u00c1RIO MARQUES",
+        "id": "5829224"
+    },
+    {
+        "party": "PMDB",
+        "state": "RS",
+        "name": "MENDES RIBEIRO FILHO",
+        "id": "523145"
+    },
+    {
+        "party": "PEN",
+        "state": "TO",
+        "name": "NILMAR RUIZ",
+        "id": "5829221"
+    },
+    {
+        "party": "PSD",
+        "state": "PR",
+        "name": "PEDRO GUERRA",
+        "id": "5829228"
+    },
+    {
+        "party": "PSDB",
+        "state": "AM",
+        "name": "PL\u00cdNIO VAL\u00c9RIO",
+        "id": "5829220"
+    },
+    {
+        "party": "PMDB",
+        "state": "MG",
+        "name": "SILAS BRASILEIRO",
+        "id": "5829223"
+    }
+]

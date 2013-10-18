@@ -17,32 +17,40 @@ import scala.util.control.Exception._
 
 import java.util.Date
 
-object UserController extends Controller {
+import securesocial.core.{Identity, Authorization}
+
+object UserController extends Controller with securesocial.core.SecureSocial {
 
   //GET
-	def show(user_id: Long) = Action { implicit request =>
-      Ok(toJson(User.findById(user_id)))
-	}
-
-    //GET
-  def recommendLaws(user_id: Long) = Action { implicit request =>
-    var user=User.findById(user_id)
-    user match {
-      case Some(user) => 
-        var lawRecommender = new LawRecommender()
-        Ok(toJson(lawRecommender.recommendLawsForUser(user)))
-      case _ => Ok("")
-    }
-			
-	}
-
-  //POST
-  def addLawRegion(user_id: Long, region_id: Long) = Action{
-    Ok(toJson(User.findById(1)))
+  def show() = SecuredAction { implicit request =>
+    
+    request.user match {
+     case user: Identity => Ok(toJson(User.findByEmail(user.email)))
+   }
   }
-  
+
+  //GET
+  def recommendLaws() = SecuredAction { implicit request =>    
+
+    request.user match {
+      case user:Identity => 
+        var lawRecommender = new LawRecommender()
+        Ok(toJson(lawRecommender.recommendLawsForUser(user)))      
+    }
+
+  }
+
   //POST
-  def addTag(user_id: Long, tag_id: Long) = Action{
-    Ok(toJson(User.findById(1)))
+  def addLawRegion(region_id: Long) = SecuredAction { implicit request => 
+    request.user match {
+      case user: Identity => Ok(toJson(User.findById(1)))
+    }    
+  }
+
+  //POST
+  def addTag(tag_id: Long) = SecuredAction { implicit request =>
+    request.user match {
+      case user: Identity => Ok(toJson(User.findById(1)))
+    }    
   }
 }

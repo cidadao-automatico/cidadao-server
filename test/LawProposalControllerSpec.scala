@@ -24,30 +24,43 @@ class LawProposalControllerSpec extends Specification with Results {
   
   "LawProposalController" should {
 
+    trait trees extends After {                
+
+                def after = {
+                    User.deleteById(1)
+                    LawType.deleteById(1)
+                    LawStatus.deleteById(1)
+                    LawPriority.deleteById(1)
+                    LawRegion.deleteById(1)
+                    LawAuthor.deleteById(1)
+                    LawProposal.deleteById(1)
+                }
+            }
+
     "return a LawProposal object in JSON format" in {
         running(FakeApplication()) {
             var stdCode="PLasdasda"
             var createdAt=Calendar.getInstance().getTime()
             var url="http://asdasdasd"
-            User.save("Gustavo", "Salazar Torres", Option.apply("tavoaqp@gmail.com"), "912871983712","Facebook","Peru", "Lima", "Lima","29733722",User.NORMAL_TYPE)
-            var user = User.findById(1)
-            LawType.save("MUNICIPAL")
-            var lawType=LawType.findById(1)
-            LawStatus.save("VOTADA")
-            var lawStatus=LawStatus.findById(1)
-            LawPriority.save("URGENTE")
-            var lawPriority=LawPriority.findById(1)
-            LawRegion.save("Brasil","PAIS", None)
-            var lawRegion=LawRegion.findById(1)
-            LawAuthor.save("Gustavo Steinberg")
-            var lawAuthor=LawAuthor.findById(1)            
-            LawProposal.save(lawPriority, lawAuthor, lawRegion, lawType, lawStatus, url, createdAt, stdCode)
-            var lawProposal=LawProposal.findById(1)
-            var response=route(FakeRequest(GET, "/law_proposal/1/show"))
+            
+            var user = User.save("Gustavo", "Salazar Torres", Option("tavoaqp@gmail.com"), 
+                "912871983712","Facebook",Option("Peru"), Option("Lima"), Option("Lima"), Option("29733722"),User.NORMAL_TYPE)
+            
+            var lawType=LawType.save("MUNICIPAL")
+            var lawStatus=LawStatus.save("VOTADA")
+            var lawPriority=LawPriority.save("URGENTE")            
+            var lawRegion=LawRegion.save("Brasil","PAIS", None)
+            var lawAuthor=LawAuthor.save("Gustavo Steinberg")
+
+            var lawProposal=LawProposal.save(lawAuthor, lawRegion, lawType,  url, 2013, stdCode, "askdhaksdjahkdjahkdjahkdjahdskjh")
+            
+            var response=route(FakeRequest(GET, "/law_proposal/"+lawProposal.id+"/show"))
             var lawProposalJson=toJson(lawProposal).toString()
 
             status(response.get) must equalTo(200)
             contentAsString(response.get) must equalTo(lawProposalJson)
+
+
         }
     }
   }
