@@ -22,7 +22,7 @@ import securesocial.core.{Identity, Authorization}
 object UserController extends Controller with securesocial.core.SecureSocial {
 
   //GET
-  def show() = SecuredAction { implicit request =>
+  def show() = SecuredAction(ajaxCall = true) { implicit request =>
     
     request.user match {
      case user: Identity => Ok(toJson(User.findByEmail(user.email)))
@@ -30,7 +30,7 @@ object UserController extends Controller with securesocial.core.SecureSocial {
   }
 
   //GET
-  def recommendLaws() = SecuredAction { implicit request =>    
+  def recommendLaws() = SecuredAction(ajaxCall = true) { implicit request =>    
 
     request.user match {
       case user:Identity => 
@@ -41,14 +41,14 @@ object UserController extends Controller with securesocial.core.SecureSocial {
   }
 
   //POST
-  def addLawRegion(region_id: Long) = SecuredAction { implicit request => 
+  def addLawRegion(region_id: Long) = SecuredAction(ajaxCall = true) { implicit request => 
     request.user match {
       case user: Identity => Ok(toJson(User.findById(1)))
     }    
   }
 
   //POST
-  def addTag(tag_id: Long) = SecuredAction { implicit request =>
+  def addTag(tag_id: Long) = SecuredAction(ajaxCall = true) { implicit request =>
     request.user match {
       case user: Identity => Ok(toJson(User.findById(1)))
     }    
