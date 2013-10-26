@@ -35,7 +35,16 @@ object UserController extends Controller with securesocial.core.SecureSocial {
     request.user match {
       case user:Identity => 
         var lawRecommender = new LawRecommender()
-        Ok(toJson(lawRecommender.recommendLawsForUser(user)))      
+        
+        val pageParam: Option[String] = request.getQueryString("page")
+        var page: Int = 0
+        pageParam match {
+          case Some(value) => 
+            page = value.toInt
+          case _ => 
+            page = 1
+        }
+        Ok(toJson(lawRecommender.recommendLawsForUser(user,page)))      
     }
 
   }

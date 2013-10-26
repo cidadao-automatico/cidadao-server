@@ -51,10 +51,19 @@ object LawProposal {
       }
     }
 
-  def all(): Seq[LawProposal] = {
-    DB.withConnection { implicit connection =>
-      SQL("select * from law_proposals").as(LawProposal.simple *)
-    }
+  def all(page: Option[Int]): Seq[LawProposal] = {
+    page match {
+      case Some(pageVal) => 
+        DB.withConnection { implicit connection =>
+          SQL("select * from law_proposals limit 4 offset {offset}").
+          on('offset -> pageVal*4).
+          as(LawProposal.simple *)
+        }
+      case _ => 
+        DB.withConnection { implicit connection =>
+          SQL("select * from law_proposals").as(LawProposal.simple *)
+        }
+      }    
   }
 
   def findRandom(): Option[LawProposal] = {
