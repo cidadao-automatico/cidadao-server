@@ -26,7 +26,7 @@ GET     /law_proposal/random             controllers.LawProposalController.rando
 POST    /law_proposal/:law_id/vote       controllers.VoteController.vote(law_id: Long)
 
 GET     /law_regions                     controllers.Application.regionList  
-GET     /law_tags                        controllers.Application.tagList
+GET     /tags                            controllers.Application.tagList
 
 
 #New routes end here

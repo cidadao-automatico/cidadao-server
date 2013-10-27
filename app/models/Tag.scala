@@ -54,7 +54,7 @@ object Tag {
 
   def findByUser(user: User): Seq[Tag] = {
     DB.withConnection { implicit connection =>
-      SQL("select * from tags inner join user_tags on tags.id=user_tags.tag_id where user_tags.user_id={userId} order by tag.id").on(
+      SQL("select * from tags inner join user_tags on tags.id=user_tags.tag_id where user_tags.user_id={userId} order by tags.id").on(
         'userId -> user.id).as(Tag.simple *)
     }    
   }
