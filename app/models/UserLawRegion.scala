@@ -8,16 +8,15 @@ import java.util.Date
 import anorm._
 import anorm.SqlParser._
 
-case class UserLawRegion(id: Pk[Long], userId: Long, lawRegionId: Long)
+case class UserLawRegion(userId: Long, lawRegionId: Long)
 
 object UserLawRegion {
 
   val simple = {
-    (get[Pk[Long]]("id") ~
-      get[Long]("user_id") ~
+    ( get[Long]("user_id") ~
       get[Long]("law_region_id")) map {
-        case id ~ user_id ~ law_region_id =>
-          UserLawRegion(id, user_id, law_region_id)
+        case user_id ~ law_region_id =>
+          UserLawRegion(user_id, law_region_id)
       }
   }
 
@@ -31,8 +30,20 @@ object UserLawRegion {
     DB.withConnection { implicit connection =>
       SQL("""
           INSERT INTO user_law_regions(user_id, law_region_id)
-          VALUES({user_id}, {law_region_id})
+          VALUES({user_id}, {law_region_id}) ON DUPLICATE KEY UPDATE user_id=user_id, law_region_id=law_region_id
           """)
+        .on(
+          'user_id -> user.id,
+          'law_region_id -> lawRegion.id).executeInsert()
+    }
+  }
+
+  def deleteByUserAndRegion(user: User, lawRegion: LawRegion){
+    DB.withConnection { implicit connection =>
+      SQL("""
+        DELETE IGNORE FROM user_law_regions
+        WHERE user_id={user_id} AND law_region_id={law_region_id}
+        """)
         .on(
           'user_id -> user.id,
           'law_region_id -> lawRegion.id).executeInsert()

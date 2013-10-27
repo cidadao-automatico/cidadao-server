@@ -29,6 +29,7 @@ object LawRegion {
   }
 
   implicit val regionWrites = Json.writes[LawRegion]
+  implicit val regionReads = Json.reads[LawRegion]
 
   val simple = {
     (get[Pk[Long]]("id") ~
@@ -58,6 +59,13 @@ object LawRegion {
       SQL("select * from law_regions where description={description}").on(
         'description -> description).as(LawRegion.simple singleOpt)
     }
+  }
+
+  def findByUser(user: User): Seq[LawRegion] = {
+    DB.withConnection { implicit connection =>
+      SQL("select * from law_regions inner join user_law_regions on law_regions.id=user_law_regions.law_region_id where user_law_regions.user_id={userId} order by law_regions.id").on(
+        'userId -> user.id).as(LawRegion.simple *)
+    }    
   }
 
   def save(description: String, typeName: String, parent: Option[LawRegion]) : LawRegion = {

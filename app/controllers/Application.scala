@@ -255,7 +255,8 @@ object Application extends Controller {
 
   //GET
   def regionList() = Action {
-     Ok(toJson(LawRegion.findAll()))
+  		var data = toJson(LawRegion.findAll())
+     	Ok(data)
   }
 
   //GET

@@ -7,6 +7,8 @@ import scala.io.Source
 import play.api.libs.iteratee.Enumerator
 import play.api.libs.concurrent.Promise
 import play.api.libs.Jsonp
+import play.api.libs.json.JsArray
+import play.api.libs.json.JsObject
 
 import models._
 import utils.ModelJson._
@@ -50,9 +52,25 @@ object UserController extends Controller with securesocial.core.SecureSocial {
   }
 
   //POST
-  def addLawRegion(region_id: Long) = SecuredAction(ajaxCall = true) { implicit request => 
+  def addLawRegions() = SecuredAction(ajaxCall = true) { implicit request => 
     request.user match {
-      case user: Identity => Ok(toJson(User.findById(1)))
+      case user: Identity =>
+        request.body.asJson.map { json =>
+
+          (json \ "regions").as[List[JsObject]].map { element =>
+            var region = element.as[LawRegion]
+            if ((element \ "enabled").as[Boolean] == true)
+            {
+              UserLawRegion.save(User.findByEmail(user.email).get,region)              
+            }else{
+              UserLawRegion.deleteByUserAndRegion(User.findByEmail(user.email).get,region)
+            }
+          }
+          
+          Ok("Ok")          
+        }.getOrElse {
+          BadRequest("Only JSON accepted")
+        }
     }    
   }
 
@@ -61,5 +79,14 @@ object UserController extends Controller with securesocial.core.SecureSocial {
     request.user match {
       case user: Identity => Ok(toJson(User.findById(1)))
     }    
+  }
+
+  def selectedRegions() = SecuredAction(ajaxCall = true) { implicit request =>
+    request.user match {
+      case user: Identity => 
+        var userObj : Option[User] = User.findByEmail(user.email)
+        Ok(toJson(LawRegion.findByUser(userObj.get)))
+    }
+
   }
 }

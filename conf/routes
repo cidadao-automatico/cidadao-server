@@ -15,7 +15,8 @@ GET		/load						controllers.Application.loadPL
 
 GET     /user/show				 		 controllers.UserController.show()
 GET     /user/recommend_laws    		 controllers.UserController.recommendLaws()
-POST    /user/region/:region_id 		 controllers.UserController.addLawRegion(region_id: Long)
+GET     /user/regions                    controllers.UserController.selectedRegions()
+POST    /user/regions 		 			 controllers.UserController.addLawRegions()
 POST    /user/tag/:tag_id       		 controllers.UserController.addTag(tag_id: Long)
 
 GET     /law_proposal/:law_id/show       controllers.LawProposalController.show(law_id: Long)
