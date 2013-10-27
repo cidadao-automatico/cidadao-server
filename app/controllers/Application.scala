@@ -3,6 +3,8 @@ package controllers
 import play.api._
 import play.api.mvc._
 import play.api.libs.json.Json._
+import play.api.libs.json.Json
+import play.api.libs.json.JsArray
 import scala.io.Source
 import play.api.libs.iteratee.Enumerator
 import play.api.libs.concurrent.Promise
@@ -262,6 +264,21 @@ object Application extends Controller {
   //GET
   def tagList() = Action {
      Ok(toJson(Tag.findAll()))
+  }
+
+  def congressmanList = Action {
+  	var jsonArray = new JsArray()
+  	var congressmanList=User.findAllCongressman()
+  	for (congressman <- congressmanList)
+  	{
+  		//TODO: this should be refactored to a proper object
+  		var userObj = User.findById(congressman.id.get)
+      	var userJson = toJson(userObj)
+      	var congressmanJson = toJson(CongressmanInfo.findByUser(userObj.get))
+      	var finalJson = Json.obj( "user" -> userJson, "congressmanInfo" -> congressmanJson)
+      	jsonArray=jsonArray :+ finalJson
+  	}
+  	Ok(jsonArray)
   }
 
   def newLogin() = Action{
