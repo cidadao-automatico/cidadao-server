@@ -16,15 +16,17 @@ GET		/load						controllers.Application.loadPL
 GET     /user/show				 		 controllers.UserController.show()
 GET     /user/recommend_laws    		 controllers.UserController.recommendLaws()
 GET     /user/regions                    controllers.UserController.selectedRegions()
+GET     /user/tags                    	 controllers.UserController.selectedTags()
 POST    /user/regions 		 			 controllers.UserController.addLawRegions()
-POST    /user/tag/:tag_id       		 controllers.UserController.addTag(tag_id: Long)
+POST    /user/tags 		 			     controllers.UserController.addLawTags()
+#POST    /user/tag/:tag_id       		 controllers.UserController.addTag(tag_id: Long)
 
 GET     /law_proposal/:law_id/show       controllers.LawProposalController.show(law_id: Long)
 GET     /law_proposal/random             controllers.LawProposalController.randomLaw
 POST    /law_proposal/:law_id/vote       controllers.VoteController.vote(law_id: Long)
 
 GET     /law_regions                     controllers.Application.regionList  
-GET     /tag_list                        controllers.Application.tagList
+GET     /law_tags                        controllers.Application.tagList
 
 
 #New routes end here

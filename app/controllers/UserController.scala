@@ -59,6 +59,7 @@ object UserController extends Controller with securesocial.core.SecureSocial {
 
           (json \ "regions").as[List[JsObject]].map { element =>
             var region = element.as[LawRegion]
+            //TODO: Perhaps use map method and then do a match instead of a single comparison
             if ((element \ "enabled").as[Boolean] == true)
             {
               UserLawRegion.save(User.findByEmail(user.email).get,region)              
@@ -75,10 +76,27 @@ object UserController extends Controller with securesocial.core.SecureSocial {
   }
 
   //POST
-  def addTag(tag_id: Long) = SecuredAction(ajaxCall = true) { implicit request =>
+  def addLawTags() = SecuredAction(ajaxCall = true) { implicit request =>
     request.user match {
-      case user: Identity => Ok(toJson(User.findById(1)))
-    }    
+      case user: Identity =>
+        request.body.asJson.map { json =>
+
+          (json \ "tags").as[List[JsObject]].map { element =>
+            var tag = element.as[Tag]
+            //TODO: Perhaps use map method and then do a match instead of a single comparison
+            if ((element \ "enabled").as[Boolean] == true)
+            {
+              UserTag.save(User.findByEmail(user.email).get, tag)
+            }else{
+              UserTag.deleteByUserAndTag(User.findByEmail(user.email).get, tag)
+            }
+          }
+          
+          Ok("Ok")          
+        }.getOrElse {
+          BadRequest("Only JSON accepted")
+        }
+    }
   }
 
   def selectedRegions() = SecuredAction(ajaxCall = true) { implicit request =>
@@ -86,6 +104,15 @@ object UserController extends Controller with securesocial.core.SecureSocial {
       case user: Identity => 
         var userObj : Option[User] = User.findByEmail(user.email)
         Ok(toJson(LawRegion.findByUser(userObj.get)))
+    }
+
+  }
+
+  def selectedTags() = SecuredAction(ajaxCall = true) { implicit request =>
+    request.user match {
+      case user: Identity => 
+        var userObj : Option[User] = User.findByEmail(user.email)
+        Ok(toJson(Tag.findByUser(userObj.get)))
     }
 
   }

@@ -44,7 +44,7 @@ object LawTag {
       SQL("select * from law_tags where tag_id={tag_id}").on(
         'tag_id -> tag.id).as(LawTag.simple singleOpt)
     }
-  }
+  }  
 
   def save(tag: Tag, lawProposal: LawProposal) {
     DB.withConnection { implicit connection =>

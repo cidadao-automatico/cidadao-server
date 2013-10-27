@@ -24,6 +24,7 @@ object Tag {
   }
 
   implicit val tagWrites = Json.writes[Tag]
+  implicit val tagReads = Json.reads[Tag]
 
   //  val withCount = {
   // (get[Pk[Long]]("projeto_lei_has_keyword.keyword_id") ~
@@ -49,6 +50,13 @@ object Tag {
       SQL("select * from tags where name={name}").on(
         'name -> name).as(Tag.simple singleOpt)
     }
+  }
+
+  def findByUser(user: User): Seq[Tag] = {
+    DB.withConnection { implicit connection =>
+      SQL("select * from tags inner join user_tags on tags.id=user_tags.tag_id where user_tags.user_id={userId} order by tag.id").on(
+        'userId -> user.id).as(Tag.simple *)
+    }    
   }
 
   def findAll(): Seq[Tag] = {

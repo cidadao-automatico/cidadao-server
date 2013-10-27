@@ -34,12 +34,24 @@ object UserTag {
     }
   }
 
-  def save(tag: Tag, user: User) {
+  def save(user: User, tag: Tag) {
     DB.withConnection { implicit connection =>
       SQL("""
-			INSERT INTO user_tags(user_id, tag_id)
-			VALUES({user_id},{tag_id})
-			""")
+          INSERT INTO user_tags(user_id, tag_id)
+          VALUES({user_id}, {tag_id}) ON DUPLICATE KEY UPDATE user_id=user_id, tag_id=tag_id
+          """)
+        .on(
+          'user_id -> user.id,
+          'tag_id -> tag.id).executeInsert()
+    }
+  }
+
+  def deleteByUserAndTag(user: User, tag: Tag){
+    DB.withConnection { implicit connection =>
+      SQL("""
+        DELETE IGNORE FROM user_tags
+        WHERE user_id={user_id} AND tag_id={tag_id}
+        """)
         .on(
           'user_id -> user.id,
           'tag_id -> tag.id).executeInsert()
