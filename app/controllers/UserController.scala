@@ -28,7 +28,9 @@ object UserController extends Controller with securesocial.core.SecureSocial {
   def show() = SecuredAction(ajaxCall = true) { implicit request =>
     
     request.user match {
-     case user: Identity => Ok(toJson(User.findByEmail(user.email)))
+     case user: Identity => 
+      var userJson = toJson(User.findByEmail(user.email))
+      Ok(userJson)
    }
   }
 

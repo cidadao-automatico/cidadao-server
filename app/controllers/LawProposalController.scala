@@ -16,7 +16,9 @@ import scala.util.control.Exception._
 
 import java.util.Date
 
-object LawProposalController extends Controller {
+import securesocial.core.{Identity, Authorization}
+
+object LawProposalController extends Controller with securesocial.core.SecureSocial {
 
   def show(law_id: Long) = Action { implicit request =>
     var lawProposal = LawProposal.findById(law_id)
@@ -31,5 +33,12 @@ object LawProposalController extends Controller {
     LawProposal.findRandom().map { lawProposal =>
       Ok(toJson(lawProposal))
     }.getOrElse(NotFound)
+  }
+
+  //GET
+  def lawsForVote() = SecuredAction(ajaxCall = true) { implicit request =>    
+    request.user match {
+     case user: Identity => Ok(toJson(LawProposal.lawsNotVotedForUser(User.findByEmail(user.email).get)))
+   }
   }
 }

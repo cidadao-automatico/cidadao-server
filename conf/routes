@@ -24,6 +24,7 @@ POST    /user/representatives	     	 controllers.UserController.addRepresentativ
 
 GET     /law_proposal/:law_id/show       controllers.LawProposalController.show(law_id: Long)
 GET     /law_proposal/random             controllers.LawProposalController.randomLaw
+GET     /law_proposal/vote_training         controllers.LawProposalController.lawsForVote
 POST    /law_proposal/:law_id/vote       controllers.VoteController.vote(law_id: Long)
 
 GET     /law_regions                     controllers.Application.regionList  
