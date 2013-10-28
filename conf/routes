@@ -21,6 +21,7 @@ GET     /user/representatives            controllers.UserController.selectedRepr
 POST    /user/regions 		 			 controllers.UserController.addLawRegions()
 POST    /user/tags 		 			     controllers.UserController.addLawTags()
 POST    /user/representatives	     	 controllers.UserController.addRepresentatives()
+POST    /user/configured	     	     controllers.UserController.updateConfigured()
 
 GET     /law_proposal/:law_id/show       controllers.LawProposalController.show(law_id: Long)
 GET     /law_proposal/random             controllers.LawProposalController.randomLaw
