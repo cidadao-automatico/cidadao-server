@@ -42,8 +42,8 @@ object Vote {
   def save(user: User, lawProposal: LawProposal, rate: Int) {
     DB.withConnection { implicit connection =>
       SQL("""
-  				INSERT INTO parties(user_id, law_proposal_id, rate)
-  				VALUES({user_id}, {law_proposal_id}, {rate})
+  				INSERT INTO votes(user_id, law_proposal_id, rate)
+  				VALUES({user_id}, {law_proposal_id}, {rate}) ON DUPLICATE KEY UPDATE rate=VALUES(rate)
   				""")
         .on(
           'user_id -> user.id,

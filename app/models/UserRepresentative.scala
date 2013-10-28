@@ -27,10 +27,10 @@ object UserRepresentative {
     }
   }
 
-  def findByUser(user: User): Option[UserRepresentative] = {
+  def findByUser(user: User): Seq[UserRepresentative] = {
     DB.withConnection { implicit connection =>
       SQL("select * from user_representatives where user_id={user_id}").on(
-        'user_id -> user.id).as(UserRepresentative.simple singleOpt)
+        'user_id -> user.id).as(UserRepresentative.simple *)
     }
   }
 
@@ -38,7 +38,7 @@ object UserRepresentative {
     DB.withConnection { implicit connection =>
       SQL("""
 			INSERT INTO user_representatives(user_id, congressman_id)
-			VALUES({user_id},{congressman_id})
+			VALUES ({user_id},{congressman_id}) ON DUPLICATE KEY UPDATE user_id=user_id, congressman_id=congressman_id
 			""")
         .on(
           'user_id -> user.id,
@@ -64,6 +64,18 @@ object UserRepresentative {
         WHERE congressman_id={congressman_id}
         """)
         .on(
+          'congressman_id -> congressman.id).executeInsert()
+    }
+  }
+
+  def deleteByUserAndCongressman(user: User, congressman: User) {
+    DB.withConnection { implicit connection =>
+      SQL("""
+        DELETE IGNORE FROM user_representatives
+        WHERE user_id={user_id} AND congressman_id={congressman_id}
+        """)
+        .on(
+          'user_id -> user.id,
           'congressman_id -> congressman.id).executeInsert()
     }
   }

@@ -3,6 +3,7 @@ package controllers
 import play.api._
 import play.api.mvc._
 import play.api.libs.json.Json._
+import play.api.libs.json.Json
 import scala.io.Source
 import play.api.libs.iteratee.Enumerator
 import play.api.libs.concurrent.Promise
@@ -27,7 +28,9 @@ object UserController extends Controller with securesocial.core.SecureSocial {
   def show() = SecuredAction(ajaxCall = true) { implicit request =>
     
     request.user match {
-     case user: Identity => Ok(toJson(User.findByEmail(user.email)))
+     case user: Identity => 
+      var userJson = toJson(User.findByEmail(user.email))
+      Ok(userJson)
    }
   }
 
@@ -99,6 +102,31 @@ object UserController extends Controller with securesocial.core.SecureSocial {
     }
   }
 
+  //POST
+  def addRepresentatives() = SecuredAction(ajaxCall = true) { implicit request =>
+    request.user match {
+      case user: Identity =>
+        request.body.asJson.map { json =>
+
+          (json \ "congressmanList").as[List[JsObject]].map { container =>
+            var congressman = (container \ "user").as[User]
+            if ((container \ "enabled").as[Boolean] == true)
+            { 
+              UserRepresentative.save(User.findByEmail(user.email).get, congressman)
+            } 
+            else
+            {
+              UserRepresentative.deleteByUserAndCongressman(User.findByEmail(user.email).get, congressman)
+            }            
+          }
+          
+          Ok("Ok")          
+        }.getOrElse {
+          BadRequest("Only JSON accepted")
+        }
+    }
+  }
+
   def selectedRegions() = SecuredAction(ajaxCall = true) { implicit request =>
     request.user match {
       case user: Identity => 
@@ -114,6 +142,23 @@ object UserController extends Controller with securesocial.core.SecureSocial {
         var userObj : Option[User] = User.findByEmail(user.email)
         Ok(toJson(Tag.findByUser(userObj.get)))
     }
+  }
 
+  def selectedRepresentatives() = SecuredAction(ajaxCall = true) { implicit request =>
+    request.user match {
+      case user: Identity => 
+        var userRepresentatives = UserRepresentative.findByUser(User.findByEmail(user.email).get)
+        var jsonArray = new JsArray()
+        for (userRepresentative <- userRepresentatives)
+        {
+          //TODO: this should be refactored to a proper object
+          var userObj = User.findById(userRepresentative.congressman_id)
+          var userJson = toJson(userObj)
+          var congressmanJson = toJson(CongressmanInfo.findByUser(userObj.get))
+          var finalJson = Json.obj( "user" -> userJson, "congressmanInfo" -> congressmanJson)
+          jsonArray=jsonArray :+ finalJson
+        }
+        Ok(jsonArray)
+    }
   }
 }

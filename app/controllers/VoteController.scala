@@ -16,27 +16,24 @@ import scala.util.control.Exception._
 
 import java.util.Date
 
-object VoteController extends Controller {
+import securesocial.core.{Identity, Authorization}
+
+object VoteController extends Controller with securesocial.core.SecureSocial {
 
   //POST
-  def vote(law_proposal_id: Long) = Action {
-    var lawProposal = LawProposal.findById(law_proposal_id)
-    //check if user is logged in
-    var user = User.findById(1)
-    //get this var from request
-    var rate = 1
-    user match {
-      case Some(user) =>
-        lawProposal match {
-          case Some(lawProposal) =>
-            Vote.save(user, lawProposal, rate)
-            Ok("")
-          case _ => Ok("")
+  def vote(law_proposal_id: Long) = SecuredAction(ajaxCall = true) { implicit request =>
+    
+    request.user match {
+     case user: Identity => 
+      request.body.asJson.map { json =>
+        var rate = (json \ "rate").as[Int]        
+        Vote.save(User.findByEmail(user.email).get, LawProposal.findById(law_proposal_id).get, rate)
+        Ok("ok")  
+      }.getOrElse {
+          BadRequest("Only JSON accepted")
         }
-
-      case _ => Ok("")
-    }
-
+      
+   }
   }
 
 }

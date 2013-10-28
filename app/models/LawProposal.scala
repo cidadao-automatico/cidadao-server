@@ -55,15 +55,41 @@ object LawProposal {
     page match {
       case Some(pageVal) => 
         DB.withConnection { implicit connection =>
-          SQL("select * from law_proposals limit 4 offset {offset}").
+          SQL("select * from law_proposals where vote_status=0 limit 4 offset {offset}").
+          on('offset -> (pageVal-1)*4).
+          as(LawProposal.simple *)
+        }
+      case _ => 
+        DB.withConnection { implicit connection =>
+          SQL("select * from law_proposals where vote_status=0").as(LawProposal.simple *)
+        }
+      }    
+  }
+
+  def allVoted(page: Option[Int]): Seq[LawProposal] = {
+    page match {
+      case Some(pageVal) => 
+        DB.withConnection { implicit connection =>
+          SQL("select * from law_proposals where vote_status=1 limit 4 offset {offset}").
           on('offset -> pageVal*4).
           as(LawProposal.simple *)
         }
       case _ => 
         DB.withConnection { implicit connection =>
-          SQL("select * from law_proposals").as(LawProposal.simple *)
+          SQL("select * from law_proposals where vote_status=1").as(LawProposal.simple *)
         }
       }    
+  }
+
+
+  def lawsNotVotedForUser(user: User): Seq[LawProposal] = {
+    DB.withConnection { implicit connection =>
+          SQL("""
+            select * from law_proposals where vote_status=1 AND id not in (select law_proposal_id from votes where user_id={user_id}) order by rand() limit 4
+            """).
+          on('user_id -> user.id).
+          as(LawProposal.simple *)
+        }
   }
 
   def findRandom(): Option[LawProposal] = {

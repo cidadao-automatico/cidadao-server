@@ -30,6 +30,7 @@ object User {
   }
 
   implicit val userWrites = Json.writes[User]
+  implicit val userReads = Json.reads[User]
 
   val simple = {
     (get[Pk[Long]]("id") ~
@@ -51,6 +52,12 @@ object User {
   def all(): Seq[User] = {
     DB.withConnection { implicit connection =>
       SQL("select * from users").as(User.simple *)
+    }
+  }
+
+  def findAllCongressman(): Seq[User] = {
+    DB.withConnection { implicit connection =>
+      SQL("select * from users where type_code={type_code}").on('type_code -> CONGRESS_TYPE).as(User.simple *)
     }
   }
 
