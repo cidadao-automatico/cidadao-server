@@ -161,4 +161,23 @@ object UserController extends Controller with securesocial.core.SecureSocial {
         Ok(jsonArray)
     }
   }
+
+  def updateConfigured() = SecuredAction(ajaxCall = true) { implicit request =>
+    request.user match {
+      case user: Identity =>
+        var userObj = User.findByEmail(user.email).get
+        userObj.configured=true
+        User.updateConfigured(userObj)
+        Ok(toJson(userObj))
+    }
+  }
+
+
+  def votes() = SecuredAction(ajaxCall = true) { implicit request =>
+    request.user match {
+      case user: Identity =>
+        var userObj = User.findByEmail(user.email).get        
+        Ok(toJson(Vote.findByUser(userObj)))
+    }
+  }
 }

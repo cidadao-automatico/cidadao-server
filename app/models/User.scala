@@ -15,7 +15,7 @@ import anorm.SqlParser._
 // import securesocial.core._
 
 case class User(id: Pk[Long], firstName: String, lastName: String, email: Option[String], oauthId: String, oauthProvider: String,
-  countryName: Option[String], stateName: Option[String], cityName: Option[String], docId: Option[String], typeCode: Int)
+  countryName: Option[String], stateName: Option[String], cityName: Option[String], docId: Option[String], typeCode: Int, var configured: Boolean)
 
 object User {
 
@@ -43,9 +43,10 @@ object User {
       get[Option[String]]("state_name") ~
       get[Option[String]]("city_name") ~
       get[Option[String]]("doc_id") ~
-      get[Int]("type_code")) map {
-        case id ~ first_name ~ last_name ~ email ~ oauth_id ~ oauth_provider ~ country_name ~ state_name ~ city_name ~ doc_id ~ type_code =>
-          User(id, first_name, last_name, email, oauth_id, oauth_provider, country_name, state_name, city_name, doc_id, type_code)
+      get[Int]("type_code") ~
+      get[Boolean]("configured")) map {
+        case id ~ first_name ~ last_name ~ email ~ oauth_id ~ oauth_provider ~ country_name ~ state_name ~ city_name ~ doc_id ~ type_code ~ configured =>
+          User(id, first_name, last_name, email, oauth_id, oauth_provider, country_name, state_name, city_name, doc_id, type_code, configured)
       }
   }
 
@@ -111,7 +112,20 @@ object User {
           'doc_id -> docId,
           'type_code -> typeCode).executeInsert()
 
-      idOpt.map { id => User(Id(id), firstName, lastName, email, oauthId, oauthProvider, countryName, stateName, cityName, docId, typeCode) }.get
+      idOpt.map { id => User(Id(id), firstName, lastName, email, oauthId, oauthProvider, countryName, stateName, cityName, docId, typeCode, false) }.get
+    }
+  }
+
+  def updateConfigured(user: User): Option[User] ={
+    DB.withConnection { implicit connection =>
+      SQL("""
+          UPDATE users SET configured={configured} WHERE id={id}
+          """)
+        .on(
+          'id -> user.id,
+          'configured -> user.configured).executeUpdate()
+
+      Option(user)
     }
   }
 
@@ -137,7 +151,7 @@ object User {
           'doc_id -> docId,
           'type_code -> typeCode).executeUpdate()
 
-      Option(User(Id(id), firstName, lastName, email, oauthId, oauthProvider, countryName, stateName, cityName, docId, typeCode))
+      Option(User(Id(id), firstName, lastName, email, oauthId, oauthProvider, countryName, stateName, cityName, docId, typeCode, false))
     }
   }
 

@@ -18,9 +18,11 @@ GET     /user/recommend_laws    		 controllers.UserController.recommendLaws()
 GET     /user/regions                    controllers.UserController.selectedRegions()
 GET     /user/tags                    	 controllers.UserController.selectedTags()
 GET     /user/representatives            controllers.UserController.selectedRepresentatives()
+GET     /user/votes      			     controllers.UserController.votes()
 POST    /user/regions 		 			 controllers.UserController.addLawRegions()
 POST    /user/tags 		 			     controllers.UserController.addLawTags()
 POST    /user/representatives	     	 controllers.UserController.addRepresentatives()
+POST    /user/configured	     	     controllers.UserController.updateConfigured()
 
 GET     /law_proposal/:law_id/show       controllers.LawProposalController.show(law_id: Long)
 GET     /law_proposal/random             controllers.LawProposalController.randomLaw
