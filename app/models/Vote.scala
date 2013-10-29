@@ -23,6 +23,7 @@ object Vote {
   }
 
   implicit val voteWrites = Json.writes[Vote]
+  implicit val voteReads = Json.reads[Vote]
 
   val simple = {
     (get[Long]("user_id") ~
@@ -50,6 +51,12 @@ object Vote {
           'law_proposal_id -> lawProposal.id,
           'rate -> rate).executeInsert()
     }
+  }
+
+  def findByUser(user: User): Seq[Vote] = {
+   DB.withConnection { implicit connection =>
+      SQL("select * from votes where user_id={user_id}").on('user_id -> user.id).as(Vote.simple *)
+    } 
   }
 
 }
