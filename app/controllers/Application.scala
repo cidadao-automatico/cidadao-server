@@ -49,6 +49,7 @@ import java.net.URL
 import java.io.File
 import java.util.concurrent.Executors
 import java.io.FileInputStream
+import scala.xml._
 
 object Application extends Controller {
 
@@ -274,13 +275,74 @@ object Application extends Controller {
 	}
   }
 
-  def loadAllLaws() = Action{
+class SaveLaw(val xmlData:NodeSeq, val lawTypeData: String) extends Runnable{
+  	var xml: NodeSeq = xmlData
+  	var lawType: String = lawTypeData
 
+  	def run(){
+  		var region=LawRegion.findByDescription("Brasil").get
+  		var sourceId = (xml \ "id").text
+  		var prefix = (xml \ "tipoProposicao" \ "sigla").text
+  		var stdCode = (xml \ "numero").text
+  		var year = (xml \ "ano").text
+  		var description = (xml \ "txtEmenta").text
+  		var detalhePath="/tmp/leis"+sourceId.split("").mkString("/")+"/detalhe_"+lawType+"_"+stdCode+".xml"
+  		var detalheFile=new File(detalhePath)
+  		if (detalheFile.exists() && detalheFile.length()>0)
+  		{
+  			println("Lei "+year+" "+lawType+" "+stdCode+" existe ("+detalhePath+")")
+  			val detalheXml = scala.xml.XML.load(new FileInputStream(detalheFile))	
+  			var lawTags=(detalheXml \ "Indexacao").text.split(",")
+  			
+  			var lawProposal=LawProposal.save(region, prefix, "", year.toInt, stdCode, description)
+  			for (tag <- lawTags)
+  			{	
+  				var cleanTag=(tag.replaceAll("[\\p{Punct}]","").split("\\s") map {(x) => StringUtils.capitalize(x.toLowerCase) + " "}).mkString("")
+  				var noTrailingTag=StringUtils.trim(cleanTag)
+  				var tagObj:Tag=Tag.findOrCreate(noTrailingTag)
+  				LawTag.save(tagObj,lawProposal)
+  				
+  			}
+
+  			var votacaoPath="/tmp/leis"+sourceId.split("").mkString("/")+"/votacao_"+lawType+"_"+stdCode+".xml"
+	  		var votacaoFile=new File(votacaoPath)
+	  		var updateVoteStatus: Boolean = false
+	  		if (votacaoFile.exists() && votacaoFile.length()>0)
+	  		{
+	  			println("Votacao de Lei "+year+" "+lawType+" "+stdCode+" existe ("+votacaoPath+")")
+	  			val votacaoXml = scala.xml.XML.load(new FileInputStream(votacaoFile))	
+	  			((votacaoXml \\ "Votacao").last \ "votos" \\ "Deputado").map { deputadoXml => 
+	  				var congressId=(deputadoXml \ "@ideCadastro").text
+	  				var rate=(deputadoXml \ "@Votacao").text
+	  				
+	  				var congressman=CongressmanInfo.findByCongressId(congressId.toInt)
+	  				congressman match {
+	  					case Some(congressmanObj) => 
+	  						println("Vai salvar voto do deputado "+congressId)
+	  						updateVoteStatus = true
+	  						Vote.save(congressmanObj.userId.toInt, lawProposal.id.get.toInt, rate.toInt, None)
+	  					case _ => 
+	  				}
+	  			}
+	  		}
+
+	  		if (updateVoteStatus==true)
+	  		{
+	  			LawProposal.updateVoteStatus(lawProposal.id.get, true)
+	  		}
+
+  		}
+  	}
+  }
+
+  def loadAllLaws() = Action{
+	val cores = 16
+	val pool = Executors.newFixedThreadPool(cores)
   	AsyncResult{
 
   		var lawTypes=List("PEC","PL")
-	  	var yearRange=1999 until 2014
-	  	var region=LawRegion.findByDescription("Brasil").get
+	  	var yearRange=2007 until 2014
+	  	
 	  	for (year <- yearRange)
 		{
 			for (lawType <- lawTypes)
@@ -289,39 +351,32 @@ object Application extends Controller {
 			  	val proposicaoXML = scala.xml.XML.load(getClass.getResource("/data/proposicoes_"+lawType+"_"+year+".xml"))				
 				
 	  			(proposicaoXML \\ "proposicao").map { xml =>
-			  		var sourceId = (xml \ "id").text
-			  		var prefix = (xml \ "tipoProposicao" \ "sigla").text
-			  		var stdCode = (xml \ "numero").text
-			  		var year = (xml \ "ano").text
-			  		var description = (xml \ "txtEmenta").text
-			  		var detalhePath="/tmp/leis"+sourceId.split("").mkString("/")+"/detalhe_"+lawType+"_"+stdCode+".xml"
-			  		var detalheFile=new File(detalhePath)
-			  		if (detalheFile.exists() && detalheFile.length()>0)
-			  		{
-			  			println("Lei "+lawType+" "+stdCode+" existe ("+detalhePath+")")
-			  			val detalheXml = scala.xml.XML.load(new FileInputStream(detalheFile))	
-			  			var lawTags=(detalheXml \ "Indexacao").text.split(",")
-			  			
-			  			var lawProposal=LawProposal.save(region, prefix, "", year.toInt, stdCode, description)
-			  			for (tag <- lawTags)
-			  			{	
-			  				var cleanTag=(tag.replaceAll("[\\p{Punct}]","").split("\\s") map {(x) => StringUtils.capitalize(x.toLowerCase) + " "}).mkString("")
-			  				var noTrailingTag=StringUtils.trim(cleanTag)
-			  				println(noTrailingTag)
-			  				var tagObj:Tag=Tag.findOrCreate(noTrailingTag)
-			  				LawTag.save(tagObj,lawProposal)
-			  				
-			  			}
-			  		}
+	  				pool.submit(new SaveLaw(xml, lawType))
+			  	}			  	
+			}  			
+		}
+		Future(Ok("ok"))
+  	}
+  }
 
-			  		
-			  		// else
-			  		// {
-			  		// 	println("Lei "+lawType+" "+stdCode+" existe ("+path+")")
-			  		// }
-			  		
-			  	}
-			  	
+  def loadAllLaws2() = Action{
+	val cores = 16
+	val pool = Executors.newFixedThreadPool(cores)
+  	AsyncResult{
+
+  		var lawTypes=List("PEC","PL")
+	  	var yearRange=1999 until 2007
+	  	
+	  	for (year <- yearRange)
+		{
+			for (lawType <- lawTypes)
+			{
+
+			  	val proposicaoXML = scala.xml.XML.load(getClass.getResource("/data/proposicoes_"+lawType+"_"+year+".xml"))				
+				
+	  			(proposicaoXML \\ "proposicao").map { xml =>
+	  				pool.submit(new SaveLaw(xml, lawType))
+			  	}			  	
 			}  			
 		}
 		Future(Ok("ok"))

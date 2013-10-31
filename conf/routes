@@ -15,6 +15,7 @@ GET 	/downloadLaws				controllers.Application.downloadProposicoes()
 GET 	/verifyLaws					controllers.Application.verifyLeisData()
 GET     /downloadVotes				controllers.Application.loadVotacao()
 GET     /loadLaws                   controllers.Application.loadAllLaws()
+GET     /loadLaws2                  controllers.Application.loadAllLaws2()
 
 #New routes start here
 

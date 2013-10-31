@@ -86,4 +86,12 @@ object CongressmanInfo {
     } 
   }
 
+  def findByCongressId(congress_id: Int) : Option[CongressmanInfo]  = {
+    DB.withConnection { implicit connection =>
+      SQL("select * from congressman_infos where congress_id={congress_id}").
+        on('congress_id -> congress_id).
+        as(CongressmanInfo.simple singleOpt)
+    } 
+  }
+
 }

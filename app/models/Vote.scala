@@ -57,19 +57,34 @@ object Vote {
     }
   }
 
-  def save(user: User, lawProposal: LawProposal, rate: Int, predictedRate: Int) {
+  def save(user: User, lawProposal: LawProposal, rate: Int, predictedRate: Option[Int]) {
     DB.withConnection { implicit connection =>
       SQL("""
-  				INSERT INTO votes(user_id, law_proposal_id, rate)
+  				INSERT INTO votes(user_id, law_proposal_id, rate, predicted_rate)
   				VALUES({user_id}, {law_proposal_id}, {rate}, {predicted_rate}) ON DUPLICATE KEY UPDATE rate=VALUES(rate), predicted_rate=VALUES(predicted_rate)
   				""")
         .on(
           'user_id -> user.id,
           'law_proposal_id -> lawProposal.id,
           'rate -> rate,
-          'predicted_rate -> predictedRate).executeInsert()
+          'predicted_rate -> predictedRate.get).executeInsert()
     }
   }
+
+  def save(userId: Int, lawProposalId: Int, rate: Int, predictedRate: Option[Int]) {
+    DB.withConnection { implicit connection =>
+      SQL("""
+          INSERT INTO votes(user_id, law_proposal_id, rate, predicted_rate)
+          VALUES({user_id}, {law_proposal_id}, {rate}, {predicted_rate}) ON DUPLICATE KEY UPDATE rate=VALUES(rate), predicted_rate=VALUES(predicted_rate)
+          """)
+        .on(
+          'user_id -> userId,
+          'law_proposal_id -> lawProposalId,
+          'rate -> rate,
+          'predicted_rate -> predictedRate.get).executeInsert()
+    }
+  }
+
 
   def findByUser(user: User): Seq[Vote] = {
    DB.withConnection { implicit connection =>

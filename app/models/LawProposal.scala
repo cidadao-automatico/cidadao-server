@@ -140,4 +140,16 @@ object LawProposal {
           'id -> id).executeInsert()
     }
   }
+
+  def updateVoteStatus(law_id : Long, status: Boolean)
+  {
+    DB.withConnection { implicit connection =>
+        SQL("""
+          UPDATE law_proposals SET vote_status={vote_status} WHERE id={law_id}
+          """)
+            .on(
+              'vote_status -> status,
+              'law_id -> law_id).executeUpdate()
+        }
+    }
 }
