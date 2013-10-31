@@ -390,7 +390,7 @@ class SaveLaw(val xmlData:NodeSeq, val lawTypeData: String) extends Runnable{
 
   //GET
   def tagList() = Action {
-     Ok(toJson(Tag.findAll()))
+     Ok(toJson(Tag.first100()))
   }
 
   def congressmanList = Action {

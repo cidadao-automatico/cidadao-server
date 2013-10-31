@@ -81,6 +81,12 @@ object Tag {
     }
   }
 
+  def first100(): Seq[Tag] = {
+    DB.withConnection { implicit connection =>
+      SQL("select * from tags limit 100").as(Tag.simple *)
+    }
+  }
+
   def save(name: String) {
     DB.withConnection { implicit connection =>
       SQL("""
