@@ -5,11 +5,16 @@ GET		/newuser						 controllers.Application.newLogin
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
-#GET		/pl/:lawid/votes				controllers.Application.getVotes(lawid: String, callback: Option[String])
+#GET	/pl/:lawid/votes				controllers.Application.getVotes(lawid: String, callback: Option[String])
 GET		/load						controllers.Application.loadPL
-#GET		/tag						controllers.Application.getTags(callback: Option[String])
-#GET		/pl							controllers.Application.getPLs(page: Option[Int], callback: Option[String])
-
+GET 	/loadDeputados 				controllers.Application.loadAllDeputados
+GET		/loadall					controllers.Application.loadAllData
+#GET	/tag						controllers.Application.getTags(callback: Option[String])
+#GET	/pl							controllers.Application.getPLs(page: Option[Int], callback: Option[String])
+GET 	/downloadLaws				controllers.Application.downloadProposicoes()
+GET 	/verifyLaws					controllers.Application.verifyLeisData()
+GET     /downloadVotes				controllers.Application.loadVotacao()
+GET     /loadLaws                   controllers.Application.loadAllLaws()
 
 #New routes start here
 
@@ -26,7 +31,7 @@ POST    /user/configured	     	     controllers.UserController.updateConfigured(
 
 GET     /law_proposal/:law_id/show       controllers.LawProposalController.show(law_id: Long)
 GET     /law_proposal/random             controllers.LawProposalController.randomLaw
-GET     /law_proposal/vote_training         controllers.LawProposalController.lawsForVote
+GET     /law_proposal/vote_training      controllers.LawProposalController.lawsForVote
 POST    /law_proposal/:law_id/vote       controllers.VoteController.vote(law_id: Long)
 
 GET     /law_regions                     controllers.Application.regionList  

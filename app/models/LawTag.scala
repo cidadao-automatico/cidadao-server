@@ -65,7 +65,7 @@ object LawTag {
   def save(tag: Tag, lawProposal: LawProposal) {
     DB.withConnection { implicit connection =>
       SQL("""
-			INSERT INTO law_tags(user_id, law_proposal_id)
+			INSERT INTO law_tags(tag_id, law_proposal_id)
 			VALUES({tag_id},{law_proposal_id})
 			""")
         .on(

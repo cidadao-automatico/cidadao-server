@@ -28,7 +28,9 @@ object ApplicationBuild extends Build {
     jdbc,
     anorm,
 	"mysql" % "mysql-connector-java" % "5.1.18",
-  "securesocial" %% "securesocial" % "2.1.1"
+  "securesocial" %% "securesocial" % "2.1.1",
+  "nz.ac.waikato.cms.weka" % "weka-stable" % "3.6.9",
+  "org.apache.lucene" % "lucene-core" % "4.5.1"
   )
 
 

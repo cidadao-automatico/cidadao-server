@@ -28,7 +28,7 @@ import java.util.Date
 import anorm._
 import anorm.SqlParser._
 
-case class Vote(userId: Long, lawProposalId: Long, rate: Int)
+case class Vote(userId: Long, lawProposalId: Long, rate: Int, predictedRate: Int)
 
 object Vote {
 
@@ -44,9 +44,10 @@ object Vote {
   val simple = {
     (get[Long]("user_id") ~
       get[Long]("law_proposal_id") ~
-      get[Int]("rate")) map {
-        case user_id ~ law_proposal_id ~ rate =>
-          Vote(user_id, law_proposal_id, rate)
+      get[Int]("rate") ~
+      get[Int]("predicted_rate")) map {
+        case user_id ~ law_proposal_id ~ rate ~ predicted_rate =>
+          Vote(user_id, law_proposal_id, rate, predicted_rate)
       }
   }
 
@@ -56,16 +57,17 @@ object Vote {
     }
   }
 
-  def save(user: User, lawProposal: LawProposal, rate: Int) {
+  def save(user: User, lawProposal: LawProposal, rate: Int, predictedRate: Int) {
     DB.withConnection { implicit connection =>
       SQL("""
   				INSERT INTO votes(user_id, law_proposal_id, rate)
-  				VALUES({user_id}, {law_proposal_id}, {rate}) ON DUPLICATE KEY UPDATE rate=VALUES(rate)
+  				VALUES({user_id}, {law_proposal_id}, {rate}, {predicted_rate}) ON DUPLICATE KEY UPDATE rate=VALUES(rate), predicted_rate=VALUES(predicted_rate)
   				""")
         .on(
           'user_id -> user.id,
           'law_proposal_id -> lawProposal.id,
-          'rate -> rate).executeInsert()
+          'rate -> rate,
+          'predicted_rate -> predictedRate).executeInsert()
     }
   }
 

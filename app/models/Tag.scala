@@ -113,21 +113,21 @@ object Tag {
   // 	}
   // }
 
-  //  def findOrCreate(name: String): Option[Tag] = {
-  // DB.withConnection { implicit connection =>
-  //   findByName(name) match {
-  // 	case Some(tag) => Some(tag)
-  // 	case None =>
-  // 	  val idOpt: Option[Long] = SQL("""INSERT INTO tags
-  // 									(name)
-  // 									VALUES
-  // 									({name})""")
-  // 								.on(
-  // 								  'name -> name
-  // 									).executeInsert()
-  // 	  idOpt.map { id => Tag(Id(id), name) }
-  //   }
-  // }
-  //  }
+   def findOrCreate(name: String): Tag = {
+    DB.withConnection { implicit connection =>
+      findByName(name) match {
+      	case Some(tag) => tag
+      	case None =>
+      	  val idOpt: Option[Long] = SQL("""INSERT INTO tags
+      									(name)
+      									VALUES
+      									({name})""")
+      								.on(
+      								  'name -> name
+      									).executeInsert()
+      	  idOpt.map { id => Tag(Id(id), name) }.get
+        }
+    }
+   }
 
 }

@@ -43,7 +43,8 @@ object VoteController extends Controller with securesocial.core.SecureSocial {
      case user: Identity => 
       request.body.asJson.map { json =>
         var rate = (json \ "rate").as[Int]        
-        Vote.save(User.findByEmail(user.email).get, LawProposal.findById(law_proposal_id).get, rate)
+        var predictedRate = (json \ "predicted_rate").as[Int]
+        Vote.save(User.findByEmail(user.email).get, LawProposal.findById(law_proposal_id).get, rate, predictedRate)
         Ok("ok")  
       }.getOrElse {
           BadRequest("Only JSON accepted")

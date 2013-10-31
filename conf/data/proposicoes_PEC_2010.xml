@@ -1,0 +1,4229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<proposicoes>
+  <proposicao>
+    <id>489897</id>
+    <nome>PEC 531/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>531</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>15/12/2010 17:23:01</datApresentacao>
+    <txtEmenta>Altera dispositivos constitucionais para prever o recebimento pelas centrais sindicais da arrecadação oriunda de parcela das contribuições sindicais.</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Flávio Dino</txtNomeAutor>
+      <idecadastro>141436</idecadastro>
+      <codPartido>99</codPartido>
+      <txtSiglaPartido>PCdoB     </txtSiglaPartido>
+      <txtSiglaUF>MA</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>5/1/2011 14:29:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>924</id>
+      <descricao>Pronta para Pauta</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>489884</id>
+    <nome>PEC 530/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>530</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>15/12/2010 17:00:51</datApresentacao>
+    <txtEmenta>Institui o sistema distrital misto, majoritário e proporcional, para a eleição das Câmaras Federal e Estadual, alterando a redação dos arts. 29 e 45 da Constituição Federal.</txtEmenta>
+    <txtExplicacaoEmenta>Estabelece que os vereadores dos municípios com mais de duzentos mil eleitores serão eleitos metade pelo sistema distrital majoritário e metade pelo sistema proporcional e os Deputados Federais pelo voto majoritário em distritos uninominais e pelo voto proporcional.  Altera a Constituição Federal de 1988.</txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Rodrigo Rocha Loures</txtNomeAutor>
+      <idecadastro>141532</idecadastro>
+      <codPartido>111</codPartido>
+      <txtSiglaPartido>PMDB      </txtSiglaPartido>
+      <txtSiglaUF>PR</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>5/1/2011 14:29:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>923</id>
+      <descricao>Arquivada</descricao>
+      <orgao>
+        <codOrgaoEstado>MESA      </codOrgaoEstado>
+        <siglaOrgaoEstado>MESA      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>489706</id>
+    <nome>PEC 529/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>529</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>15/12/2010 14:19:58</datApresentacao>
+    <txtEmenta>Inclui o parágrafo 22 ao art. 40 da Constituição Federal, garantindo ao atual professor de educação infantil a contagem do tempo de efetivo exercício em cargo, emprego ou função pública em unidade de atendimento às crianças de zero até seis anos de idade, antes da integração destas ao sistema municipal de ensino, para fins de aposentadoria.</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Vicentinho</txtNomeAutor>
+      <idecadastro>74283</idecadastro>
+      <codPartido>134</codPartido>
+      <txtSiglaPartido>PT        </txtSiglaPartido>
+      <txtSiglaUF>SP</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>5/1/2011 10:44:00</datDespacho>
+      <txtDespacho>Apense-se à(ao) PEC-573/2006.Proposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>925</id>
+      <descricao>Tramitando em Conjunto</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>334449</codProposicaoPrincipal>
+        <proposicaoPrincipal>PEC 573/2006</proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>489701</id>
+    <nome>PEC 528/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>528</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>15/12/2010 13:46:40</datApresentacao>
+    <txtEmenta>Acrescenta dispositivos ao art. 203 da Constituição Federal, para garantir uma renda mínima para a pessoa com deficiência intelectual, com autismo ou com deficiência múltipla.</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Eduardo Barbosa</txtNomeAutor>
+      <idecadastro>74655</idecadastro>
+      <codPartido>128</codPartido>
+      <txtSiglaPartido>PSDB      </txtSiglaPartido>
+      <txtSiglaUF>MG</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>7/10/2011</datDespacho>
+      <txtDespacho>Tendo em vista a correlação das matérias, determino a apensação da PEC-528/2010 à PEC-431/2009. Ambas as propostas aguardam criação de comissão temporária.Proposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>925</id>
+      <descricao>Tramitando em Conjunto</descricao>
+      <orgao>
+        <codOrgaoEstado>MESA      </codOrgaoEstado>
+        <siglaOrgaoEstado>MESA      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>459272</codProposicaoPrincipal>
+        <proposicaoPrincipal>PEC 431/2009</proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>489621</id>
+    <nome>PEC 527/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>527</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>14/12/2010 20:01:00</datApresentacao>
+    <txtEmenta>Dá nova redação ao § 4° do art. 18 da Constituição da República Federativa do Brasil, para restabelecer a competência dos Estados para legislar sobre criação, fusão, incorporação e desmembramento de Municípios.</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Giovanni Queiroz</txtNomeAutor>
+      <idecadastro>74077</idecadastro>
+      <codPartido>104</codPartido>
+      <txtSiglaPartido>PDT       </txtSiglaPartido>
+      <txtSiglaUF>PA</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>22/12/2010 18:22:00</datDespacho>
+      <txtDespacho>Apense-se à(ao) PEC-93/2007.Proposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>925</id>
+      <descricao>Tramitando em Conjunto</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>356309</codProposicaoPrincipal>
+        <proposicaoPrincipal>PEC 93/2007</proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>489524</id>
+    <nome>PEC 526/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>526</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>14/12/2010 15:48:23</datApresentacao>
+    <txtEmenta>Acrescenta parágrafo único ao art. 96 da Constituição Federal, dispondo sobre a participação de servidores na eleição de membros dos órgãos diretivos dos Tribunais de Justiça. </txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Vicentinho</txtNomeAutor>
+      <idecadastro>74283</idecadastro>
+      <codPartido>134</codPartido>
+      <txtSiglaPartido>PT        </txtSiglaPartido>
+      <txtSiglaUF>SP</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>5/1/2011 14:29:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>907</id>
+      <descricao>Aguardando Designação de Relator</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>489219</id>
+    <nome>PEC 525/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>525</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>9/12/2010 14:03:51</datApresentacao>
+    <txtEmenta>Altera os arts. 52, II, 92, §1º e 102, I, "r" e cria o Conselho Nacional da Defensoria Pública, e dá outras providências.</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Mauro Benevides</txtNomeAutor>
+      <idecadastro>73588</idecadastro>
+      <codPartido>111</codPartido>
+      <txtSiglaPartido>PMDB      </txtSiglaPartido>
+      <txtSiglaUF>CE</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>15/12/2010 20:26:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>924</id>
+      <descricao>Pronta para Pauta</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>488855</id>
+    <nome>PEC 524/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>524</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>7/12/2010 16:57:52</datApresentacao>
+    <txtEmenta>Altera a Constituição Federal substituindo a expressão Vereador para Deputado Municipal.</txtEmenta>
+    <txtExplicacaoEmenta>Altera a Constituição Federal de 1988.</txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Vicentinho Alves</txtNomeAutor>
+      <idecadastro>141554</idecadastro>
+      <codPartido>168</codPartido>
+      <txtSiglaPartido>PR        </txtSiglaPartido>
+      <txtSiglaUF>TO</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>15/12/2010 20:26:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>923</id>
+      <descricao>Arquivada</descricao>
+      <orgao>
+        <codOrgaoEstado>MESA      </codOrgaoEstado>
+        <siglaOrgaoEstado>MESA      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>488803</id>
+    <nome>PEC 523/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>523</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>7/12/2010 13:31:31</datApresentacao>
+    <txtEmenta>Dá nova redação ao § 4º do art. 18 da Constituição da República Federativa do Brasil, para restabelecer a competência dos Estados para legislar sobre criação, fusão, incorporação e desmembramento de Municípios.</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Giovanni Queiroz</txtNomeAutor>
+      <idecadastro>74077</idecadastro>
+      <codPartido>104</codPartido>
+      <txtSiglaPartido>PDT       </txtSiglaPartido>
+      <txtSiglaUF>PA</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>8/12/2010</datDespacho>
+      <txtDespacho>Devolva-se ao Autor, por não conter o número mínimo de assinaturas indicado no inciso I do art. 60, da Constituição Federal, combinado com o inciso I do art. 201, do Regimento Interno da Câmara dos Deputados. Oficie-se e, após, publique-se.Proposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial.
+DCD do dia 09/12/10 PÁG 49582 COL 02.</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>
+      </id>
+      <descricao>
+      </descricao>
+      <orgao>
+        <codOrgaoEstado>
+        </codOrgaoEstado>
+        <siglaOrgaoEstado>
+        </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>0</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>487785</id>
+    <nome>PEC 522/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>522</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>25/11/2010 14:56:07</datApresentacao>
+    <txtEmenta>Dá nova redação ao Inciso IV do art. 60 do Ato das Disposições Constitucionais Transitórias, da Constituição da República Federativa do Brasil, para facultar aos Municípios dispor dos recursos recebidos à conta do FUNDEB para atuação no ensino médio.</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Pompeo de Mattos</txtNomeAutor>
+      <idecadastro>73486</idecadastro>
+      <codPartido>104</codPartido>
+      <txtSiglaPartido>PDT       </txtSiglaPartido>
+      <txtSiglaUF>RS</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>2/12/2010 13:08:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>924</id>
+      <descricao>Pronta para Pauta</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>487512</id>
+    <nome>PEC 521/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>521</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>24/11/2010 14:10:41</datApresentacao>
+    <txtEmenta>Institui o piso salarial nacional para os servidores públicos. </txtEmenta>
+    <txtExplicacaoEmenta>Altera a Constituição Federal de 1988.</txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Marco Maia</txtNomeAutor>
+      <idecadastro>133373</idecadastro>
+      <codPartido>134</codPartido>
+      <txtSiglaPartido>PT        </txtSiglaPartido>
+      <txtSiglaUF>RS</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>5/1/2011 18:32:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>923</id>
+      <descricao>Arquivada</descricao>
+      <orgao>
+        <codOrgaoEstado>MESA      </codOrgaoEstado>
+        <siglaOrgaoEstado>MESA      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>487457</id>
+    <nome>PEC 520/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>520</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>23/11/2010 20:45:53</datApresentacao>
+    <txtEmenta>Dá nova redação ao art. 77 da Constituição Federal.</txtEmenta>
+    <txtExplicacaoEmenta>Fixa a data do segundo turno da eleição para  Presidente e Vice-Presidente da República para o quarto domingo de outubro.  Altera a Constituição Federal de 1988. </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Ricardo Barros</txtNomeAutor>
+      <idecadastro>73788</idecadastro>
+      <codPartido>115</codPartido>
+      <txtSiglaPartido>PP        </txtSiglaPartido>
+      <txtSiglaUF>PR</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>1/12/2010</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial. DCD do dia 02/12/10 PAG 48607 COL 01.</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>923</id>
+      <descricao>Arquivada</descricao>
+      <orgao>
+        <codOrgaoEstado>MESA      </codOrgaoEstado>
+        <siglaOrgaoEstado>MESA      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>487393</id>
+    <nome>PEC 519/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>519</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>23/11/2010 17:32:40</datApresentacao>
+    <txtEmenta>Altera redação das disposições do Capítulo III, do Título III, da Constituição Federal.</txtEmenta>
+    <txtExplicacaoEmenta>Reformula o Poder Judiciário.  </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Dagoberto</txtNomeAutor>
+      <idecadastro>141411</idecadastro>
+      <codPartido>104</codPartido>
+      <txtSiglaPartido>PDT       </txtSiglaPartido>
+      <txtSiglaUF>MS</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>1/12/2010</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial. DCD de 02/12/10 PAG 48607 COL 01.</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>915</id>
+      <descricao>Aguardando Parecer</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>486477</id>
+    <nome>PEC 518/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>518</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>11/11/2010 15:15:39</datApresentacao>
+    <txtEmenta>Dá nova redação ao caput do art. 19 do Ato das Disposições Constitucionais Transitórias e revoga o § 2º do dispositivo.</txtEmenta>
+    <txtExplicacaoEmenta>Concede estabilidade aos servidores públicos, admitidos sob o regime celetista, em exercício na data de vigência do Regime Jurídico Único.  </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Pompeo de Mattos</txtNomeAutor>
+      <idecadastro>73486</idecadastro>
+      <codPartido>104</codPartido>
+      <txtSiglaPartido>PDT       </txtSiglaPartido>
+      <txtSiglaUF>RS</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>19/11/2010 10:21:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>924</id>
+      <descricao>Pronta para Pauta</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>484645</id>
+    <nome>PEC 517/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>517</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>10/8/2010 12:52:00</datApresentacao>
+    <txtEmenta>Dá nova redação às alíneas "b" e "c" do inciso XXIII do art. 21 da Constituição Federal, para autorizar a produção, a comercialização e a utilização de radioisótopos para a pesquisa e uso médicos.
+
+
+</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Senado Federal - Álvaro Dias</txtNomeAutor>
+      <idecadastro>
+      </idecadastro>
+      <codPartido>
+      </codPartido>
+      <txtSiglaPartido>PSDB      </txtSiglaPartido>
+      <txtSiglaUF>PR</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>11/8/2010 16:24:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>910</id>
+      <descricao>Especial</descricao>
+      <orgao>
+        <codOrgaoEstado>CCP       </codOrgaoEstado>
+        <siglaOrgaoEstado>Diversos  </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>2</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>484644</id>
+    <nome>PEC 516/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>516</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>10/8/2010 12:43:00</datApresentacao>
+    <txtEmenta>Altera o art. 31 da Emenda Constitucional nº 19, de 4 de junho de 1998, para dispor sobre o quadro de servidores civis e militares dos ex-Territórios Federais do Amapá e de Roraima, possibilitando que nele sejam incluídos os admitidos regularmente até a data de instalação dos Estados.</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Senado Federal - Romero Jucá</txtNomeAutor>
+      <idecadastro>
+      </idecadastro>
+      <codPartido>
+      </codPartido>
+      <txtSiglaPartido>PMDB      </txtSiglaPartido>
+      <txtSiglaUF>RR</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>11/8/2010 16:24:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>924</id>
+      <descricao>Pronta para Pauta</descricao>
+      <orgao>
+        <codOrgaoEstado>PLEN      </codOrgaoEstado>
+        <siglaOrgaoEstado>PLEN      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>484643</id>
+    <nome>PEC 515/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>515</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>10/8/2010 12:33:00</datApresentacao>
+    <txtEmenta>Altera a redação do inciso XVIII do art. 7º da Constituição Federal, para aumentar para cento e oitenta dias a duração do período da licença à gestante.</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Senado Federal - Rosalba Ciarlini</txtNomeAutor>
+      <idecadastro>
+      </idecadastro>
+      <codPartido>
+      </codPartido>
+      <txtSiglaPartido>DEM       </txtSiglaPartido>
+      <txtSiglaUF>RN</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>13/8/2010 10:27:00</datDespacho>
+      <txtDespacho>Encaminhe-se a proposta ao Plenário, considerando-a já apreciada pela CCJC e pela Comissão Especial, visto que é idêntica à PEC nº 30/2007. Apense-se a esta a PEC-30/2007.Proposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>924</id>
+      <descricao>Pronta para Pauta</descricao>
+      <orgao>
+        <codOrgaoEstado>PLEN      </codOrgaoEstado>
+        <siglaOrgaoEstado>PLEN      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>484565</id>
+    <nome>PEC 514/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>514</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>4/8/2010 20:28:00</datApresentacao>
+    <txtEmenta>Altera a redação do inciso I  e § 1º do art. 29-A  da  Constituição  Federal, tratando das disposições relativas o limite de gastos das Câmaras Municipais.</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Eduardo Gomes</txtNomeAutor>
+      <idecadastro>73945</idecadastro>
+      <codPartido>128</codPartido>
+      <txtSiglaPartido>PSDB      </txtSiglaPartido>
+      <txtSiglaUF>TO</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>11/8/2010</datDespacho>
+      <txtDespacho>Apense-se à(ao) PEC-509/2010.Proposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>925</id>
+      <descricao>Tramitando em Conjunto</descricao>
+      <orgao>
+        <codOrgaoEstado>CCP       </codOrgaoEstado>
+        <siglaOrgaoEstado>CCP       </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>484350</codProposicaoPrincipal>
+        <proposicaoPrincipal>PEC 509/2010</proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>484478</id>
+    <nome>PEC 513/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>513</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>4/8/2010 18:08:34</datApresentacao>
+    <txtEmenta>Inclui o direito à busca da felicidade como objetivo fundamental da República Federativa do Brasil e direito inerente a cada indivíduo e à sociedade, mediante a dotação, pelo Estado e pela própria sociedade, das adequadas condições de exercício desse direito.</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Manuela D'ávila</txtNomeAutor>
+      <idecadastro>141492</idecadastro>
+      <codPartido>99</codPartido>
+      <txtSiglaPartido>PCdoB     </txtSiglaPartido>
+      <txtSiglaUF>RS</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>11/8/2010 16:24:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>915</id>
+      <descricao>Aguardando Parecer</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>484476</id>
+    <nome>PEC 512/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>512</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>4/8/2010 18:03:40</datApresentacao>
+    <txtEmenta>Dá à justiça estadual competência para julgar as causas envolvendo interesse de crianças, ainda que fundadas em tratado internacional.</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Sérgio Barradas Carneiro</txtNomeAutor>
+      <idecadastro>74533</idecadastro>
+      <codPartido>134</codPartido>
+      <txtSiglaPartido>PT        </txtSiglaPartido>
+      <txtSiglaUF>BA</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>11/8/2010 16:24:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>924</id>
+      <descricao>Pronta para Pauta</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>484465</id>
+    <nome>PEC 511/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>511</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>4/8/2010 17:51:00</datApresentacao>
+    <txtEmenta>Altera a Constituição Federal, estabelecendo limite máximo para a carga tributária nacional. 
+</txtEmenta>
+    <txtExplicacaoEmenta>Limita ao percentual de 25% (vinte e cinco por cento), calculado sobre o PIB do ano anterior.  </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Alfredo Kaefer</txtNomeAutor>
+      <idecadastro>141454</idecadastro>
+      <codPartido>128</codPartido>
+      <txtSiglaPartido>PSDB      </txtSiglaPartido>
+      <txtSiglaUF>PR</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>11/8/2010 16:24:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>924</id>
+      <descricao>Pronta para Pauta</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>484394</id>
+    <nome>PEC 510/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>510</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>4/8/2010 15:40:27</datApresentacao>
+    <txtEmenta>Suprime a alínea "b", do inciso X, do § 2º do art. 155 da Constituição Federal, para permitir a cobrança do Imposto sobre Circulação de Mercadorias e Serviços (ICMS) nas vendas de petróleo e seus derivados para outros Estados da Federação. </txtEmenta>
+    <txtExplicacaoEmenta>Altera a Constituição Federal de 1988.</txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Geraldo Pudim</txtNomeAutor>
+      <idecadastro>141442</idecadastro>
+      <codPartido>168</codPartido>
+      <txtSiglaPartido>PR        </txtSiglaPartido>
+      <txtSiglaUF>RJ</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>13/8/2010</datDespacho>
+      <txtDespacho>Apense-se à(ao) PEC-485/2010.Proposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>923</id>
+      <descricao>Arquivada</descricao>
+      <orgao>
+        <codOrgaoEstado>MESA      </codOrgaoEstado>
+        <siglaOrgaoEstado>MESA      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>475769</codProposicaoPrincipal>
+        <proposicaoPrincipal>PEC 485/2010</proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>484350</id>
+    <nome>PEC 509/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>509</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>4/8/2010 14:45:16</datApresentacao>
+    <txtEmenta>Altera a redação do inciso I do art. 29-A, relativo ao limite percentual de despesas das Câmaras Municipais.</txtEmenta>
+    <txtExplicacaoEmenta>Aumenta para 8% (oito por cento).  </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Ribamar Alves</txtNomeAutor>
+      <idecadastro>74027</idecadastro>
+      <codPartido>125</codPartido>
+      <txtSiglaPartido>PSB       </txtSiglaPartido>
+      <txtSiglaUF>MA</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>11/8/2010 16:24:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>902</id>
+      <descricao>Aguardando criação de Comissão Temporária</descricao>
+      <orgao>
+        <codOrgaoEstado>MESA      </codOrgaoEstado>
+        <siglaOrgaoEstado>MESA      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>484347</id>
+    <nome>PEC 508/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>508</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>4/8/2010 14:43:00</datApresentacao>
+    <txtEmenta>Altera os arts. 95 e 128 da Constituição Federal.</txtEmenta>
+    <txtExplicacaoEmenta>Proíbe aos Juízes e membros do Ministério Público o exercício de cargos e funções nos órgãos e entidades dos Poderes Executivo e Legislativo da União, Estados, Distrito Federal e Municípios.  </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Ribamar Alves</txtNomeAutor>
+      <idecadastro>74027</idecadastro>
+      <codPartido>125</codPartido>
+      <txtSiglaPartido>PSB       </txtSiglaPartido>
+      <txtSiglaUF>MA</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>13/8/2010 10:25:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>915</id>
+      <descricao>Aguardando Parecer</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>483906</id>
+    <nome>PEC 506/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>506</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>15/7/2010 17:44:00</datApresentacao>
+    <txtEmenta>Acrescenta artigo ao Ato das Disposições Constitucionais Transitórias (ADCT), para dispor sobre a prorrogação dos beneficios para a Zona Franca de Manaus, e dá outras providências.</txtEmenta>
+    <txtExplicacaoEmenta>Prorroga até 31 de dezembro de 2029.  </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Senado Federal - Arthur Virgílio</txtNomeAutor>
+      <idecadastro>
+      </idecadastro>
+      <codPartido>
+      </codPartido>
+      <txtSiglaPartido>PSDB      </txtSiglaPartido>
+      <txtSiglaUF>AM</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>28/7/2010</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de Cidadania. Apense-se a esta a PEC 439/2009.Proposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>924</id>
+      <descricao>Especial</descricao>
+      <orgao>
+        <codOrgaoEstado>PLEN      </codOrgaoEstado>
+        <siglaOrgaoEstado>Diversos  </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>3</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>483905</id>
+    <nome>PEC 505/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>505</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>15/7/2010 17:44:00</datApresentacao>
+    <txtEmenta>Altera os arts. 93, 95, 103-B, 128 e 130-A da Constituição Federal, para excluir a aposentadoria por interesse público do rol de sanções aplicáveis a magistrados e para permitir a perda de cargo, por magistrados e membros do Ministério Público, na forma e nos casos que especifica.</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Senado Federal - Ideli Salvatti</txtNomeAutor>
+      <idecadastro>
+      </idecadastro>
+      <codPartido>
+      </codPartido>
+      <txtSiglaPartido>PT        </txtSiglaPartido>
+      <txtSiglaUF>SC</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>4/8/2010</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>924</id>
+      <descricao>Pronta para Pauta</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>483907</id>
+    <nome>PEC 507/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>507</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>15/7/2010 17:44:00</datApresentacao>
+    <txtEmenta>Prorroga, por tempo indeterminado, o prazo de vigência do Fundo de Combate e Erradicação da Pobreza.
+</txtEmenta>
+    <txtExplicacaoEmenta>Altera a Constituição Federal de 1988.
+
+</txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Senado Federal - Antonio Carlos Júnior</txtNomeAutor>
+      <idecadastro>
+      </idecadastro>
+      <codPartido>
+      </codPartido>
+      <txtSiglaPartido>DEM       </txtSiglaPartido>
+      <txtSiglaUF>BA</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>28/7/2010</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>1140</id>
+      <descricao>Transformado em Norma Jurídica</descricao>
+      <orgao>
+        <codOrgaoEstado>MESA      </codOrgaoEstado>
+        <siglaOrgaoEstado>MESA      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>483817</id>
+    <nome>PEC 504/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>504</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>14/7/2010 16:53:00</datApresentacao>
+    <txtEmenta>Altera o § 4º do art. 225 da Constituição Federal, para incluir o Cerrado e a Caatinga entre os biomas considerados patrimônio nacional.
+
+
+</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Senado Federal - Demóstenes Torres</txtNomeAutor>
+      <idecadastro>
+      </idecadastro>
+      <codPartido>
+      </codPartido>
+      <txtSiglaPartido>DEM       </txtSiglaPartido>
+      <txtSiglaUF>GO</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>5/9/2013</datDespacho>
+      <txtDespacho>Tendo em vista que a matéria da PEC 504/2010 está totalmente contida nos textos da PEC nº 115/1995 e de suas apensadas, distribua-se a proposta à Comissão Especial destinada a proferir parecer à Proposta de Emenda à Constituição nº 115-A, de 1995, que "modifica o parágrafo 4º do art. 225 da Constituição Federal, incluindo o Cerrado na relação dos biomas considerados Patrimônio Nacional", e apense a PEC nº 115/1995, com suas apensadas, à PEC 504/2010, nos termos dos arts. 142 e 143, II, 'a', do RICD. Esclareço, por oportuno, que, como a Comissão Especial já se pronunciou pela aprovação da matéria, com Substitutivo, todas as propostas restam prontas para a pauta em Plenário, para discussão em primeiro turno.Proposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>924</id>
+      <descricao>Pronta para Pauta</descricao>
+      <orgao>
+        <codOrgaoEstado>PLEN      </codOrgaoEstado>
+        <siglaOrgaoEstado>PLEN      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>483798</id>
+    <nome>PEC 503/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>503</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>14/7/2010 16:05:13</datApresentacao>
+    <txtEmenta>Estabelece um percentual mínimo dos impostos e de transferências para aplicação em saneamento básico pela União, pelos Estados e Distrito Federal e pelos Municípios.</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Jairo Ataide</txtNomeAutor>
+      <idecadastro>3151</idecadastro>
+      <codPartido>202</codPartido>
+      <txtSiglaPartido>DEM       </txtSiglaPartido>
+      <txtSiglaUF>MG</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>4/8/2010</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>907</id>
+      <descricao>Aguardando Designação de Relator</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>483702</id>
+    <nome>PEC 502/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>502</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>14/7/2010 14:52:14</datApresentacao>
+    <txtEmenta>Acrescenta artigo ao Ato das Disposições Constitucionais Transitórias para assegurar os recursos mínimos para o financiamento das ações e serviços públicos de segurança.</txtEmenta>
+    <txtExplicacaoEmenta>Altera a Constituição Federal de 1988.</txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>José Maia Filho</txtNomeAutor>
+      <idecadastro>151965</idecadastro>
+      <codPartido>202</codPartido>
+      <txtSiglaPartido>DEM       </txtSiglaPartido>
+      <txtSiglaUF>PI</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>28/7/2010 10:10:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>923</id>
+      <descricao>Arquivada</descricao>
+      <orgao>
+        <codOrgaoEstado>MESA      </codOrgaoEstado>
+        <siglaOrgaoEstado>MESA      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>483492</id>
+    <nome>PEC 501/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>501</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>13/7/2010 15:30:44</datApresentacao>
+    <txtEmenta>Acrescenta o § 2º ao art. 84 da Constituição Federal, proibindo qualquer entrave à liberdade de expressão.</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Eduardo Sciarra</txtNomeAutor>
+      <idecadastro>74382</idecadastro>
+      <codPartido>202</codPartido>
+      <txtSiglaPartido>DEM       </txtSiglaPartido>
+      <txtSiglaUF>PR</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>15/7/2010 16:18:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>915</id>
+      <descricao>Aguardando Parecer</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>482999</id>
+    <nome>PEC 500/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>500</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>7/7/2010 18:51:58</datApresentacao>
+    <txtEmenta>Altera os parágrafos 5º e 6º do art. 14 da Constituição Federal.  </txtEmenta>
+    <txtExplicacaoEmenta>Estabelece que o prazo de desincompatibilização para que o Presidente da República, os Governadores de Estado e do Distrito Federal e os Prefeitos possam concorrer a outros cargos seja de três meses antes do pleito e modifica a regra de inelegibilidade do cônjuge e parentes consangüíneos ou afins.  </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Maurício Rands</txtNomeAutor>
+      <idecadastro>74045</idecadastro>
+      <codPartido>134</codPartido>
+      <txtSiglaPartido>PT        </txtSiglaPartido>
+      <txtSiglaUF>PE</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>14/7/2010 11:33:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>907</id>
+      <descricao>Aguardando Designação de Relator</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>482984</id>
+    <nome>PEC 499/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>499</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>7/7/2010 18:27:19</datApresentacao>
+    <txtEmenta>Altera o inciso IV e acrescenta o § 10º ao art. 144 da Constituição Federal.</txtEmenta>
+    <txtExplicacaoEmenta>Inclui a Perícia Oficial Criminal como um órgão da Segurança Pública. </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Paulo Pimenta</txtNomeAutor>
+      <idecadastro>74400</idecadastro>
+      <codPartido>134</codPartido>
+      <txtSiglaPartido>PT        </txtSiglaPartido>
+      <txtSiglaUF>RS</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>17/5/2013</datDespacho>
+      <txtDespacho>Deferido o Requerimento n. 7.744/2013, conforme despacho do seguinte teor: “Defiro o pedido contido no Requerimento n. 7.744/2013. Apense-se a Proposta de Emenda à Constituição n. 499/2010 à Proposta de Emenda à Constituição n. 325/2009, nos termos do art. 142, caput e parágrafo único, c.c. o art. 143, inciso II, alínea b, ambos do RICD. Publique-se. Oficie-se.”</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>925</id>
+      <descricao>Tramitando em Conjunto</descricao>
+      <orgao>
+        <codOrgaoEstado>CCP       </codOrgaoEstado>
+        <siglaOrgaoEstado>CCP       </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>423899</codProposicaoPrincipal>
+        <proposicaoPrincipal>PEC 325/2009</proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>482954</id>
+    <nome>PEC 498/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>498</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>7/7/2010 17:54:47</datApresentacao>
+    <txtEmenta>Acrescenta § 6º ao art. 129 da Constituição Federal.</txtEmenta>
+    <txtExplicacaoEmenta>Estabelece que o Ministério Público da União e os Ministérios Públicos dos Estados encaminharão semestralmente ao Conselho Nacional do Ministério Público relatórios sobre o andamento dos procedimentos administrativos instaurados, relativos a atos de improbidade administrativa e a crimes contra a administração pública. </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Francisco Praciano</txtNomeAutor>
+      <idecadastro>141438</idecadastro>
+      <codPartido>134</codPartido>
+      <txtSiglaPartido>PT        </txtSiglaPartido>
+      <txtSiglaUF>AM</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>14/7/2010 11:33:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>924</id>
+      <descricao>Pronta para Pauta</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>482760</id>
+    <nome>PEC 497/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>497</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>7/7/2010 15:32:45</datApresentacao>
+    <txtEmenta>Dá nova redação ao inciso I do art. 19 da Constituição Federal, para possibilitar a instituição de subsídios nas tarifas de energia elétrica aos templos de qualquer  religião.</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Eduardo Valverde</txtNomeAutor>
+      <idecadastro>73938</idecadastro>
+      <codPartido>134</codPartido>
+      <txtSiglaPartido>PT        </txtSiglaPartido>
+      <txtSiglaUF>RO</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>14/7/2010 11:33:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>924</id>
+      <descricao>Pronta para Pauta</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>481624</id>
+    <nome>PEC 496/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>496</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>22/6/2010 15:23:36</datApresentacao>
+    <txtEmenta>Acrescenta o inciso XII ao art. 109 da Constituição Federal para estabelecer como competência dos Juizes Federais processar e julgar os crimes políticos contra a imprensa.</txtEmenta>
+    <txtExplicacaoEmenta>Altera a Constituição Federal de 1988.</txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Geraldo Pudim</txtNomeAutor>
+      <idecadastro>141442</idecadastro>
+      <codPartido>168</codPartido>
+      <txtSiglaPartido>PR        </txtSiglaPartido>
+      <txtSiglaUF>RJ</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>29/6/2010</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>923</id>
+      <descricao>Arquivada</descricao>
+      <orgao>
+        <codOrgaoEstado>MESA      </codOrgaoEstado>
+        <siglaOrgaoEstado>MESA      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>481327</id>
+    <nome>PEC 495/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>495</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>17/6/2010 10:39:35</datApresentacao>
+    <txtEmenta>Acrescenta § 10 ao art. 144 da Constituição Federal.</txtEmenta>
+    <txtExplicacaoEmenta>Garante aos agentes de trânsito, encarregados do controle de tráfego e aos que fazem policiamento ostensivo em rodovias, equiparação com a maior remuneração da categoria dentre todas as unidades da federação.   Altera a Constituição Federal de 1988.</txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Armando Abílio</txtNomeAutor>
+      <idecadastro>74405</idecadastro>
+      <codPartido>136</codPartido>
+      <txtSiglaPartido>PTB       </txtSiglaPartido>
+      <txtSiglaUF>PB</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>23/6/2010</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>923</id>
+      <descricao>Arquivada</descricao>
+      <orgao>
+        <codOrgaoEstado>MESA      </codOrgaoEstado>
+        <siglaOrgaoEstado>MESA      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>481285</id>
+    <nome>PEC 494/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>494</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>16/6/2010 19:34:35</datApresentacao>
+    <txtEmenta>Dá nova redação ao art. 155, § 2º, X, b da Constituição Federal de 1988 para permitir a cobrança do Imposto sobre Circulação de Mercadorias e Serviços (ICMS) nas vendas de energia elétrica para outros Estados da federação.</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Zequinha Marinho</txtNomeAutor>
+      <idecadastro>73933</idecadastro>
+      <codPartido>126</codPartido>
+      <txtSiglaPartido>PSC       </txtSiglaPartido>
+      <txtSiglaUF>PA</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>23/6/2010 12:19:00</datDespacho>
+      <txtDespacho>Apense-se à(ao) PEC-315/2008.Proposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>925</id>
+      <descricao>Tramitando em Conjunto</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>420316</codProposicaoPrincipal>
+        <proposicaoPrincipal>PEC 315/2008</proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>480976</id>
+    <nome>PEC 493/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>493</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>16/6/2010 09:50:03</datApresentacao>
+    <txtEmenta>Altera art. 63 da Constituição Federal, impedindo a tramitação de projetos que impliquem em aumento de despesa no período eleitoral.</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Eduardo Cunha</txtNomeAutor>
+      <idecadastro>74173</idecadastro>
+      <codPartido>111</codPartido>
+      <txtSiglaPartido>PMDB      </txtSiglaPartido>
+      <txtSiglaUF>RJ</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>23/6/2010</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>924</id>
+      <descricao>Pronta para Pauta</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>480774</id>
+    <nome>PEC 492/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>492</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>10/6/2010 15:24:01</datApresentacao>
+    <txtEmenta>Dá nova redação à alínea "a" do inciso IX do § 2º do art. 155 da Constituição Federal. </txtEmenta>
+    <txtExplicacaoEmenta>Estabelece a incidência de ICMS sobre a entrada de bem ou mercadoria importados,  desde que haja transmissão de propriedade do bem ou mercadoria.  </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>João Dado</txtNomeAutor>
+      <idecadastro>73682</idecadastro>
+      <codPartido>104</codPartido>
+      <txtSiglaPartido>PDT       </txtSiglaPartido>
+      <txtSiglaUF>SP</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>21/6/2010 09:31:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>907</id>
+      <descricao>Aguardando Designação de Relator</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>480716</id>
+    <nome>PEC 491/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>491</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>10/6/2010 10:05:07</datApresentacao>
+    <txtEmenta>Acresce incisos ao art. 150, VI e art. 155, X da Constituição Federal</txtEmenta>
+    <txtExplicacaoEmenta>Proíbe a criação de imposto incidentes sobre insumos agrícolas, pecuária, alimentos para o consumo humano e medicamentos. </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Luiz Carlos Hauly</txtNomeAutor>
+      <idecadastro>73778</idecadastro>
+      <codPartido>128</codPartido>
+      <txtSiglaPartido>PSDB      </txtSiglaPartido>
+      <txtSiglaUF>PR</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>21/6/2010 09:31:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>924</id>
+      <descricao>Pronta para Pauta</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>478082</id>
+    <nome>PEC 490/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>490</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>19/5/2010 19:47:00</datApresentacao>
+    <txtEmenta>Dá nova redação ao inciso VIII do art. 37 da Constituição Federal.</txtEmenta>
+    <txtExplicacaoEmenta>Reserva percentual de cargos e empregos públicos para os residentes em municípios de até 20.000 (vinte mil) habitantes.  
+</txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Efraim Filho</txtNomeAutor>
+      <idecadastro>141422</idecadastro>
+      <codPartido>202</codPartido>
+      <txtSiglaPartido>DEM       </txtSiglaPartido>
+      <txtSiglaUF>PB</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>27/5/2010</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>902</id>
+      <descricao>Aguardando criação de Comissão Temporária</descricao>
+      <orgao>
+        <codOrgaoEstado>MESA      </codOrgaoEstado>
+        <siglaOrgaoEstado>MESA      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>477533</id>
+    <nome>PEC 489/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>489</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>18/5/2010 18:23:11</datApresentacao>
+    <txtEmenta>Acrescenta o inciso V ao art. 158 da Constituição Federal, e da outras providências. </txtEmenta>
+    <txtExplicacaoEmenta>Altera o produto da arrecadação sobre a compensação financeira em função da produção de petróleo, de gás natural e de outros hidrocarbonetos fluidos sob o regime de partilha de produção.  Altera a Constituição Federal de 1988. </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Marcos Medrado</txtNomeAutor>
+      <idecadastro>74634</idecadastro>
+      <codPartido>104</codPartido>
+      <txtSiglaPartido>PDT       </txtSiglaPartido>
+      <txtSiglaUF>BA</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>27/5/2010</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de Cidadania (admissibilidade)Proposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>923</id>
+      <descricao>Arquivada</descricao>
+      <orgao>
+        <codOrgaoEstado>MESA      </codOrgaoEstado>
+        <siglaOrgaoEstado>MESA      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>476787</id>
+    <nome>PEC 488/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>488</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>12/5/2010 17:43:00</datApresentacao>
+    <txtEmenta>Altera o art. 94 da Constituição Federal, incluindo a Carreira dos Defensores Públicos no Quinto Constitucional.</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Sérgio Barradas Carneiro</txtNomeAutor>
+      <idecadastro>74533</idecadastro>
+      <codPartido>134</codPartido>
+      <txtSiglaPartido>PT        </txtSiglaPartido>
+      <txtSiglaUF>BA</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>22/12/2011 16:26:00</datDespacho>
+      <txtDespacho>Defiro o Requerimento n. 3916/2011. Apense-se a PEC n. 488/2010 à PEC n. 128/2007, nos termos do art. 142, c/c o art. 143, II, b, ambos do RICD. Publique-se. Oficie-se.</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>925</id>
+      <descricao>Tramitando em Conjunto</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>359981</codProposicaoPrincipal>
+        <proposicaoPrincipal>PEC 128/2007</proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>476230</id>
+    <nome>PEC 487/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>487</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>11/5/2010 17:14:29</datApresentacao>
+    <txtEmenta>Altera a redação do art. 144, da Constituição Federal e acrescenta preceito às Disposições Constitucionais Gerais, adequando a natureza e denominação das Polícias Civis</txtEmenta>
+    <txtExplicacaoEmenta>Denomina de polícia judiciária dos Estados a polícia civil,  que será dirigida por delegados de carreira, bacharéis em Direito aprovados em concurso público com a participação da OAB em todas a fases.  </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Regis de Oliveira</txtNomeAutor>
+      <idecadastro>73556</idecadastro>
+      <codPartido>126</codPartido>
+      <txtSiglaPartido>PSC       </txtSiglaPartido>
+      <txtSiglaUF>SP</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>24/5/2010</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>915</id>
+      <descricao>Aguardando Parecer</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>476216</id>
+    <nome>PEC 486/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>486</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>11/5/2010 17:06:00</datApresentacao>
+    <txtEmenta>Dá nova redação à alínea "d" do inciso XXXVIII do art. 5º da Constituição Federal, excetuando que os crimes cometidos ou apoiados por organizações delituosas ou facções criminosas a competência será do juízo singular.</txtEmenta>
+    <txtExplicacaoEmenta>Determina que os crimes dolosos contra a vida serão julgados pelo juízo criminal singular.  </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Vital do Rêgo Filho</txtNomeAutor>
+      <idecadastro>141556</idecadastro>
+      <codPartido>111</codPartido>
+      <txtSiglaPartido>PMDB      </txtSiglaPartido>
+      <txtSiglaUF>PB</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>24/5/2010</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>915</id>
+      <descricao>Aguardando Parecer</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>475769</id>
+    <nome>PEC 485/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>485</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>5/5/2010 18:02:44</datApresentacao>
+    <txtEmenta>Revoga imunidade tributária prevista no art. 155, § 2º, X, "b", da Constituição Federal.</txtEmenta>
+    <txtExplicacaoEmenta>Revoga a imunidade tributária ao Imposto sobre Operações relativas à Circulação de Mercadorias e sobre Prestações de Seviços de Transporte Interestadual e Intermunicipal e de Comunicação - ICMS, que destinem a outros Estados petróleo, lubrificantes, combustíveis líquidos e gasosos dele derivados, e energia elétrica.  Altera a Constituição Federal de 1988. </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Edmilson Valentim</txtNomeAutor>
+      <idecadastro>139187</idecadastro>
+      <codPartido>99</codPartido>
+      <txtSiglaPartido>PCdoB     </txtSiglaPartido>
+      <txtSiglaUF>RJ</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>12/5/2010 15:46:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>923</id>
+      <descricao>Arquivada</descricao>
+      <orgao>
+        <codOrgaoEstado>MESA      </codOrgaoEstado>
+        <siglaOrgaoEstado>MESA      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>475687</id>
+    <nome>PEC 484/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>484</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>5/5/2010 16:17:26</datApresentacao>
+    <txtEmenta>Dá nova redação ao § 3º do art. 53 da Constituição Federal, revogando os seus §§ 4º e 5º.</txtEmenta>
+    <txtExplicacaoEmenta>Revoga a possibilidade de sustação de ação penal no caso de crime comum quando o acusado for Deputado ou Senador. </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Eduardo Sciarra</txtNomeAutor>
+      <idecadastro>74382</idecadastro>
+      <codPartido>202</codPartido>
+      <txtSiglaPartido>DEM       </txtSiglaPartido>
+      <txtSiglaUF>PR</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>12/5/2010</datDespacho>
+      <txtDespacho>Apense-se (à)ao PEC-119/2007.
+Proposição Sujeita à Apreciação do Plenário
+Regime de Tramitação: Especial
+
+
+</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>925</id>
+      <descricao>Tramitando em Conjunto</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>359795</codProposicaoPrincipal>
+        <proposicaoPrincipal>PEC 119/2007</proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>475585</id>
+    <nome>PEC 483/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>483</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>5/5/2010 14:55:00</datApresentacao>
+    <txtEmenta>Dá nova redação ao inciso II e acrescenta o inciso IV-A ao art. 37 da Constituição Federal.</txtEmenta>
+    <txtExplicacaoEmenta>Proíbe a realização de concurso público para a formação de cadastro de reserva obrigando o preenchimento das vagas publicadas no edital no prazo de validade do concurso. </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Gonzaga Patriota</txtNomeAutor>
+      <idecadastro>74419</idecadastro>
+      <codPartido>125</codPartido>
+      <txtSiglaPartido>PSB       </txtSiglaPartido>
+      <txtSiglaUF>PE</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>12/5/2010</datDespacho>
+      <txtDespacho>Apense-se (à)ao PEC-439/2005. Por oportuno, tendo em vista a correlação das matérias, revejo o despacho aposto à PEC nº 370/2005, para determinar sua apensação à PEC nº 439/2005.
+Proposição Sujeita à Apreciação do Plenário
+Regime de Tramitação: Especial
+</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>925</id>
+      <descricao>Tramitando em Conjunto</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>292967</codProposicaoPrincipal>
+        <proposicaoPrincipal>PEC 439/2005</proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>475435</id>
+    <nome>PEC 482/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>482</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>4/5/2010 19:20:26</datApresentacao>
+    <txtEmenta>Acrescenta alínea "d" ao inciso III,  do art. 150 da Constituição Federal para isentar, anualmente, do recolhimento aos cofres municipais do Imposto Predial e Territorial Urbano - IPTU, os proprietários de imóveis urbanos, situados próximo ou no entorno de favelas, invasões e loteamentos irregulares.</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Andreia Zito</txtNomeAutor>
+      <idecadastro>141379</idecadastro>
+      <codPartido>128</codPartido>
+      <txtSiglaPartido>PSDB      </txtSiglaPartido>
+      <txtSiglaUF>RJ</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>10/5/2010 11:01:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>907</id>
+      <descricao>Aguardando Designação de Relator</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>474780</id>
+    <nome>PEC 481/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>481</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>28/4/2010 16:05:05</datApresentacao>
+    <txtEmenta>Altera os artigos 95 e 128 da Constituição Federal.</txtEmenta>
+    <txtExplicacaoEmenta>Altera a Constituição Federal de 1988, "... vedando ao Juíz e aos membros do Ministério Público o exercício de funções fora das atribuições institucionais e, mais especificamente, no âmbito dos órgãos e entidades dos Poderes Executivo e Legislativo da União, Estados, Distrito Federal e Municípios.".</txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Ribamar Alves</txtNomeAutor>
+      <idecadastro>74027</idecadastro>
+      <codPartido>125</codPartido>
+      <txtSiglaPartido>PSB       </txtSiglaPartido>
+      <txtSiglaUF>MA</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>5/5/2010</datDespacho>
+      <txtDespacho>Devolva-se ao Autor, por não conter o número mínimo de assinaturas indicado no inciso I do art. 60, da Constituição Federal, combinado com o inciso I do art. 201, do Regimento Interno da Câmara dos Deputados. Oficie-se e, após, publique-se.
+DCD de 06/05/10 PÁG 18314 COL 01</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>1120</id>
+      <descricao>Devolvida ao Autor</descricao>
+      <orgao>
+        <codOrgaoEstado>PLEN      </codOrgaoEstado>
+        <siglaOrgaoEstado>PLEN      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>473894</id>
+    <nome>PEC 480/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>480</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>16/4/2010 09:50:00</datApresentacao>
+    <txtEmenta>Acrescenta §§  5º e 6º ao art. 239 da Constituição Federal. </txtEmenta>
+    <txtExplicacaoEmenta>Institui o Fundo Nacional de Emprego e Solidariedade.  Altera a Constituição Federal de 1988.</txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Uldurico Pinto</txtNomeAutor>
+      <idecadastro>73809</idecadastro>
+      <codPartido>109</codPartido>
+      <txtSiglaPartido>PHS       </txtSiglaPartido>
+      <txtSiglaUF>BA</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>20/4/2010 17:13:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>923</id>
+      <descricao>Arquivada</descricao>
+      <orgao>
+        <codOrgaoEstado>MESA      </codOrgaoEstado>
+        <siglaOrgaoEstado>MESA      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>473827</id>
+    <nome>PEC 479/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>479</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>15/4/2010 15:43:00</datApresentacao>
+    <txtEmenta>Acrescenta o inciso LXXIX ao art. 5º da Constituição Federal, para Incluir o acesso à Internet em alta velocidade entre os direitos fundamentais do cidadão.</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Sebastião Bala Rocha</txtNomeAutor>
+      <idecadastro>141539</idecadastro>
+      <codPartido>104</codPartido>
+      <txtSiglaPartido>PDT       </txtSiglaPartido>
+      <txtSiglaUF>AP</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>22/4/2010 15:04:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de Cidadania (admissibilidade)Proposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>915</id>
+      <descricao>Aguardando Parecer</descricao>
+      <orgao>
+        <codOrgaoEstado>PEC47910  </codOrgaoEstado>
+        <siglaOrgaoEstado>PEC47910  </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>473496</id>
+    <nome>PEC 478/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>478</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>14/4/2010 16:56:00</datApresentacao>
+    <txtEmenta>Revoga o parágrafo único do art. 7º da Constituição Federal, para estabelecer a igualdade de direitos trabalhistas entre os empregados domésticos e os demais trabalhadores urbanos e rurais.</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Carlos Bezerra</txtNomeAutor>
+      <idecadastro>141401</idecadastro>
+      <codPartido>111</codPartido>
+      <txtSiglaPartido>PMDB      </txtSiglaPartido>
+      <txtSiglaUF>MT</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>22/4/2010</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>1140</id>
+      <descricao>Transformado em Norma Jurídica</descricao>
+      <orgao>
+        <codOrgaoEstado>MESA      </codOrgaoEstado>
+        <siglaOrgaoEstado>MESA      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>472552</id>
+    <nome>PEC 477/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>477</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>7/4/2010 19:55:00</datApresentacao>
+    <txtEmenta>Acrescenta o art. 14-A na Constituição Federal para instituir a Petição Revogatória, a Petição Destituinte e o Plebiscito Destituinte e dá outras providências.</txtEmenta>
+    <txtExplicacaoEmenta>Altera a Constituição Federal de 1988.</txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Rodrigo Rollemberg</txtNomeAutor>
+      <idecadastro>141533</idecadastro>
+      <codPartido>125</codPartido>
+      <txtSiglaPartido>PSB       </txtSiglaPartido>
+      <txtSiglaUF>DF</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>15/4/2010</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>923</id>
+      <descricao>Arquivada</descricao>
+      <orgao>
+        <codOrgaoEstado>MESA      </codOrgaoEstado>
+        <siglaOrgaoEstado>MESA      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>471998</id>
+    <nome>PEC 476/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>476</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>5/4/2010 15:31:51</datApresentacao>
+    <txtEmenta> Altera o art. 208 da Constituição Federal da Republica.</txtEmenta>
+    <txtExplicacaoEmenta>Inclui como dever do Estado a gratuidade para cursos pré-vestibulares.  Altera a Constituição Federal de 1988.</txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Vicentinho Alves</txtNomeAutor>
+      <idecadastro>141554</idecadastro>
+      <codPartido>168</codPartido>
+      <txtSiglaPartido>PR        </txtSiglaPartido>
+      <txtSiglaUF>TO</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>8/4/2010</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>923</id>
+      <descricao>Arquivada</descricao>
+      <orgao>
+        <codOrgaoEstado>MESA      </codOrgaoEstado>
+        <siglaOrgaoEstado>MESA      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>471005</id>
+    <nome>PEC 475/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>475</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>24/3/2010 16:11:53</datApresentacao>
+    <txtEmenta>Torna obrigatório o ensino superior nos municípios acima de quinhentos mil habitantes.</txtEmenta>
+    <txtExplicacaoEmenta>Estabelece a educação básica obrigatória, gratuita e universal dos quatro aos dezessete anos de idade e a progressiva universalização do ensino superior gratuito.  </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Fábio Faria</txtNomeAutor>
+      <idecadastro>141428</idecadastro>
+      <codPartido>112</codPartido>
+      <txtSiglaPartido>PMN       </txtSiglaPartido>
+      <txtSiglaUF>RN</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>31/3/2010 10:53:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>924</id>
+      <descricao>Pronta para Pauta</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>470715</id>
+    <nome>PEC 474/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>474</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>23/3/2010 19:22:00</datApresentacao>
+    <txtEmenta>Inclui o § 6º ao art. 129 da Constituição Federal.</txtEmenta>
+    <txtExplicacaoEmenta>Inclui critérios para a escolha de um quinto dos membros do Ministério Público.  Altera a Constituição Federal de 1988.</txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Rogerio Lisboa</txtNomeAutor>
+      <idecadastro>141534</idecadastro>
+      <codPartido>202</codPartido>
+      <txtSiglaPartido>DEM       </txtSiglaPartido>
+      <txtSiglaUF>RJ</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>16/4/2010</datDespacho>
+      <txtDespacho>NOVO DESPACHO DA PEC nº. 474/2010: CCJC. Oficie-se. Publique-se"</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>923</id>
+      <descricao>Arquivada</descricao>
+      <orgao>
+        <codOrgaoEstado>MESA      </codOrgaoEstado>
+        <siglaOrgaoEstado>MESA      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>470119</id>
+    <nome>PEC 473/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>473</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>18/3/2010 11:34:22</datApresentacao>
+    <txtEmenta>Dá nova redação aos seguintes dispositivos da Constituição Federal: os  caputs dos arts. 44 e 45; os §§ 1º e 2º do art. 50 e o seu caput; o § 2º e o caput do art. 51; o § 2º do art. 55; os §§ 3º e 5º do art. 57;  o § 3º do art. 58;  o inciso I  e o § 3º do art. 60; o § 2º e o  caput do art. 61;  o § 8º do art. 62; o inciso do art. 63; os § 3º e 4º do art. 64; o § 1º do art. 68; os incisos IV e X do art. 71; o art. 80; o caput do art. 86; os incisos II, IV e VII do art. 89; o inciso II do art. 91;  a alínea d e q do art. 102; o inciso III do art. 103; o inciso XIII do art. 103-B e o inciso VI do art. 130-A.</txtEmenta>
+    <txtExplicacaoEmenta>Substitui  a expressão "Câmara dos Deputados" pela expressão "Câmara Federal".  </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Emilia Fernandes</txtNomeAutor>
+      <idecadastro>153384</idecadastro>
+      <codPartido>134</codPartido>
+      <txtSiglaPartido>PT        </txtSiglaPartido>
+      <txtSiglaUF>RS</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>25/3/2010</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>907</id>
+      <descricao>Aguardando Designação de Relator</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>470071</id>
+    <nome>PEC 472/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>472</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>18/3/2010 10:01:27</datApresentacao>
+    <txtEmenta>Dá nova redação ao art. 159, para aumentar a participação dos Estados, do Distrito Federal e dos Municípios no produto da arrecadação dos impostos sobre renda e proventos de qualquer natureza e sobre produtos industrializados.</txtEmenta>
+    <txtExplicacaoEmenta>Fixa em vinte e seis inteiros e cinco décimos por cento a participação dos Estados e DF e em trinta por cento a participação dos Municípios.  Altera a Constituição Federal de 1988.</txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>José Carlos Vieira</txtNomeAutor>
+      <idecadastro>73875</idecadastro>
+      <codPartido>168</codPartido>
+      <txtSiglaPartido>PR        </txtSiglaPartido>
+      <txtSiglaUF>SC</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>24/3/2010 10:12:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>923</id>
+      <descricao>Arquivada</descricao>
+      <orgao>
+        <codOrgaoEstado>MESA      </codOrgaoEstado>
+        <siglaOrgaoEstado>MESA      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>470068</id>
+    <nome>PEC 471/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>471</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>18/3/2010 09:59:31</datApresentacao>
+    <txtEmenta>Acrescenta os §§ 6º e 7º ao art. 77 da Constituição Federal, para criar o voto de apreciação do Poder Executivo.</txtEmenta>
+    <txtExplicacaoEmenta>Altera a Constituição Federal de 1988.</txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>José Carlos Vieira</txtNomeAutor>
+      <idecadastro>73875</idecadastro>
+      <codPartido>168</codPartido>
+      <txtSiglaPartido>PR        </txtSiglaPartido>
+      <txtSiglaUF>SC</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>24/3/2010 10:12:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>923</id>
+      <descricao>Arquivada</descricao>
+      <orgao>
+        <codOrgaoEstado>MESA      </codOrgaoEstado>
+        <siglaOrgaoEstado>MESA      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>469145</id>
+    <nome>PEC 470/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>470</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>10/3/2010 17:54:10</datApresentacao>
+    <txtEmenta>Acrescenta ao art. 30 da Constituição  Federal  o inciso X e  o art. 233, ao Capitulo IX, do  Título VIII.</txtEmenta>
+    <txtExplicacaoEmenta>Estabelece a municipalização do sistema carcerário brasileiro e o cumprimento da pena privativa de liberdade no município onde reside o condenado.  Altera a Constituição Federal de 1988.</txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Domingos Dutra</txtNomeAutor>
+      <idecadastro>74197</idecadastro>
+      <codPartido>134</codPartido>
+      <txtSiglaPartido>PT        </txtSiglaPartido>
+      <txtSiglaUF>MA</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>16/3/2010 15:47:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>923</id>
+      <descricao>Arquivada</descricao>
+      <orgao>
+        <codOrgaoEstado>MESA      </codOrgaoEstado>
+        <siglaOrgaoEstado>MESA      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>469131</id>
+    <nome>PEC 468/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>468</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>10/3/2010 17:42:00</datApresentacao>
+    <txtEmenta>Acrescenta inciso ao art. 60 da Constituição Federal. </txtEmenta>
+    <txtExplicacaoEmenta>Permite às Câmaras Municipais o direito de apresentar Proposta de Emenda Constitucional.  </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Wilson Picler</txtNomeAutor>
+      <idecadastro>154996</idecadastro>
+      <codPartido>104</codPartido>
+      <txtSiglaPartido>PDT       </txtSiglaPartido>
+      <txtSiglaUF>PR</txtSiglaUF>
+    </autor1>
+    <qtdAutores>2</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>17/3/2010</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>901</id>
+      <descricao>Especial</descricao>
+      <orgao>
+        <codOrgaoEstado>SERCO(SGM)</codOrgaoEstado>
+        <siglaOrgaoEstado>Diversos  </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>2</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>469132</id>
+    <nome>PEC 469/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>469</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>10/3/2010 17:42:00</datApresentacao>
+    <txtEmenta>Altera a redação do art. 103 da Constituição Federal, para atribuir às Câmaras Municipais a Legitimação para propor ação direta de inconstitucionalidade junto ao Supremo Tribunal Federal.</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Mário Heringer</txtNomeAutor>
+      <idecadastro>74158</idecadastro>
+      <codPartido>104</codPartido>
+      <txtSiglaPartido>PDT       </txtSiglaPartido>
+      <txtSiglaUF>MG</txtSiglaUF>
+    </autor1>
+    <qtdAutores>2</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>17/3/2010</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>901</id>
+      <descricao>Especial</descricao>
+      <orgao>
+        <codOrgaoEstado>SERCO(SGM)</codOrgaoEstado>
+        <siglaOrgaoEstado>Diversos  </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>2</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>468443</id>
+    <nome>PEC 467/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>467</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>9/3/2010 15:46:00</datApresentacao>
+    <txtEmenta>Revoga o Ato das Disposições Constitucionais Transitórias da Constituição Federal.</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Sérgio Barradas Carneiro</txtNomeAutor>
+      <idecadastro>74533</idecadastro>
+      <codPartido>134</codPartido>
+      <txtSiglaPartido>PT        </txtSiglaPartido>
+      <txtSiglaUF>BA</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>16/3/2010 15:47:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>901</id>
+      <descricao>Aguardando constituição de Comissão Temporária </descricao>
+      <orgao>
+        <codOrgaoEstado>MESA      </codOrgaoEstado>
+        <siglaOrgaoEstado>MESA      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>468154</id>
+    <nome>PEC 466/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>466</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>4/3/2010 15:06:13</datApresentacao>
+    <txtEmenta>Acrescenta os arts. 192-A e 192-B à Constituição Federal, dispondo sobre o capital social da Caixa Econômica Federal e do Banco do Brasil S.A.</txtEmenta>
+    <txtExplicacaoEmenta>Garante a detenção de cem por cento do capital social da Caixa Econômica e o controle do capital social do Banco do Brasil à União Federal.  </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Otavio Leite</txtNomeAutor>
+      <idecadastro>141515</idecadastro>
+      <codPartido>128</codPartido>
+      <txtSiglaPartido>PSDB      </txtSiglaPartido>
+      <txtSiglaUF>RJ</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>11/3/2010 15:09:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>924</id>
+      <descricao>Pronta para Pauta</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>468137</id>
+    <nome>PEC 465/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>465</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>4/3/2010 14:52:00</datApresentacao>
+    <txtEmenta>Fixa parâmetros para a remuneração dos advogados públicos e defensores públicos.</txtEmenta>
+    <txtExplicacaoEmenta>Estabelecendo que o subsídio do grau ou nível máximo das carreiras corresponderá a noventa inteiros e vinte e cinco centésimos do subsídio mensal dos Ministros do Supremo Tribunal Federal.  </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Wilson Santiago</txtNomeAutor>
+      <idecadastro>74044</idecadastro>
+      <codPartido>111</codPartido>
+      <txtSiglaPartido>PMDB      </txtSiglaPartido>
+      <txtSiglaUF>PB</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>
+      </datDespacho>
+      <txtDespacho>
+      </txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>925</id>
+      <descricao>Tramitando em Conjunto</descricao>
+      <orgao>
+        <codOrgaoEstado>PEC44309  </codOrgaoEstado>
+        <siglaOrgaoEstado>PEC44309  </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>463155</codProposicaoPrincipal>
+        <proposicaoPrincipal>PEC 443/2009</proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>468094</id>
+    <nome>PEC 464/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>464</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>4/3/2010 14:40:05</datApresentacao>
+    <txtEmenta>Dispõe sobre os integrantes da Polícia Militar e do Corpo de Bombeiros Militar, oriundos do Distrito Federal quando sediado no Rio de Janeiro.</txtEmenta>
+    <txtExplicacaoEmenta>Garante  aos policiais militares e bombeiros do antigo Distrito Federal que foram inativados antes de abril de 1960, bem como aos que optaram em permanecer, os mesmos direitos e prerrogativas dos policiais e bombeiros inativos do atual Distrito Federal.  </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Alexandre Santos</txtNomeAutor>
+      <idecadastro>74830</idecadastro>
+      <codPartido>111</codPartido>
+      <txtSiglaPartido>PMDB      </txtSiglaPartido>
+      <txtSiglaUF>RJ</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>
+      </datDespacho>
+      <txtDespacho>
+      </txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>925</id>
+      <descricao>Tramitando em Conjunto</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>452533</codProposicaoPrincipal>
+        <proposicaoPrincipal>PEC 410/2009</proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>467916</id>
+    <nome>PEC 463/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>463</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>3/3/2010 18:59:35</datApresentacao>
+    <txtEmenta>Altera a alínea "r" do inciso I do art. 102, acrescenta inciso ao art. 22 e acrescenta o art. 130-B à Constituição Federal, para instituir o Conselho Nacional do Ministério Público de Contas, acrescenta parágrafo ao art. 130 e dá outras providências.</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Mendes Ribeiro Filho</txtNomeAutor>
+      <idecadastro>73904</idecadastro>
+      <codPartido>111</codPartido>
+      <txtSiglaPartido>PMDB      </txtSiglaPartido>
+      <txtSiglaUF>RS</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>11/3/2010 15:09:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>907</id>
+      <descricao>Aguardando Designação de Relator</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>467809</id>
+    <nome>PEC 462/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>462</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>3/3/2010 15:45:08</datApresentacao>
+    <txtEmenta>Altera o art. 119 da Constituição Federal, para modificar a composição do Tribunal Superior Eleitoral.</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Paes Landim</txtNomeAutor>
+      <idecadastro>74319</idecadastro>
+      <codPartido>136</codPartido>
+      <txtSiglaPartido>PTB       </txtSiglaPartido>
+      <txtSiglaUF>PI</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>
+      </datDespacho>
+      <txtDespacho>
+      </txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>925</id>
+      <descricao>Especial</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>Diversos  </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>398998</codProposicaoPrincipal>
+        <proposicaoPrincipal>PEC 262/2008</proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>2</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>467384</id>
+    <nome>PEC 461/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>461</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>25/2/2010 11:43:02</datApresentacao>
+    <txtEmenta>Dá nova redação ao § 1º do art. 64 da Constituição da República.</txtEmenta>
+    <txtExplicacaoEmenta>Estabelece que o Supremo Tribunal Federal poderá solicitar urgência na apreciação de projetos de sua iniciativa.  </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Cleber Verde</txtNomeAutor>
+      <idecadastro>141408</idecadastro>
+      <codPartido>199</codPartido>
+      <txtSiglaPartido>PRB       </txtSiglaPartido>
+      <txtSiglaUF>MA</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>4/3/2010 10:46:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>924</id>
+      <descricao>Pronta para Pauta</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>467367</id>
+    <nome>PEC 460/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>460</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>25/2/2010 10:50:31</datApresentacao>
+    <txtEmenta>Altera os arts. 34, 35, 160 e 167 e acrescenta o art. 191-A, na Constituição Federal para assegurar os recursos mínimos para o financiamento de programas de apoio à Agricultura Familiar.</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Assis do Couto</txtNomeAutor>
+      <idecadastro>74378</idecadastro>
+      <codPartido>134</codPartido>
+      <txtSiglaPartido>PT        </txtSiglaPartido>
+      <txtSiglaUF>PR</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>
+      </datDespacho>
+      <txtDespacho>
+      </txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>925</id>
+      <descricao>Tramitando em Conjunto</descricao>
+      <orgao>
+        <codOrgaoEstado>CCP       </codOrgaoEstado>
+        <siglaOrgaoEstado>CCP       </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>355039</codProposicaoPrincipal>
+        <proposicaoPrincipal>PEC 88/2007</proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>467286</id>
+    <nome>PEC 459/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>459</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>24/2/2010 17:46:38</datApresentacao>
+    <txtEmenta>Acrescenta o inciso XV ao art. 29 da Constituição Federal, para determinar ao Poder Executivo Municipal a organização e manutenção de Curso de Gestão Pública para Prefeitos.</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Dr. Ubiali</txtNomeAutor>
+      <idecadastro>141498</idecadastro>
+      <codPartido>125</codPartido>
+      <txtSiglaPartido>PSB       </txtSiglaPartido>
+      <txtSiglaUF>SP</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>4/3/2010 10:46:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>924</id>
+      <descricao>Pronta para Pauta</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>467285</id>
+    <nome>PEC 458/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>458</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>24/2/2010 17:45:04</datApresentacao>
+    <txtEmenta>Acrescenta os § 4º e 5º ao art. 215 da Constituição Federal, criando percentual mínimo de aplicação de recursos para a cultura e dá outras providências. </txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Dr. Ubiali</txtNomeAutor>
+      <idecadastro>141498</idecadastro>
+      <codPartido>125</codPartido>
+      <txtSiglaPartido>PSB       </txtSiglaPartido>
+      <txtSiglaUF>SP</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>4/3/2010</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>924</id>
+      <descricao>Pronta para Pauta</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>467247</id>
+    <nome>PEC 457/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>457</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>24/2/2010 15:51:31</datApresentacao>
+    <txtEmenta>Altera o art. 103-B, para modificar a composição do Conselho Nacional de Justiça.</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Regis de Oliveira</txtNomeAutor>
+      <idecadastro>73556</idecadastro>
+      <codPartido>126</codPartido>
+      <txtSiglaPartido>PSC       </txtSiglaPartido>
+      <txtSiglaUF>SP</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>
+      </datDespacho>
+      <txtDespacho>
+      </txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>925</id>
+      <descricao>Especial</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>Diversos  </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>390114</codProposicaoPrincipal>
+        <proposicaoPrincipal>PEC 244/2008</proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>2</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>466264</id>
+    <nome>PEC 456/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>456</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>10/2/2010 17:54:31</datApresentacao>
+    <txtEmenta>Institui o unicameralismo legislativo, dando nova redação ao art. 5º, inciso LXX, alínea "a"; ao art. 12, § 3º, inciso II; ao art. 14, § 3º, inciso VI, alínea "a"; ao art. 18,  § 3º; ao art. 21, inciso XXIII, alínea "a"; ao art. 27, caput; ao art. 29, inciso IX; ao art. 36, §§ 1º, 2º e 3º; ao art. 44, caput; ao art. 45, caput; ao art. 47; ao art. 48, caput; ao art. 49, caput e incisos VII e X; ao art. 50; ao art. 51, caput e inciso II; ao art. 52, caput e parágrafo único; ao art. 53; ao art. 54, caput; ao art. 55; ao art. 56; ao art. 57; ao art. 58; ao art. 60, caput e §§ 2º e 3º; ao art. 61, caput e § 2º; ao art. 62; ao art. 63; ao art. 64; ao art. 66, caput e §§ 1º, 4º e 7º; ao art. 67; ao art. 68; ao art. 70, caput; ao art. 71, caput e incisos IV, VII e X, e §§ 1º, 2º, 3º e 4º; ao art. 72, § 2º; ao art. 73, § 2º; ao art. 78, caput; ao art. 80; ao art. 81, § 1º; ao art. 83; ao art. 84, incisos VIII, XI, XIV, XIX, XX, XXIII e XXIV do caput; ao art. 86, caput, e § 1º, inciso II; ao art. 89, incisos II e VII; ao art. 91, inciso II do caput; ao art. 101, parágrafo único; ao art. 102, inciso I.</txtEmenta>
+    <txtExplicacaoEmenta>Estabelece que o Congresso Nacional será substituído por uma única Casa, a Assembléia Nacional, transferindo-se para esta as competências que antes eram das duas Casas.  </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Jaime Martins</txtNomeAutor>
+      <idecadastro>74665</idecadastro>
+      <codPartido>168</codPartido>
+      <txtSiglaPartido>PR        </txtSiglaPartido>
+      <txtSiglaUF>MG</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>
+      </datDespacho>
+      <txtDespacho>
+      </txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>925</id>
+      <descricao>Tramitando em Conjunto</descricao>
+      <orgao>
+        <codOrgaoEstado>CCJC      </codOrgaoEstado>
+        <siglaOrgaoEstado>CCJC      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>464843</codProposicaoPrincipal>
+        <proposicaoPrincipal>PEC 451/2009</proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>465682</id>
+    <nome>PEC 455/2010</nome>
+    <tipoProposicao>
+      <id>136</id>
+      <sigla>PEC</sigla>
+      <nome>Proposta de Emenda à Constituição</nome>
+    </tipoProposicao>
+    <numero>455</numero>
+    <ano>2010</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>3/2/2010 16:33:43</datApresentacao>
+    <txtEmenta>Dá nova redação ao caput art. 5° da Constituição Federal, para incluir o meio ambiente ecologicamente equilibrado como um direito fundamental.</txtEmenta>
+    <txtExplicacaoEmenta>Altera a Constituição Federal de 1988.</txtExplicacaoEmenta>
+    <regime>
+      <codRegime>18</codRegime>
+      <txtRegime>Especial</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>5</id>
+      <txtApreciacao>Proposição Sujeita à Apreciação do Plenário</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Roberto Rocha</txtNomeAutor>
+      <idecadastro>74209</idecadastro>
+      <codPartido>128</codPartido>
+      <txtSiglaPartido>PSDB      </txtSiglaPartido>
+      <txtSiglaUF>MA</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>12/2/2010 11:44:00</datDespacho>
+      <txtDespacho>À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>923</id>
+      <descricao>Arquivada</descricao>
+      <orgao>
+        <codOrgaoEstado>MESA      </codOrgaoEstado>
+        <siglaOrgaoEstado>MESA      </siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>a</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+</proposicoes>

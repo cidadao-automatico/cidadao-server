@@ -27,7 +27,7 @@ import java.util.Date
 import anorm._
 import anorm.SqlParser._
 
-case class CongressmanInfo(userId: Long, partyId: Long, stateName: Option[String], homePageUrl: Option[String])
+case class CongressmanInfo(userId: Long, partyId: Long, stateName: Option[String], homePageUrl: Option[String], congressId: Option[Long], sourceId: Option[Long], shortName: Option[String], photoUrl: Option[String], phoneNumber: Option[String], email: Option[String])
 
 object CongressmanInfo {
 
@@ -39,9 +39,15 @@ object CongressmanInfo {
     (get[Long]("user_id") ~
       get[Long]("party_id") ~
       get[Option[String]]("state_name") ~
-      get[Option[String]]("home_page_url")) map {
-        case user_id ~ party_id ~ state_name ~ home_page_url =>
-          CongressmanInfo(user_id, party_id, state_name, home_page_url)
+      get[Option[String]]("home_page_url") ~
+      get[Option[Long]]("congress_id") ~
+      get[Option[Long]]("source_id") ~
+      get[Option[String]]("short_name") ~
+      get[Option[String]]("photo_url") ~
+      get[Option[String]]("phone_number") ~
+      get[Option[String]]("email")) map {
+        case user_id ~ party_id ~ state_name ~ home_page_url ~ congress_id ~ source_id ~ short_name ~ photo_url ~ phone_number ~ email  =>
+          CongressmanInfo(user_id, party_id, state_name, home_page_url, congress_id, source_id, short_name, photo_url, phone_number, email)
       }
   }
 
@@ -51,17 +57,24 @@ object CongressmanInfo {
     }
   }
 
-  def save(user: User, party: Party, stateName: String, homePageUrl: String) {
+  def save(user: User, party: Party, stateName: Option[String], homePageUrl: Option[String], congressId: Option[Long], sourceId: Option[Long], shortName: Option[String], photoUrl: Option[String], phoneNumber: Option[String], email: Option[String]) {
     DB.withConnection { implicit connection =>
       SQL("""
-  				INSERT INTO congressman_infos(user_id, party_id, state_name, home_page_url)
-  				VALUES({user_id}, {party_id}, {state_name}, {home_page_url})
+  				INSERT INTO congressman_infos(user_id, party_id, state_name, home_page_url, congress_id, source_id, short_name, photo_url, phone_number, email)
+  				VALUES({user_id}, {party_id}, {state_name}, {home_page_url}, {congress_id}, {source_id}, {short_name}, {photo_url}, {phone_number}, {email})
   				""")
         .on(
           'user_id -> user.id,
           'party_id -> party.id,
-          'state_name -> stateName,
-          'home_page_url -> homePageUrl).executeInsert()
+          'state_name -> stateName.get,
+          'home_page_url -> homePageUrl.get,
+          'congress_id -> congressId.get,
+          'source_id -> sourceId.get,
+          'short_name -> shortName.get,
+          'photo_url -> photoUrl.get,
+          'phone_number -> phoneNumber.get,
+          'email -> email.get
+          ).executeInsert()
     }
   }
 

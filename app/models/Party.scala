@@ -55,15 +55,17 @@ object Party {
     }
   }
 
-  def save(name: String, homePageUrl: String) {
+  def save(name: String, homePageUrl: String): Party = {
     DB.withConnection { implicit connection =>
-      SQL("""
+        val idOpt: Option[Long] = SQL("""
   				INSERT INTO parties(name, home_page_url)
   				VALUES({name}, {home_page_url})
   				""")
         .on(
           'name -> name,
           'home_page_url -> homePageUrl).executeInsert()
+
+        idOpt.map{ id => Party(Id(id), name, homePageUrl) }.get
     }
   }
 
@@ -84,5 +86,13 @@ object Party {
         'name -> name).as(Party.simple singleOpt)
     }
 
+  }
+
+  def findOrSave(name: String, homePageUrl: String): Party = {
+    var oldParty=findByName(name)
+    oldParty match {
+      case Some(party) => party
+      case _ => save(name, homePageUrl)
+    }
   }
 }

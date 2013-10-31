@@ -109,6 +109,8 @@ object User {
 
   def save(firstName: String, lastName: String, email: Option[String], oauthId: String, oauthProvider: String,
     countryName: Option[String], stateName: Option[String], cityName: Option[String], docId: Option[String], typeCode: Int): User = {
+    println("entrou no metodo")
+
     DB.withConnection { implicit connection =>
       val idOpt: Option[Long] = SQL("""
   				INSERT INTO users(first_name, last_name, email, oauth_id, oauth_provider, country_name,
@@ -127,9 +129,10 @@ object User {
           'city_name -> cityName,
           'doc_id -> docId,
           'type_code -> typeCode).executeInsert()
-
+        println("saiu do metodo")
       idOpt.map { id => User(Id(id), firstName, lastName, email, oauthId, oauthProvider, countryName, stateName, cityName, docId, typeCode, false) }.get
     }
+    
   }
 
   def updateConfigured(user: User): Option[User] ={
