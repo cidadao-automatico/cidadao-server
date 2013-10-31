@@ -16,3 +16,4 @@ dist
 conf/application.conf
 *~
 bin
+.target
