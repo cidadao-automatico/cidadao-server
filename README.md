@@ -1,7 +1,7 @@
 Vigia Político
 ==============
 
-[Site Vigia Político](www.vigiapolitico.com.br)
+[Site Vigia Político](http://www.vigiapolitico.com.br)
 
 O QUE É?
 --------
