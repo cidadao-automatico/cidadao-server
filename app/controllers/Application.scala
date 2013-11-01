@@ -25,6 +25,9 @@ import scala.io.Source
 import play.api.libs.iteratee.Enumerator
 import play.api.libs.concurrent.Promise
 import play.api.libs.Jsonp
+import play.api.db._
+import anorm._
+import anorm.SqlParser._
 
 import models._
 import utils.ModelJson._
@@ -50,6 +53,7 @@ import java.io.File
 import java.util.concurrent.Executors
 import java.io.FileInputStream
 import scala.xml._
+import java.util.ArrayList
 
 object Application extends Controller {
 
@@ -290,11 +294,12 @@ class SaveLaw(val xmlData:NodeSeq, val lawTypeData: String) extends Runnable{
   		var detalheFile=new File(detalhePath)
   		if (detalheFile.exists() && detalheFile.length()>0)
   		{
-  			println("Lei "+year+" "+lawType+" "+stdCode+" existe ("+detalhePath+")")
+  			
   			val detalheXml = scala.xml.XML.load(new FileInputStream(detalheFile))	
   			var lawTags=(detalheXml \ "Indexacao").text.split(",")
   			
   			var lawProposal=LawProposal.save(region, prefix, "", year.toInt, stdCode, description)
+  			println("Lei id "+lawProposal.id.get+" "+year+" "+lawType+" "+stdCode+" existe ("+detalhePath+")")
   			for (tag <- lawTags)
   			{	
   				var cleanTag=(tag.replaceAll("[\\p{Punct}]","").split("\\s") map {(x) => StringUtils.capitalize(x.toLowerCase) + " "}).mkString("")
@@ -306,34 +311,41 @@ class SaveLaw(val xmlData:NodeSeq, val lawTypeData: String) extends Runnable{
 
   			var votacaoPath="/tmp/leis"+sourceId.split("").mkString("/")+"/votacao_"+lawType+"_"+stdCode+".xml"
 	  		var votacaoFile=new File(votacaoPath)
-	  		var updateVoteStatus: Boolean = false
+	  		var updateVoteStatus = false
+	  		
 	  		if (votacaoFile.exists() && votacaoFile.length()>0)
 	  		{
-	  			println("Votacao de Lei "+year+" "+lawType+" "+stdCode+" existe ("+votacaoPath+")")
+	  			println("Votacao de Lei "+lawProposal.id.get+" "+year+" "+lawType+" "+stdCode+" existe ("+votacaoPath+")")
 	  			val votacaoXml = scala.xml.XML.load(new FileInputStream(votacaoFile))	
-	  			((votacaoXml \\ "Votacao").last \ "votos" \\ "Deputado").map { deputadoXml => 
-	  				var congressId=(deputadoXml \ "@ideCadastro").text
-	  				var rate=(deputadoXml \ "@Votacao").text
+	  			var deputadosList=((votacaoXml \\ "Votacao").last \ "votos" \\ "Deputado").map { deputadoXml => 
+	  				var sourceId=(deputadoXml \ "@ideCadastro").text
+					var votoText=StringUtils.trim((deputadoXml \ "@Voto").text)
+					var rate = votoText match{
+						case "Sim" => 5
+						case _ => 1
+					}
 	  				
-	  				var congressman=CongressmanInfo.findByCongressId(congressId.toInt)
-	  				congressman match {
-	  					case Some(congressmanObj) => 
-	  						println("Vai salvar voto do deputado "+congressId)
-	  						updateVoteStatus = true
-	  						Vote.save(congressmanObj.userId.toInt, lawProposal.id.get.toInt, rate.toInt, None)
+	  				var congressmanObj = CongressmanInfo.findBySourceId(sourceId.toInt)
+
+	  				congressmanObj match {
+	  					case Some(dbObj) =>	Vote.save(dbObj.userId.toInt, lawProposal.id.get.toInt, rate)  		  								
 	  					case _ => 
 	  				}
+
+	  				if (congressmanObj!=None)
+	  				{
+	  					LawProposal.updateVoteStatus(lawProposal.id.get, true)
+	  				}
+	  					  				
 	  			}
+				
 	  		}
-
-	  		if (updateVoteStatus==true)
-	  		{
-	  			LawProposal.updateVoteStatus(lawProposal.id.get, true)
-	  		}
-
+	  		
   		}
   	}
   }
+
+
 
   def loadAllLaws() = Action{
 	val cores = 16
@@ -341,7 +353,7 @@ class SaveLaw(val xmlData:NodeSeq, val lawTypeData: String) extends Runnable{
   	AsyncResult{
 
   		var lawTypes=List("PEC","PL")
-	  	var yearRange=2007 until 2014
+	  	var yearRange=2010 until 2014
 	  	
 	  	for (year <- yearRange)
 		{
@@ -365,7 +377,7 @@ class SaveLaw(val xmlData:NodeSeq, val lawTypeData: String) extends Runnable{
   	AsyncResult{
 
   		var lawTypes=List("PEC","PL")
-	  	var yearRange=1999 until 2007
+	  	var yearRange=2007 until 2010
 	  	
 	  	for (year <- yearRange)
 		{
