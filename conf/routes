@@ -16,7 +16,8 @@ GET 	/verifyLaws					controllers.Application.verifyLeisData()
 GET     /downloadVotes				controllers.Application.loadVotacao()
 GET     /loadLaws                   controllers.Application.loadAllLaws()
 GET     /loadLaws2                  controllers.Application.loadAllLaws2()
-
+GET     /trainClassifier			controllers.Application.trainClassifier()
+GET     /dadofake                   controllers.Application.dadoFake()
 #New routes start here
 
 GET     /user/show				 		 controllers.UserController.show()

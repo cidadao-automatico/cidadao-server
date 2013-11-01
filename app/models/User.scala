@@ -78,6 +78,12 @@ object User {
     }
   }
 
+  def findFirst100Congressman(): Seq[User] = {
+    DB.withConnection { implicit connection =>
+      SQL("select * from users where type_code={type_code} limit 100").on('type_code -> CONGRESS_TYPE).as(User.simple *)
+    }
+  }
+
   def findById(id: Long): Option[User] = {
     DB.withConnection { implicit connection =>
       SQL("select * from users where id={id}").on(

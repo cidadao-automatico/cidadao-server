@@ -55,6 +55,11 @@ import java.io.FileInputStream
 import scala.xml._
 import java.util.ArrayList
 
+import weka.core.Instance;
+import weka.core.Instances;
+import weka.core.converters.ArffLoader;
+import weka.classifiers.bayes.NaiveBayesUpdateable;
+
 object Application extends Controller {
 
 	def loadPL = Action{
@@ -407,7 +412,7 @@ class SaveLaw(val xmlData:NodeSeq, val lawTypeData: String) extends Runnable{
 
   def congressmanList = Action {
   	var jsonArray = new JsArray()
-  	var congressmanList=User.findAllCongressman()
+  	var congressmanList=User.findFirst100Congressman()
   	for (congressman <- congressmanList)
   	{
   		//TODO: this should be refactored to a proper object
@@ -422,5 +427,13 @@ class SaveLaw(val xmlData:NodeSeq, val lawTypeData: String) extends Runnable{
 
   def newLogin() = Action{
   	Redirect("/#/user_home")
+  }
+
+  def trainClassifier() = Action {
+  	Ok("ok")
+  }
+
+  def dadoFake() = Action {
+  	Ok("ok")
   }
 }
