@@ -1,3 +1,19 @@
+/*
+// Copyright 2012/2013 de Gustavo Steinberg, Flavio Soares, Pierre Andrews, Gustavo Salazar Torres, Thomaz Abramo
+//
+// Este arquivo é parte do programa Vigia Político. O projeto Vigia
+// Político é um software livre; você pode redistribuí-lo e/ou
+// modificá-lo dentro dos termos da GNU Affero General Public License
+// como publicada pela Fundação do Software Livre (FSF); na versão 3 da
+// Licença. Este programa é distribuído na esperança que possa ser útil,
+// mas SEM NENHUMA GARANTIA; sem uma garantia implícita de ADEQUAÇÃO a
+// qualquer MERCADO ou APLICAÇÃO EM PARTICULAR. Veja a licença para
+// maiores detalhes. Você deve ter recebido uma cópia da GNU Affero
+// General Public License, sob o título "LICENCA.txt", junto com este
+// programa, se não, acesse http://www.gnu.org/licenses/
+*/
+
+
 package models
 
 import play.api.db._
@@ -15,7 +31,7 @@ import anorm.SqlParser._
 // import securesocial.core._
 
 case class User(id: Pk[Long], firstName: String, lastName: String, email: Option[String], oauthId: String, oauthProvider: String,
-  countryName: Option[String], stateName: Option[String], cityName: Option[String], docId: Option[String], typeCode: Int)
+  countryName: Option[String], stateName: Option[String], cityName: Option[String], docId: Option[String], typeCode: Int, var configured: Boolean)
 
 object User {
 
@@ -30,6 +46,7 @@ object User {
   }
 
   implicit val userWrites = Json.writes[User]
+  implicit val userReads = Json.reads[User]
 
   val simple = {
     (get[Pk[Long]]("id") ~
@@ -42,15 +59,28 @@ object User {
       get[Option[String]]("state_name") ~
       get[Option[String]]("city_name") ~
       get[Option[String]]("doc_id") ~
-      get[Int]("type_code")) map {
-        case id ~ first_name ~ last_name ~ email ~ oauth_id ~ oauth_provider ~ country_name ~ state_name ~ city_name ~ doc_id ~ type_code =>
-          User(id, first_name, last_name, email, oauth_id, oauth_provider, country_name, state_name, city_name, doc_id, type_code)
+      get[Int]("type_code") ~
+      get[Boolean]("configured")) map {
+        case id ~ first_name ~ last_name ~ email ~ oauth_id ~ oauth_provider ~ country_name ~ state_name ~ city_name ~ doc_id ~ type_code ~ configured =>
+          User(id, first_name, last_name, email, oauth_id, oauth_provider, country_name, state_name, city_name, doc_id, type_code, configured)
       }
   }
 
   def all(): Seq[User] = {
     DB.withConnection { implicit connection =>
       SQL("select * from users").as(User.simple *)
+    }
+  }
+
+  def findAllCongressman(): Seq[User] = {
+    DB.withConnection { implicit connection =>
+      SQL("select * from users where type_code={type_code}").on('type_code -> CONGRESS_TYPE).as(User.simple *)
+    }
+  }
+
+  def findFirst100Congressman(): Seq[User] = {
+    DB.withConnection { implicit connection =>
+      SQL("select * from users where type_code={type_code} limit 100").on('type_code -> CONGRESS_TYPE).as(User.simple *)
     }
   }
 
@@ -85,6 +115,8 @@ object User {
 
   def save(firstName: String, lastName: String, email: Option[String], oauthId: String, oauthProvider: String,
     countryName: Option[String], stateName: Option[String], cityName: Option[String], docId: Option[String], typeCode: Int): User = {
+    println("entrou no metodo")
+
     DB.withConnection { implicit connection =>
       val idOpt: Option[Long] = SQL("""
   				INSERT INTO users(first_name, last_name, email, oauth_id, oauth_provider, country_name,
@@ -103,8 +135,22 @@ object User {
           'city_name -> cityName,
           'doc_id -> docId,
           'type_code -> typeCode).executeInsert()
+        println("saiu do metodo")
+      idOpt.map { id => User(Id(id), firstName, lastName, email, oauthId, oauthProvider, countryName, stateName, cityName, docId, typeCode, false) }.get
+    }
+    
+  }
 
-      idOpt.map { id => User(Id(id), firstName, lastName, email, oauthId, oauthProvider, countryName, stateName, cityName, docId, typeCode) }.get
+  def updateConfigured(user: User): Option[User] ={
+    DB.withConnection { implicit connection =>
+      SQL("""
+          UPDATE users SET configured={configured} WHERE id={id}
+          """)
+        .on(
+          'id -> user.id,
+          'configured -> user.configured).executeUpdate()
+
+      Option(user)
     }
   }
 
@@ -130,7 +176,7 @@ object User {
           'doc_id -> docId,
           'type_code -> typeCode).executeUpdate()
 
-      Option(User(Id(id), firstName, lastName, email, oauthId, oauthProvider, countryName, stateName, cityName, docId, typeCode))
+      Option(User(Id(id), firstName, lastName, email, oauthId, oauthProvider, countryName, stateName, cityName, docId, typeCode, false))
     }
   }
 
@@ -152,5 +198,7 @@ object User {
     }
 
   }
+
+  
 
 }

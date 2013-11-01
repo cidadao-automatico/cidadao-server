@@ -15,3 +15,5 @@ dist
 /.settings
 conf/application.conf
 *~
+bin
+.target

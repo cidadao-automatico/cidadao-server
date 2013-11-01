@@ -1,3 +1,19 @@
+/*
+// Copyright 2012/2013 de Gustavo Steinberg, Flavio Soares, Pierre Andrews, Gustavo Salazar Torres, Thomaz Abramo
+//
+// Este arquivo é parte do programa Vigia Político. O projeto Vigia
+// Político é um software livre; você pode redistribuí-lo e/ou
+// modificá-lo dentro dos termos da GNU Affero General Public License
+// como publicada pela Fundação do Software Livre (FSF); na versão 3 da
+// Licença. Este programa é distribuído na esperança que possa ser útil,
+// mas SEM NENHUMA GARANTIA; sem uma garantia implícita de ADEQUAÇÃO a
+// qualquer MERCADO ou APLICAÇÃO EM PARTICULAR. Veja a licença para
+// maiores detalhes. Você deve ter recebido uma cópia da GNU Affero
+// General Public License, sob o título "LICENCA.txt", junto com este
+// programa, se não, acesse http://www.gnu.org/licenses/
+*/
+
+
 package models
 
 import play.api.db._
@@ -24,6 +40,7 @@ object Tag {
   }
 
   implicit val tagWrites = Json.writes[Tag]
+  implicit val tagReads = Json.reads[Tag]
 
   //  val withCount = {
   // (get[Pk[Long]]("projeto_lei_has_keyword.keyword_id") ~
@@ -51,9 +68,22 @@ object Tag {
     }
   }
 
+  def findByUser(user: User): Seq[Tag] = {
+    DB.withConnection { implicit connection =>
+      SQL("select * from tags inner join user_tags on tags.id=user_tags.tag_id where user_tags.user_id={userId} order by tags.id").on(
+        'userId -> user.id).as(Tag.simple *)
+    }    
+  }
+
   def findAll(): Seq[Tag] = {
     DB.withConnection { implicit connection =>
       SQL("select * from tags").as(Tag.simple *)
+    }
+  }
+
+  def first100(): Seq[Tag] = {
+    DB.withConnection { implicit connection =>
+      SQL("select * from tags limit 100").as(Tag.simple *)
     }
   }
 
@@ -89,21 +119,21 @@ object Tag {
   // 	}
   // }
 
-  //  def findOrCreate(name: String): Option[Tag] = {
-  // DB.withConnection { implicit connection =>
-  //   findByName(name) match {
-  // 	case Some(tag) => Some(tag)
-  // 	case None =>
-  // 	  val idOpt: Option[Long] = SQL("""INSERT INTO tags
-  // 									(name)
-  // 									VALUES
-  // 									({name})""")
-  // 								.on(
-  // 								  'name -> name
-  // 									).executeInsert()
-  // 	  idOpt.map { id => Tag(Id(id), name) }
-  //   }
-  // }
-  //  }
+   def findOrCreate(name: String): Tag = {
+    DB.withConnection { implicit connection =>
+      findByName(name) match {
+      	case Some(tag) => tag
+      	case None =>
+      	  val idOpt: Option[Long] = SQL("""INSERT INTO tags
+      									(name)
+      									VALUES
+      									({name})""")
+      								.on(
+      								  'name -> name
+      									).executeInsert()
+      	  idOpt.map { id => Tag(Id(id), name) }.get
+        }
+    }
+   }
 
 }

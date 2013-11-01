@@ -1,3 +1,19 @@
+/*
+// Copyright 2012/2013 de Gustavo Steinberg, Flavio Soares, Pierre Andrews, Gustavo Salazar Torres, Thomaz Abramo
+//
+// Este arquivo é parte do programa Vigia Político. O projeto Vigia
+// Político é um software livre; você pode redistribuí-lo e/ou
+// modificá-lo dentro dos termos da GNU Affero General Public License
+// como publicada pela Fundação do Software Livre (FSF); na versão 3 da
+// Licença. Este programa é distribuído na esperança que possa ser útil,
+// mas SEM NENHUMA GARANTIA; sem uma garantia implícita de ADEQUAÇÃO a
+// qualquer MERCADO ou APLICAÇÃO EM PARTICULAR. Veja a licença para
+// maiores detalhes. Você deve ter recebido uma cópia da GNU Affero
+// General Public License, sob o título "LICENCA.txt", junto com este
+// programa, se não, acesse http://www.gnu.org/licenses/
+*/
+
+
 package models
 
 import play.api.db._
@@ -39,15 +55,17 @@ object Party {
     }
   }
 
-  def save(name: String, homePageUrl: String) {
+  def save(name: String, homePageUrl: String): Party = {
     DB.withConnection { implicit connection =>
-      SQL("""
+        val idOpt: Option[Long] = SQL("""
   				INSERT INTO parties(name, home_page_url)
   				VALUES({name}, {home_page_url})
   				""")
         .on(
           'name -> name,
           'home_page_url -> homePageUrl).executeInsert()
+
+        idOpt.map{ id => Party(Id(id), name, homePageUrl) }.get
     }
   }
 
@@ -68,5 +86,13 @@ object Party {
         'name -> name).as(Party.simple singleOpt)
     }
 
+  }
+
+  def findOrSave(name: String, homePageUrl: String): Party = {
+    var oldParty=findByName(name)
+    oldParty match {
+      case Some(party) => party
+      case _ => save(name, homePageUrl)
+    }
   }
 }

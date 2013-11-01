@@ -1,3 +1,19 @@
+/*
+// Copyright 2012/2013 de Gustavo Steinberg, Flavio Soares, Pierre Andrews, Gustavo Salazar Torres, Thomaz Abramo
+//
+// Este arquivo é parte do programa Vigia Político. O projeto Vigia
+// Político é um software livre; você pode redistribuí-lo e/ou
+// modificá-lo dentro dos termos da GNU Affero General Public License
+// como publicada pela Fundação do Software Livre (FSF); na versão 3 da
+// Licença. Este programa é distribuído na esperança que possa ser útil,
+// mas SEM NENHUMA GARANTIA; sem uma garantia implícita de ADEQUAÇÃO a
+// qualquer MERCADO ou APLICAÇÃO EM PARTICULAR. Veja a licença para
+// maiores detalhes. Você deve ter recebido uma cópia da GNU Affero
+// General Public License, sob o título "LICENCA.txt", junto com este
+// programa, se não, acesse http://www.gnu.org/licenses/
+*/
+
+
 package models
 
 import play.api.db._
@@ -29,6 +45,7 @@ object LawRegion {
   }
 
   implicit val regionWrites = Json.writes[LawRegion]
+  implicit val regionReads = Json.reads[LawRegion]
 
   val simple = {
     (get[Pk[Long]]("id") ~
@@ -58,6 +75,13 @@ object LawRegion {
       SQL("select * from law_regions where description={description}").on(
         'description -> description).as(LawRegion.simple singleOpt)
     }
+  }
+
+  def findByUser(user: User): Seq[LawRegion] = {
+    DB.withConnection { implicit connection =>
+      SQL("select * from law_regions inner join user_law_regions on law_regions.id=user_law_regions.law_region_id where user_law_regions.user_id={userId} order by law_regions.id").on(
+        'userId -> user.id).as(LawRegion.simple *)
+    }    
   }
 
   def save(description: String, typeName: String, parent: Option[LawRegion]) : LawRegion = {
