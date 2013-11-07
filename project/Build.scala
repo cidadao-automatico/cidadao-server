@@ -30,7 +30,10 @@ object ApplicationBuild extends Build {
 	"mysql" % "mysql-connector-java" % "5.1.18",
   "securesocial" %% "securesocial" % "2.1.1",
   "nz.ac.waikato.cms.weka" % "weka-stable" % "3.6.9",
-  "org.apache.lucene" % "lucene-core" % "4.5.1"
+  "org.apache.lucene" % "lucene-core" % "4.5.1",
+  "org.apache.mahout" % "mahout-core" % "0.8",
+  "org.apache.mahout" % "mahout-math" % "0.8",
+  "org.apache.hadoop" % "hadoop-core" % "1.1.2"
   )
 
 

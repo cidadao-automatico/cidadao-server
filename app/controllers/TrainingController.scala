@@ -34,12 +34,15 @@ import utils.ModelJson._
 
 import anorm.NotAssigned
 
+import java.util.regex.Pattern
 import scala.util.control.Exception._
 
 import java.util.Date
+import java.text.Normalizer
 
 import play.api.libs.ws.WS
-import scala.concurrent.Future
+import scala.concurrent.duration._
+import scala.concurrent._
 import play.api.libs.concurrent.Execution.Implicits._
 import org.apache.commons.lang3._
 import wela.examples._
@@ -54,48 +57,76 @@ import java.util.concurrent.Executors
 import java.io.FileInputStream
 import scala.xml._
 import java.util.ArrayList
+import scala.sys.process._
 
 import weka.core.Instance;
 import weka.core.Instances;
 import weka.core.converters.ArffLoader;
 import weka.classifiers.bayes.NaiveBayesUpdateable;
 
-object Application extends Controller {
+import play.api.libs.concurrent.Akka;
+import play.api.Play.current;
 
-	def loadPL = Action{
-		
-		Ok("done")
-	}
+import org.apache.mahout.math.Vector;
+import org.apache.mahout.classifier.sgd._
+import org.apache.mahout.math.RandomAccessSparseVector;
 
-  //GET
-  def regionList() = Action {
-  		var data = toJson(LawRegion.findAll())
-     	Ok(data)
+object TrainingController extends Controller {
+
+	val PATH_PREFIX="/home/gustavo/camara"	 
+  val firstTagId=Tag.findFirstId()
+
+   def convertToVector(tagIndexedList: List[(Int,Long)]):Vector={
+      var vector:Vector = new RandomAccessSparseVector(tagIndexedList.length)
+      for (tagCount <- tagIndexedList){
+        vector.setQuick(tagCount._1-firstTagId,tagCount._2)
+      }
+      return vector
+   }
+   def trainClassifier() = Action {
+   	AsyncResult{
+      var documentFreq=LawTag.getCountPairs()
+      var vectorFreq=convertToVector(documentFreq)
+
+      
+      
+      var documentCount=LawProposal.countAllVoted()
+      var tagCount=Tag.countAll()
+      var parties=Party.all
+      for (party <- parties)
+      {
+        var congressmen = CongressmanInfo.findUsersByParty(party)
+        var partyVectors = Set[Vector]()
+        for (congressman <- congressmen)
+        {
+          var manualVotes = Vote.findManualByUser(congressman)
+          var vectorLaws = manualVotes.map { vote => (convertToVector(Tag.findCountsByLawId(vote.lawProposalId.toInt)),vote.rate)}
+          var congressmanModel=new OnlineLogisticRegression(5,tagCount.toInt, new L1())
+          for (vector <- vectorLaws)
+          {
+              logmsg("size: "+vector._1.size()+" nota:"+vector._2)
+          }
+
+        }
+      }
+
+   		Future(Ok("ok"))
+   	}
   }
 
-  //GET
-  def tagList() = Action {
-     Ok(toJson(Tag.first100()))
+
+  def logmsg(message: String)
+  {
+  	play.api.Logger.info(message)
   }
 
-  def congressmanList = Action {
-  	var jsonArray = new JsArray()
-  	var congressmanList=User.findFirst100Congressman()
-  	for (congressman <- congressmanList)
-  	{
-  		//TODO: this should be refactored to a proper object
-  		var userObj = User.findById(congressman.id.get)
-      	var userJson = toJson(userObj)
-      	var congressmanJson = toJson(CongressmanInfo.findByUser(userObj.get))
-      	var finalJson = Json.obj( "user" -> userJson, "congressmanInfo" -> congressmanJson)
-      	jsonArray=jsonArray :+ finalJson
-  	}
-  	Ok(jsonArray)
+  def errmsg(message: String)
+  {
+  	play.api.Logger.error(message)	
   }
 
-  def newLogin() = Action{
-  	Redirect("/#/user_home")
+  def warnmsg(message: String)
+  {
+  	play.api.Logger.warn(message)	
   }
-
- 
 }

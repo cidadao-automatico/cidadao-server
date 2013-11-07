@@ -74,6 +74,12 @@ object LawTag {
     }
   }
 
+  def getCountPairs():List[(Int,Long)] = {
+   DB.withConnection { implicit connection =>
+      SQL("select tag_id, count(*) as conta from law_tags group by tag_id order by tag_id asc").as(int("tag_id") ~ long("conta") map(flatten) *)
+    } 
+  }
+
   def deleteById(id: Long) {
     DB.withConnection { implicit connection =>
       SQL("""
@@ -82,6 +88,17 @@ object LawTag {
         """)
         .on(
           'id -> id).executeInsert()
+    }
+  }
+
+  def deleteByLaw(lawId: Long) {
+    DB.withConnection { implicit connection =>
+      SQL("""
+        DELETE FROM law_tags
+        WHERE law_proposal_id={law_proposal_id}
+        """)
+        .on(
+          'law_proposal_id -> lawId).executeInsert()
     }
   }
 

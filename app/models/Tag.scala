@@ -29,7 +29,7 @@ import anorm._
 import anorm.SqlParser._
 
 //case class Tag(id: Pk[Long], tag: String, count: Option[Long])
-case class Tag(id: Pk[Long] = NotAssigned, name: String)
+case class Tag(id: Pk[Long] = NotAssigned, name: String, normalizedName: String)
 
 object Tag {
 
@@ -54,10 +54,11 @@ object Tag {
 
   val simple = {
     (get[Pk[Long]]("id") ~
-      get[String]("name")) map {
-        case id ~ name =>
+      get[String]("name") ~
+      get[String]("normalized_name")) map {
+        case id ~ name ~ normalized_name =>
           // Tag(id, name, None)
-          Tag(id, name)
+          Tag(id, name, normalized_name)
       }
   }
 
@@ -65,6 +66,14 @@ object Tag {
     DB.withConnection { implicit connection =>
       SQL("select * from tags where name={name}").on(
         'name -> name).as(Tag.simple singleOpt)
+    }
+  }
+
+  def findByNormalizedName(normalizedName: String): Option[Tag] = {
+    //FIXME: AS vezes ta retornando mais de um registro, verificar!
+    DB.withConnection { implicit connection =>
+      SQL("select * from tags where normalized_name={normalized_name} LIMIT 1").on(
+        'normalized_name -> normalizedName).as(Tag.simple singleOpt)
     }
   }
 
@@ -109,6 +118,32 @@ object Tag {
     }
   }
 
+  def findFirstId(): Int ={
+    DB.withConnection { implicit connection =>
+      SQL("""
+        select id from tags order by id asc limit 1
+        """).as(int("id") single)
+    } 
+  }
+
+  def countAll(): Long ={
+    DB.withConnection { implicit connection =>
+      SQL("""
+        select count(*) as conta from tags
+        """).as(long("conta") single)
+    } 
+  }
+
+  def findCountsByLawId(lawProposalId: Int): List[(Int,Long)] = {
+    DB.withConnection { implicit connection =>
+      SQL("""
+        select id, count(lt.tag_id) as conta from tags left join (select tag_id from law_tags where law_tags.law_proposal_id={law_proposal_id}) lt on lt.tag_id=tags.id group by id order by id asc
+        """)
+        .on(
+          'law_proposal_id -> lawProposalId).as( int("id") ~ long("conta") map(flatten) *)
+    } 
+  }
+
   // def findAll(): Seq[Tag] = {
   // 	DB.withConnection { implicit connection =>
   // 		SQL("""SELECT count(PROJETO_LEI_ID) as count,
@@ -119,19 +154,20 @@ object Tag {
   // 	}
   // }
 
-   def findOrCreate(name: String): Tag = {
+   def findOrCreate(name: String, normalizedName:String): Tag = {
     DB.withConnection { implicit connection =>
-      findByName(name) match {
+      findByNormalizedName(name) match {
       	case Some(tag) => tag
       	case None =>
       	  val idOpt: Option[Long] = SQL("""INSERT INTO tags
-      									(name)
+      									(name, normalized_name)
       									VALUES
-      									({name})""")
+      									({name},{normalized_name})""")
       								.on(
-      								  'name -> name
+      								  'name -> name,
+                        'normalized_name -> normalizedName
       									).executeInsert()
-      	  idOpt.map { id => Tag(Id(id), name) }.get
+      	  idOpt.map { id => Tag(Id(id), name, normalizedName) }.get
         }
     }
    }

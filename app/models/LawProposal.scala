@@ -29,7 +29,7 @@ import anorm._
 import anorm.SqlParser._
 
 case class LawProposal(id: Pk[Long], regionId: Long,
-  url: String, year: Int, stdCode: String, description: String, prefix: String)
+  url: String, year: Int, stdCode: String, description: String, prefix: String, priorityStatus: String)
 
 object LawProposal {
 
@@ -48,9 +48,10 @@ object LawProposal {
       get[Int]("year") ~
       get[String]("std_code") ~
       get[String]("description") ~
-      get[String]("prefix")) map {
-        case id ~ law_region_id ~ law_url ~ year ~ std_code ~ description ~ prefix =>
-          LawProposal(id, law_region_id, law_url, year, std_code, description, prefix)
+      get[String]("prefix") ~
+      get[String]("priority_status") ) map {
+        case id ~ law_region_id ~ law_url ~ year ~ std_code ~ description ~ prefix ~ priority_status=>
+          LawProposal(id, law_region_id, law_url, year, std_code, description, prefix, priority_status)
       }
   }
 
@@ -78,6 +79,12 @@ object LawProposal {
       }    
   }
 
+  def countAllVoted(): Long = {
+    DB.withConnection { implicit connection =>
+          SQL("select count(*) as conta from law_proposals where vote_status=1").as(long("conta") single)
+        }
+  }
+
   def allVoted(page: Option[Int]): Seq[LawProposal] = {
     page match {
       case Some(pageVal) => 
@@ -93,6 +100,21 @@ object LawProposal {
       }    
   }
 
+  def allVotedNoPage(): Seq[LawProposal] = {    
+      DB.withConnection { implicit connection =>
+        SQL("select * from law_proposals where vote_status=1").as(LawProposal.simple *)
+      }    
+  }
+
+  def findByUser(user: User): Seq[LawProposal] = {
+    DB.withConnection { implicit connection =>
+          SQL("""
+            select law_proposals.* from law_proposals inner join votes on law_proposals.id=votes.law_proposal_id where votes.user_id={user_id}
+            """).
+          on('user_id -> user.id).
+          as(LawProposal.simple *)
+        }
+  }
 
   def lawsNotVotedForUser(user: User): Seq[LawProposal] = {
     DB.withConnection { implicit connection =>
@@ -104,18 +126,28 @@ object LawProposal {
         }
   }
 
+  def lawsNotVotedForCongressman(congressman: User): Seq[LawProposal] = {
+    DB.withConnection { implicit connection =>
+          SQL("""
+            select * from law_proposals where vote_status=1 AND id not in (select law_proposal_id from votes where user_id={user_id})
+            """).
+          on('user_id -> congressman.id).
+          as(LawProposal.simple *)
+        }
+  }
+
   def findRandom(): Option[LawProposal] = {
     DB.withConnection { implicit connection =>
       SQL("select * from law_proposals order by rand() limit 1").as(LawProposal.simple singleOpt)
     }
   }
 
-  def save(lawRegion: LawRegion, prefix: String, url: String, year: Int, stdCode: String, description: String) : LawProposal = {
+  def save(lawRegion: LawRegion, prefix: String, url: String, year: Int, stdCode: String, description: String, priorityStatus:String) : LawProposal = {
     
     DB.withConnection { implicit connection =>
         val idOpt: Option[Long] = SQL("""
-          INSERT INTO law_proposals(prefix, law_region_id, law_url, year, std_code, description)
-          VALUES({prefix}, {law_region_id}, {law_url}, {year}, {std_code}, {description})
+          INSERT INTO law_proposals(prefix, law_region_id, law_url, year, std_code, description, priority_status)
+          VALUES({prefix}, {law_region_id}, {law_url}, {year}, {std_code}, {description}, {priority_status})
           """)
             .on(
               'prefix -> prefix,
@@ -123,9 +155,10 @@ object LawProposal {
               'law_url -> url,
               'year -> year,
               'std_code -> stdCode,
-              'description -> description).executeInsert()
+              'description -> description,
+              'priority_status -> priorityStatus).executeInsert()
 
-        idOpt.map { id => LawProposal(Id(id), lawRegion.id.get, url, year, stdCode, description, prefix) }.get
+        idOpt.map { id => LawProposal(Id(id), lawRegion.id.get, url, year, stdCode, description, prefix, priorityStatus) }.get
 
         }
   }
