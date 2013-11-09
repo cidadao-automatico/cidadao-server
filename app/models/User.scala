@@ -199,6 +199,25 @@ object User {
 
   }
 
+  def updateModelPath(id: Long, modelPath: String)
+  {
+    DB.withConnection { implicit connection =>
+      SQL("""
+          UPDATE users SET model_path={model_path} WHERE id={id}
+          """)
+        .on(
+          'id -> id,
+          'model_path -> modelPath).executeUpdate()      
+    } 
+  }
+
+  def findModelPath(id: Long): String ={
+    DB.withConnection { implicit connection =>
+      var result=SQL("select model_path from users where id={id}").on(
+        'id -> id).apply().head
+      return result[String]("model_path")
+    }
+  }
   
 
 }

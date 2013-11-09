@@ -42,6 +42,12 @@ object UserLawRegion {
     }
   }
 
+  def findByUser(user:User): Seq[UserLawRegion] = {
+    DB.withConnection { implicit connection =>
+      SQL("select * from user_law_regions where user_id={user_id}").on('user_id -> user.id.get).as(UserLawRegion.simple *)
+    }
+  }
+
   def save(user: User, lawRegion: LawRegion) {
     DB.withConnection { implicit connection =>
       SQL("""

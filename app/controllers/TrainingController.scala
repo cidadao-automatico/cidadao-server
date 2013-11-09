@@ -53,6 +53,10 @@ import weka.classifiers.functions.LeastMedSq
 import sys.process._
 import java.net.URL
 import java.io.File
+import java.io.FileOutputStream
+import java.io.DataOutputStream
+import java.io.FileInputStream
+import java.io.DataInputStream
 import java.util.concurrent.Executors
 import java.io.FileInputStream
 import scala.xml._
@@ -70,11 +74,17 @@ import play.api.Play.current;
 import org.apache.mahout.math.Vector;
 import org.apache.mahout.classifier.sgd._
 import org.apache.mahout.math.RandomAccessSparseVector;
+import org.apache.mahout.vectorizer.TFIDF;
 
 object TrainingController extends Controller {
 
-	val PATH_PREFIX="/home/gustavo/camara"	 
+	val PATH_PREFIX="/home/gustavo/camara/models"
+  val USER_PREFIX="/users"
+  val PARTY_PREFIX="/parties"
+  val MODEL_FILE="model.data"
   val firstTagId=Tag.findFirstId()
+  var numCategories=6
+  var tagCount=Tag.countAll()
 
    def convertToVector(tagIndexedList: List[(Int,Long)]):Vector={
       var vector:Vector = new RandomAccessSparseVector(tagIndexedList.length)
@@ -83,35 +93,145 @@ object TrainingController extends Controller {
       }
       return vector
    }
+
    def trainClassifier() = Action {
    	AsyncResult{
-      var documentFreq=LawTag.getCountPairs()
-      var vectorFreq=convertToVector(documentFreq)
-
-      
+      var tfidf = new TFIDF();
+      var docFreq=convertToVector(LawTag.getCountPairs())      
       
       var documentCount=LawProposal.countAllVoted()
-      var tagCount=Tag.countAll()
       var parties=Party.all
       for (party <- parties)
       {
         var congressmen = CongressmanInfo.findUsersByParty(party)
-        var partyVectors = Set[Vector]()
+        var partyTupleVectors = Array[(Long,Int,Vector)]()
         for (congressman <- congressmen)
         {
           var manualVotes = Vote.findManualByUser(congressman)
-          var vectorLaws = manualVotes.map { vote => (convertToVector(Tag.findCountsByLawId(vote.lawProposalId.toInt)),vote.rate)}
-          var congressmanModel=new OnlineLogisticRegression(5,tagCount.toInt, new L1())
-          for (vector <- vectorLaws)
+          
+          var lawTuples = manualVotes.map { vote => (vote.lawProposalId,vote.rate,convertToVector(Tag.findCountsByLawId(vote.lawProposalId.toInt)))}
+          for (lawTuple <- lawTuples)
           {
-              logmsg("size: "+vector._1.size()+" nota:"+vector._2)
+            var wordCount=Tag.totalTagsByLawId(lawTuple._1.intValue())
+            var lawVector=lawTuple._3
+            for (vecIdx <- 0 to lawVector.size()-1){
+              var count=lawVector.get(vecIdx)
+              var freq=docFreq.get(vecIdx)
+              var tfIdfValue = tfidf.calculate(count.intValue(), freq.intValue(), wordCount.intValue(), documentCount.intValue());              
+              lawVector.set(vecIdx, tfIdfValue)
+            }
+            partyTupleVectors=partyTupleVectors :+ lawTuple
           }
 
+          var congressmanModel=new OnlineLogisticRegression(numCategories,tagCount.toInt, new L1())
+          logmsg("Training model for congressman "+congressman+" with "+lawTuples.length+" instances")
+          for (lawTuple <- lawTuples)
+          {
+            congressmanModel.train(lawTuple._1,lawTuple._2, lawTuple._3)
+          }          
+          
+          var relativeModelOutputPath=USER_PREFIX+generatePathFromId(congressman.id.get)
+          var modelOutputPath=PATH_PREFIX+relativeModelOutputPath
+          var outputPath=new File(modelOutputPath)
+          if (!outputPath.exists())
+          {
+            outputPath.mkdirs()
+          }
+
+          var outputFilePath=modelOutputPath+"/"+MODEL_FILE
+          var outputFile=new File(outputFilePath)
+          logmsg("Saving model for user "+congressman.id.get+" at "+outputFilePath)
+          var fileOutStream=new FileOutputStream(outputFile)
+          var dataOutStream=new DataOutputStream(fileOutStream)
+          congressmanModel.write(dataOutStream)
+          dataOutStream.close()
+          fileOutStream.close()
+
+          User.updateModelPath(congressman.id.get, relativeModelOutputPath)
+
         }
+        logmsg("Training model for party "+party+" with "+partyTupleVectors.size+" instances")
+        var partyModel=new OnlineLogisticRegression(5,tagCount.toInt, new L1())
+        for (lawTuple <- partyTupleVectors){
+          partyModel.train(lawTuple._1,lawTuple._2-1, lawTuple._3)
+        }
+
+        var relativeModelOutputPath=PARTY_PREFIX+generatePathFromId(party.id.get)
+        var modelOutputPath=PATH_PREFIX+relativeModelOutputPath
+        var outputPath=new File(modelOutputPath)
+        if (!outputPath.exists())
+        {
+          outputPath.mkdirs()
+        }
+
+        var outputFilePath=modelOutputPath+"/"+MODEL_FILE
+        var outputFile=new File(outputFilePath)
+        logmsg("Saving model for party "+party.id.get+" at "+outputFilePath)
+        var fileOutStream=new FileOutputStream(outputFile)
+        var dataOutStream=new DataOutputStream(fileOutStream)
+        partyModel.write(dataOutStream)
+        dataOutStream.close()
+        fileOutStream.close()
+        Party.updateModelPath(party.id.get, relativeModelOutputPath)          
+        
       }
 
    		Future(Ok("ok"))
    	}
+  }
+
+  def generatePathFromId(id: Long):String = {
+    id.toString().split("").mkString("/")
+  }
+
+  class CongressmanClassifyTask(val congressman: CongressmanInfo) extends Runnable{
+
+    def run(){
+      var modelInputPath=PATH_PREFIX+USER_PREFIX+generatePathFromId(congressman.userId)+"/"+MODEL_FILE
+      var fileInputStream=new FileInputStream(modelInputPath)
+      var dataInputStream=new DataInputStream(fileInputStream)
+      
+      var partyModel=new OnlineLogisticRegression(numCategories,tagCount.toInt, new L1())
+      partyModel.readFields(dataInputStream)
+
+      var notVotedLaws=LawProposal.all(None)
+      for (lawProposal <- notVotedLaws)
+      {        
+        var lawVector=convertToVector(Tag.findCountsByLawId(lawProposal.id.get.toInt))
+        
+        var probs=partyModel.classify(lawVector)
+        var predictedRate=probs.maxValueIndex()+1
+        logmsg("Classified Law "+ lawProposal.id.get +" for congressman "+congressman.shortName+" with rate: "+predictedRate)
+        Vote.saveWithoutRate(congressman.userId.intValue(),lawProposal.id.get.intValue(),predictedRate)
+        // var existingVote=Vote.findByLawAndUserIds(lawProposal.id.get, congressman.userId)
+        // existingVote match{
+        //   case Some(vote) => Vote.updateRates(vote.userId.intValue(),vote.lawProposalId.intValue(), vote.rate, predictedRate)
+        //   case _ => Vote.saveWithoutRate(congressman.userId.intValue(),lawProposal.id.get.intValue(),predictedRate)
+        // }
+      }
+      dataInputStream.close()
+      fileInputStream.close()
+    }
+  }
+
+  def classifyLaws() = Action{
+
+    val cores = 4
+    val pool = Executors.newFixedThreadPool(cores)
+
+        
+    var congressmen=CongressmanInfo.all()
+    for (congressman <- congressmen)
+    {
+      pool.submit(new CongressmanClassifyTask(congressman))
+      
+
+    }
+
+    
+    //FIXME: Para cada modelo de usuario iterar sobre as leis não votadas manualmente
+    //extrair o vetor da lei e passar pro classificador. Logo criar o voto. Fazer campo de voto manual nulo.
+    Ok("ok")
   }
 
 

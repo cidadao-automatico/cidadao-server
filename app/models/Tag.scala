@@ -144,6 +144,21 @@ object Tag {
     } 
   }
 
+  def idResultSetParser(implicit extractor: anorm.Column[java.math.BigDecimal]) = ResultSetParser.singleOpt[java.math.BigDecimal](anorm.SqlParser.get[java.math.BigDecimal]("1"))
+  
+
+  def totalTagsByLawId(lawProposalId: Int): Long = {
+    DB.withConnection { implicit connection =>
+      var result=SQL("""
+        select CAST(sum(conta) AS CHAR(10)) as soma from (select id, count(lt.tag_id) as conta from tags left join (select tag_id from law_tags where law_tags.law_proposal_id={law_proposal_id}) lt on lt.tag_id=tags.id group by id order by id asc) temp
+        """)
+        .on(
+          'law_proposal_id -> lawProposalId).apply().head
+        //FIXME: Awful awful way to fix Anorm bug for BigDecimal. Bad Anorm, no cookie for you!
+        return java.lang.Long.parseLong(result[String]("soma"))
+    } 
+  }
+
   // def findAll(): Seq[Tag] = {
   // 	DB.withConnection { implicit connection =>
   // 		SQL("""SELECT count(PROJETO_LEI_ID) as count,

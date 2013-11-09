@@ -10,10 +10,11 @@ GET     /assets/*file               controllers.Assets.at(path="/public", file)
 #GET 	/downloadLaws				controllers.DataController.downloadProposicoes()
 #GET 	/verifyLaws					controllers.DataController.verifyLeisData()
 #GET     /downloadVotes				controllers.DataController.loadVotacao()
-#GET     /loadLaws                   controllers.DataController.loadAllLaws()
+GET     /loadLaws                   controllers.DataController.loadAllLaws()
 #GET     /loadLaws2                  controllers.DataController.loadAllLaws2()
 #GET     /loadLaws3                  controllers.DataController.loadAllLaws3()
 GET     /trainClassifier			controllers.TrainingController.trainClassifier()
+GET     /classifyLaws			controllers.TrainingController.classifyLaws()
 #GET     /dadofake                   controllers.DataController.dadoFake()
 #New routes start here
 

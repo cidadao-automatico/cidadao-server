@@ -40,6 +40,7 @@ object LawProposal {
   }
 
   implicit val lawProposalWrites = Json.writes[LawProposal]
+  implicit val lawProposalReads = Json.reads[LawProposal]
 
   val simple = {
     (get[Pk[Long]]("id") ~      
@@ -141,6 +142,25 @@ object LawProposal {
       SQL("select * from law_proposals order by rand() limit 1").as(LawProposal.simple singleOpt)
     }
   }
+
+  def findByUserConfiguration(user: User, page: Int): Seq[LawProposal] ={
+    DB.withConnection { implicit connection =>
+        SQL("""
+      select lp.* from law_proposals lp inner join law_proposal_comissions lpc on lp.id=lpc.law_proposal_id 
+      inner join law_regions lr on lr.id=lp.law_region_id where 
+      lpc.comission_id in (select uc.comission_id from user_comissions uc where uc.user_id={user_id}) and 
+      lr.id in (select ulr.law_region_id from user_law_regions ulr where ulr.user_id={user_id})
+      order by lp.id limit 4 offset {offset}
+    """).on('user_id -> user.id,
+            'offset -> (page-1)*4).as(LawProposal.simple *)
+      }
+  }
+
+  /*select lp.* from law_proposals lp inner join law_proposal_comissions lpc on lp.id=lpc.law_proposal_id 
+      inner join law_regions lr on lr.id=lp.law_region_id where lpc.comission_id in 
+      (select uc.comission_id from user_comissions uc where uc.user_id={user_id}) and 
+      lr.id in (select ulr.law_region_id from user_law_regions ulr where ulr.user_id={user_id})
+      and lp.id not in (select bl.law_proposal_id from user_law_blacklist ulb where ulb.user_id={user_id});*/
 
   def save(lawRegion: LawRegion, prefix: String, url: String, year: Int, stdCode: String, description: String, priorityStatus:String) : LawProposal = {
     

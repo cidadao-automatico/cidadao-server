@@ -378,6 +378,7 @@ class SaveLaw(val xmlData:NodeSeq, val pool: java.util.concurrent.ExecutorServic
 
 
   def internalLoadLaw(xml: NodeSeq) {
+  		var comissions=Comission.findAll()
 	  	var stopwords=Set("de","da","do","sa","sem","não","sim","a","à","agora","ainda","alguém","algum","alguma","algumas","alguns","ampla","amplas","amplo","amplos","ante","antes","ao","aos","após","aquela",
 				"aquelas","aquele","aqueles","aquilo","as","até","através","cada","coisa","coisas","com","como","contra","contudo","da","daquele","daqueles","das","de","dela",
 				"delas","dele","deles","depois","dessa","dessas","desse","desses","desta","destas","deste","deste","destes","deve","devem","devendo","dever","deverá","deverão",
@@ -403,7 +404,7 @@ class SaveLaw(val xmlData:NodeSeq, val pool: java.util.concurrent.ExecutorServic
   		var detalheFile=new File(detalhePath)
   		if (detalheFile.exists() && detalheFile.length()>0)
   		{
-  			logmsg("Processing Lei id "+year+" "+prefix+" "+stdCode)
+  			
 	  		var votacaoPath=PATH_PREFIX+sourceId.split("").mkString("/")+"/votacao_"+prefix+"_"+year+"_"+stdCode+".xml"
 		  	var votacaoFile=new File(votacaoPath)
 
@@ -411,14 +412,17 @@ class SaveLaw(val xmlData:NodeSeq, val pool: java.util.concurrent.ExecutorServic
 	  		val detalheXml = scala.xml.XML.load(detalheStream)	
 			var lawTags=(detalheXml \ "Indexacao").text.split(",")
 			var regimeTramitacao = (detalheXml \ "RegimeTramitacao").text
-
-			// logmsg("regimeTramitacao: "+regimeTramitacao)
+			var linkInteiroTeor = (detalheXml \ "LinkInteiroTeor").text
+			var ultimoDespacho = StringUtils.trim((detalheXml \ "UltimoDespacho").text).toLowerCase
+			var apreciacao = StringUtils.trim((detalheXml \ "Apreciacao").text).toLowerCase
+			var autor = StringUtils.trim((detalheXml \ "Autor").text).toLowerCase			
+			
 
 			if (votacaoFile.exists())
 			{
 				if (votacaoFile.length()>0)
 				{
-					var lawProposal=LawProposal.save(region, prefix, "", year.toInt, stdCode, description, mapRegimeStatus(regimeTramitacao))
+					var lawProposal=LawProposal.save(region, prefix, linkInteiroTeor, year.toInt, stdCode, description, mapRegimeStatus(regimeTramitacao))
 					logmsg("Lei id "+lawProposal.id.get+" "+year+" "+prefix+" "+stdCode+" existe ("+detalhePath+")")
 					for (tag <- lawTags)
 					{	
@@ -469,24 +473,54 @@ class SaveLaw(val xmlData:NodeSeq, val pool: java.util.concurrent.ExecutorServic
 			}
 			else
 			{
-				var lawProposal=LawProposal.save(region, prefix, "", year.toInt, stdCode, description,mapRegimeStatus(regimeTramitacao))
-				logmsg("Lei id "+lawProposal.id.get+" "+year+" "+prefix+" "+stdCode+" existe ("+detalhePath+")")
-				for (tag <- lawTags)
-				{	
-					var cleanTag=(tag.replaceAll("[\\p{Punct}]","").split("\\s") map {(x) => StringUtils.capitalize(x.toLowerCase) + " "}).mkString("")
-					var tagList=StringUtils.trim(cleanTag).split("\\s")
-					for (tag <- tagList)
+				var comissionSet = Set[Comission]()
+				for (comission <- comissions){
+					if (ultimoDespacho.contains(comission.name.toLowerCase) || ultimoDespacho.contains(comission.prefix.toLowerCase))
 					{
-						var lowerCaseTag=tag.toLowerCase
-						if (!StringUtils.isBlank(lowerCaseTag) && !stopwords.contains(lowerCaseTag))
+						comissionSet=comissionSet + comission
+					}
+
+					if (apreciacao.contains(comission.name.toLowerCase) || apreciacao.contains(comission.prefix.toLowerCase))
+					{
+						comissionSet=comissionSet + comission
+					}
+
+					if (autor.contains(comission.name.toLowerCase) || autor.contains(comission.prefix.toLowerCase))
+					{
+						comissionSet=comissionSet + comission
+					}
+
+				}
+				
+				if (!comissionSet.isEmpty)
+				{
+					logmsg("Processing Lei "+year+" "+prefix+" "+stdCode+"// sourceId: "+sourceId+"// despacho: "+ultimoDespacho+"// apreciacao: "+apreciacao+"// autor: "+autor)
+				// logmsg("regimeTramitacao: "+regimeTramitacao)
+					var lawProposal=LawProposal.save(region, prefix, linkInteiroTeor, year.toInt, stdCode, description,mapRegimeStatus(regimeTramitacao))
+					logmsg("Lei id "+lawProposal.id.get+" "+year+" "+prefix+" "+stdCode+" existe ("+detalhePath+")")
+					for (comission <- comissionSet)
+					{
+						LawComission.save(comission,lawProposal)	
+					}
+
+					for (tag <- lawTags)
+					{	
+						var cleanTag=(tag.replaceAll("[\\p{Punct}]","").split("\\s") map {(x) => StringUtils.capitalize(x.toLowerCase) + " "}).mkString("")
+						var tagList=StringUtils.trim(cleanTag).split("\\s")
+						for (tag <- tagList)
 						{
-							var normTag=pattern.matcher(Normalizer.normalize(lowerCaseTag,Normalizer.Form.NFD)).replaceAll("")		
-							var tagObj=Tag.findOrCreate(tag,normTag)
-							LawTag.save(tagObj,lawProposal)								
-						}
-					}  				
-				}	
-				detalheStream.close()
+							var lowerCaseTag=tag.toLowerCase
+							if (!StringUtils.isBlank(lowerCaseTag) && !stopwords.contains(lowerCaseTag))
+							{
+								var normTag=pattern.matcher(Normalizer.normalize(lowerCaseTag,Normalizer.Form.NFD)).replaceAll("")		
+								var tagObj=Tag.findOrCreate(tag,normTag)
+								LawTag.save(tagObj,lawProposal)								
+							}
+						}  				
+					}	
+					detalheStream.close()
+				}
+				
 			}
 		}
 					
@@ -499,9 +533,11 @@ class SaveLaw(val xmlData:NodeSeq, val pool: java.util.concurrent.ExecutorServic
 
 	val cores = 16
 	val pool = Executors.newFixedThreadPool(cores)
-  	AsyncResult{
 
-	  	var yearRange=2012 until 2014
+  	AsyncResult{
+  		var comissions=Comission.findAll()
+
+	  	var yearRange=2011 until 2014
 	  	
 	  	for (year <- yearRange)
 		{

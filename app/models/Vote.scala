@@ -72,7 +72,7 @@ object Vote {
   }
 
   def save(userId: Int, lawProposalId: Int, rate: Int, predictedRate: Option[Int]) {
-    println("salva voto userid:"+userId+" lawProposalId:"+lawProposalId+" rate:"+rate)
+    
     DB.withConnection { implicit connection =>
       SQL("""
           INSERT INTO votes(user_id, law_proposal_id, rate, predicted_rate)
@@ -86,8 +86,22 @@ object Vote {
     }
   }
 
+  def saveWithoutRate(userId: Int, lawProposalId: Int, predictedRate: Int) {
+    
+    DB.withConnection { implicit connection =>
+      SQL("""
+          INSERT INTO votes(user_id, law_proposal_id, predicted_rate)
+          VALUES({user_id}, {law_proposal_id}, {predicted_rate}) ON DUPLICATE KEY UPDATE predicted_rate=VALUES(predicted_rate)
+          """)
+        .on(
+          'user_id -> userId,
+          'law_proposal_id -> lawProposalId,
+          'predicted_rate -> predictedRate).executeInsert()
+    }
+  }
+
   def save(userId: Int, lawProposalId: Int, rate: Int) {
-    // println("salva voto userid:"+userId+" lawProposalId:"+lawProposalId+" rate:"+rate)
+    
     DB.withConnection { implicit connection =>
       SQL("""
           INSERT INTO votes(user_id, law_proposal_id, rate)
@@ -100,6 +114,21 @@ object Vote {
     }
   }
 
+  def updateRates(userId: Int, lawProposalId: Int, rate: Int, predictedRate: Int)
+  {
+    DB.withConnection { implicit connection =>
+        SQL("""
+          UPDATE votes SET rate={rate}, predicted_rate={predicted_rate} WHERE user_id={user_id} AND law_proposal_id={law_proposal_id}
+          """)
+            .on(              
+              'user_id -> userId,
+              'rate -> rate,
+              'predicted_rate -> predictedRate,
+              'law_proposal_id -> lawProposalId).executeUpdate()
+        }
+    
+  }
+
 
   def findByUser(user: User): Seq[Vote] = {
    DB.withConnection { implicit connection =>
@@ -110,6 +139,12 @@ object Vote {
   def findByLawId(law_id: Long): Seq[Vote] = {
    DB.withConnection { implicit connection =>
       SQL("select * from votes where law_proposal_id={law_proposal_id}").on('law_proposal_id -> law_id).as(Vote.simple *)
+    } 
+  }
+
+  def findByLawAndUserIds(lawId: Long, userId: Long): Option[Vote] = {
+   DB.withConnection { implicit connection =>
+      SQL("select * from votes where law_proposal_id={law_proposal_id} and user_id={user_id}").on('law_proposal_id -> lawId, 'user_id -> userId).as(Vote.simple singleOpt)
     } 
   }
 

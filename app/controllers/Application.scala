@@ -75,7 +75,7 @@ object Application extends Controller {
 
   //GET
   def tagList() = Action {
-     Ok(toJson(Tag.first100()))
+     Ok(toJson(Comission.findAll()))
   }
 
   def congressmanList = Action {
