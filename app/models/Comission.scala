@@ -56,6 +56,13 @@ object Comission {
     }
   }
 
+  def findByUser(user: User): Seq[Comission] = {
+    DB.withConnection { implicit connection =>
+      SQL("select * from comissions inner join user_comissions on comissions.id=user_comissions.comission_id where user_comissions.user_id={userId} order by comissions.id").on(
+        'userId -> user.id).as(Comission.simple *)
+    }    
+  }
+
   def findAll(): Seq[Comission] = {
     DB.withConnection { implicit connection =>
       SQL("select * from comissions").as(Comission.simple *)

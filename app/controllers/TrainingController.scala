@@ -147,7 +147,7 @@ object TrainingController extends Controller {
           dataOutStream.close()
           fileOutStream.close()
 
-          User.updateModelPath(congressman.id.get, relativeModelOutputPath)
+          User.updateModelPath(congressman.id.get, Option(relativeModelOutputPath))
 
         }
         logmsg("Training model for party "+party+" with "+partyTupleVectors.size+" instances")

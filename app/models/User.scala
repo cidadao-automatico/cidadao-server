@@ -199,7 +199,7 @@ object User {
 
   }
 
-  def updateModelPath(id: Long, modelPath: String)
+  def updateModelPath(id: Long, modelPath: Option[String])
   {
     DB.withConnection { implicit connection =>
       SQL("""
@@ -211,11 +211,17 @@ object User {
     } 
   }
 
-  def findModelPath(id: Long): String ={
+  def findModelPath(id: Long): Option[String] ={
     DB.withConnection { implicit connection =>
       var result=SQL("select model_path from users where id={id}").on(
         'id -> id).apply().head
-      return result[String]("model_path")
+
+      try{
+        return Option(result[String]("model_path"))
+      } catch{
+        case e: Exception =>  return None
+      }
+
     }
   }
   

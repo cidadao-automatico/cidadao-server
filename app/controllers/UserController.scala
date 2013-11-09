@@ -98,8 +98,8 @@ object UserController extends Controller with securesocial.core.SecureSocial {
           var dbUser:User=User.findByEmail(user.email).get
           var modelInputPath=PATH_PREFIX+USER_PREFIX+generatePathFromId(dbUser.id.get)+"/"+MODEL_FILE
           var modelFile=new File(modelInputPath)
-          
-          if (!modelFile.exists())
+          var isModelCreated=User.findModelPath(dbUser.id.get)
+          if (isModelCreated==None)
           {
             var userModel=new OnlineLogisticRegression(numCategories,tagCount.toInt, new L1())
             var relativeModelOutputPath=USER_PREFIX+generatePathFromId(dbUser.id.get)
@@ -134,7 +134,7 @@ object UserController extends Controller with securesocial.core.SecureSocial {
             dataOutStream.close()
             fileOutStream.close()
 
-            User.updateModelPath(dbUser.id.get, relativeModelOutputPath)
+            User.updateModelPath(dbUser.id.get, Option(relativeModelOutputPath))
           }
         
           var existingModel=new OnlineLogisticRegression(numCategories,tagCount.toInt, new L1())
@@ -328,7 +328,7 @@ object UserController extends Controller with securesocial.core.SecureSocial {
     request.user match {
       case user: Identity => 
         var userObj : Option[User] = User.findByEmail(user.email)
-        Ok(toJson(Tag.findByUser(userObj.get)))
+        Ok(toJson(Comission.findByUser(userObj.get)))
     }
   }
 
