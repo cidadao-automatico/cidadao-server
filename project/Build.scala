@@ -27,10 +27,14 @@ object ApplicationBuild extends Build {
     // Add your project dependencies here,
     jdbc,
     anorm,
-	"mysql" % "mysql-connector-java" % "5.1.18",
+	"mysql" % "mysql-connector-java" % "5.1.26",
   "securesocial" %% "securesocial" % "2.1.1",
   "nz.ac.waikato.cms.weka" % "weka-stable" % "3.6.9",
-  "org.apache.lucene" % "lucene-core" % "4.5.1"
+  "org.apache.lucene" % "lucene-core" % "4.3.0",
+  "org.apache.lucene" % "lucene-analyzers-common" % "4.3.0",
+  "org.apache.mahout" % "mahout-core" % "0.8",
+  "org.apache.mahout" % "mahout-math" % "0.8",
+  "org.apache.hadoop" % "hadoop-core" % "1.1.2"
   )
 
 

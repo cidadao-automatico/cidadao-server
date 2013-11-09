@@ -24,60 +24,60 @@ import java.util.Date
 import anorm._
 import anorm.SqlParser._
 
-case class UserTag(tag_id: Long, user_id: Long)
+case class UserComission(comission_id: Long, user_id: Long)
 
-object UserTag {
+object UserComission {
 
   val simple = {
-    (get[Long]("tag_id") ~
+    (get[Long]("comission_id") ~
       get[Long]("user_id")) map {
-        case tag_id ~ user_id =>
-          UserTag(tag_id, user_id)
+        case comission_id ~ user_id =>
+          UserComission(comission_id, user_id)
       }
   }
 
-  def findByUser(user: User): Option[UserTag] = {
+  def findByUser(user: User): Seq[UserComission] = {
     DB.withConnection { implicit connection =>
-      SQL("select * from user_tags where user_id={user_id}").on(
-        'user_id -> user.id).as(UserTag.simple singleOpt)
+      SQL("select * from user_comissions where user_id={user_id}").on(
+        'user_id -> user.id).as(UserComission.simple *)
     }
   }
 
-  def findByTag(tag: Tag): Option[UserTag] = {
+  def findByComission(comission: Comission): Seq[UserComission] = {
     DB.withConnection { implicit connection =>
-      SQL("select * from law_tags where tag_id={tag_id}").on(
-        'tag_id -> tag.id).as(UserTag.simple singleOpt)
+      SQL("select * from law_tags where comission_id={comission_id}").on(
+        'comission_id -> comission.id).as(UserComission.simple *)
     }
   }
 
-  def save(user: User, tag: Tag) {
+  def save(user: User, comission: Comission) {
     DB.withConnection { implicit connection =>
       SQL("""
-          INSERT INTO user_tags(user_id, tag_id)
-          VALUES({user_id}, {tag_id}) ON DUPLICATE KEY UPDATE user_id=user_id, tag_id=tag_id
+          INSERT INTO user_comissions(user_id, comission_id)
+          VALUES({user_id}, {comission_id}) ON DUPLICATE KEY UPDATE user_id=user_id, comission_id=comission_id
           """)
         .on(
           'user_id -> user.id,
-          'tag_id -> tag.id).executeInsert()
+          'comission_id -> comission.id).executeInsert()
     }
   }
 
-  def deleteByUserAndTag(user: User, tag: Tag){
+  def deleteByUserAndComission(user: User, comission: Comission){
     DB.withConnection { implicit connection =>
       SQL("""
-        DELETE IGNORE FROM user_tags
-        WHERE user_id={user_id} AND tag_id={tag_id}
+        DELETE IGNORE FROM user_comissions
+        WHERE user_id={user_id} AND comission_id={comission_id}
         """)
         .on(
           'user_id -> user.id,
-          'tag_id -> tag.id).executeInsert()
+          'comission_id -> comission.id).executeInsert()
     }
   }
 
   def deleteByUser(user: User) {
     DB.withConnection { implicit connection =>
       SQL("""
-        DELETE FROM user_tags
+        DELETE FROM user_comissions
         WHERE user_id={user_id}
         """)
         .on(
@@ -85,14 +85,14 @@ object UserTag {
     }
   }
 
-  def deleteByTag(tag: Tag) {
+  def deleteByComission(comission: Comission) {
     DB.withConnection { implicit connection =>
       SQL("""
-        DELETE FROM user_tags
-        WHERE tag_id={tag_id}
+        DELETE FROM user_comissions
+        WHERE comission_id={comission_id}
         """)
         .on(
-          'tag_id -> tag.id).executeInsert()
+          'comission_id -> comission.id).executeInsert()
     }
   }
 

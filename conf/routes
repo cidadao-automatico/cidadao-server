@@ -5,19 +5,17 @@ GET		/newuser						 controllers.Application.newLogin
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
-#GET	/pl/:lawid/votes				controllers.Application.getVotes(lawid: String, callback: Option[String])
-GET		/load						controllers.Application.loadPL
-GET 	/loadDeputados 				controllers.Application.loadAllDeputados
-GET		/loadall					controllers.Application.loadAllData
-#GET	/tag						controllers.Application.getTags(callback: Option[String])
-#GET	/pl							controllers.Application.getPLs(page: Option[Int], callback: Option[String])
-GET 	/downloadLaws				controllers.Application.downloadProposicoes()
-GET 	/verifyLaws					controllers.Application.verifyLeisData()
-GET     /downloadVotes				controllers.Application.loadVotacao()
-GET     /loadLaws                   controllers.Application.loadAllLaws()
-GET     /loadLaws2                  controllers.Application.loadAllLaws2()
-GET     /trainClassifier			controllers.Application.trainClassifier()
-GET     /dadofake                   controllers.Application.dadoFake()
+#GET 	/loadDeputados 				controllers.DataController.loadAllDeputados
+#GET		/loadLawsDesc				controllers.DataController.loadLawsDesc
+#GET 	/downloadLaws				controllers.DataController.downloadProposicoes()
+#GET 	/verifyLaws					controllers.DataController.verifyLeisData()
+#GET     /downloadVotes				controllers.DataController.loadVotacao()
+GET     /loadLaws                   controllers.DataController.loadAllLaws()
+#GET     /loadLaws2                  controllers.DataController.loadAllLaws2()
+#GET     /loadLaws3                  controllers.DataController.loadAllLaws3()
+GET     /trainClassifier			controllers.TrainingController.trainClassifier()
+GET     /classifyLaws			controllers.TrainingController.classifyLaws()
+#GET     /dadofake                   controllers.DataController.dadoFake()
 #New routes start here
 
 GET     /user/show				 		 controllers.UserController.show()

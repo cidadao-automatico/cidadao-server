@@ -102,4 +102,12 @@ object CongressmanInfo {
     } 
   }
 
+  def findUsersByParty(party: Party): Seq[User] = {
+    DB.withConnection { implicit connection =>
+      SQL("select users.* from users inner join congressman_infos on users.id=congressman_infos.user_id where congressman_infos.party_id={party_id}").
+        on('party_id -> party.id.get).
+        as(User.simple *)
+    }  
+  }
+
 }

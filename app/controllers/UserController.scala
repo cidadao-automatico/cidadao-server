@@ -37,8 +37,34 @@ import scala.util.control.Exception._
 import java.util.Date
 
 import securesocial.core.{Identity, Authorization}
+import play.api.libs.ws.WS
+import scala.concurrent.duration._
+import scala.concurrent._
+import play.api.libs.concurrent.Execution.Implicits._
+
+import java.io.File
+import java.io.FileOutputStream
+import java.io.DataOutputStream
+import java.io.FileInputStream
+import java.io.DataInputStream
+
+import org.apache.mahout.math.Vector;
+import org.apache.mahout.classifier.sgd._
+import org.apache.mahout.math.RandomAccessSparseVector;
+import org.apache.mahout.vectorizer.TFIDF;
 
 object UserController extends Controller with securesocial.core.SecureSocial {
+
+  val PATH_PREFIX="/vigiapolitico/models/staging/models"
+  val USER_PREFIX="/users"
+  val PARTY_PREFIX="/parties"
+  val MODEL_FILE="model.data"
+  val firstTagId=Tag.findFirstId()
+  var numCategories=6
+  var tagCount=Tag.countAll()
+  var tfidf = new TFIDF();
+  var docFreq=convertToVector(LawTag.getCountPairs())      
+  var documentCount=LawProposal.countAllVoted()
 
   //GET
   def show() = SecuredAction(ajaxCall = true) { implicit request =>
@@ -50,22 +76,168 @@ object UserController extends Controller with securesocial.core.SecureSocial {
    }
   }
 
+  def convertToVector(tagIndexedList: List[(Int,Long)]):Vector={
+      var vector:Vector = new RandomAccessSparseVector(tagIndexedList.length)
+      for (tagCount <- tagIndexedList){
+        vector.setQuick(tagCount._1-firstTagId,tagCount._2)
+      }
+      return vector
+   }
+
+   def generatePathFromId(id: Long):String = {
+    id.toString().split("").mkString("/")
+  }
+
   //GET
   def recommendLaws() = SecuredAction(ajaxCall = true) { implicit request =>    
 
     request.user match {
       case user:Identity => 
-        var lawRecommender = new LawRecommender()
+        AsyncResult
+        {
+          var dbUser:User=User.findByEmail(user.email).get
+          var modelInputPath=PATH_PREFIX+USER_PREFIX+generatePathFromId(dbUser.id.get)+"/"+MODEL_FILE
+          var modelFile=new File(modelInputPath)
+          var isModelCreated=User.findModelPath(dbUser.id.get)
+          if (isModelCreated==None)
+          {
+            var userModel=new OnlineLogisticRegression(numCategories,tagCount.toInt, new L1())
+            var relativeModelOutputPath=USER_PREFIX+generatePathFromId(dbUser.id.get)
+            var modelParentPath=PATH_PREFIX+relativeModelOutputPath
+            var modelParentFile=new File(modelParentPath)
+            modelParentFile.mkdirs()
+
+            var manualVotes = Vote.findManualByUser(dbUser)
+            var lawTuples = manualVotes.map { vote => (vote.lawProposalId,vote.rate,convertToVector(Tag.findCountsByLawId(vote.lawProposalId.toInt)))}
+            for (lawTuple <- lawTuples)
+            {
+              var wordCount=Tag.totalTagsByLawId(lawTuple._1.intValue())
+              var lawVector=lawTuple._3
+              for (vecIdx <- 0 to lawVector.size()-1){
+                var count=lawVector.get(vecIdx)
+                var freq=docFreq.get(vecIdx)
+                var tfIdfValue = tfidf.calculate(count.intValue(), freq.intValue(), wordCount.intValue(), documentCount.intValue());              
+                lawVector.set(vecIdx, tfIdfValue)
+              }              
+            }
+            for (lawTuple <- lawTuples)
+            {
+              userModel.train(lawTuple._1,lawTuple._2, lawTuple._3)
+            }
+            
+            var outputFilePath=modelParentPath+"/"+MODEL_FILE
+            var outputFile=new File(outputFilePath)
+            logmsg("Saving model for user "+dbUser.id.get+" at "+outputFilePath)
+            var fileOutStream=new FileOutputStream(outputFile)
+            var dataOutStream=new DataOutputStream(fileOutStream)
+            userModel.write(dataOutStream)
+            dataOutStream.close()
+            fileOutStream.close()
+
+            User.updateModelPath(dbUser.id.get, Option(relativeModelOutputPath))
+          }
         
-        val pageParam: Option[String] = request.getQueryString("page")
-        var page: Int = 0
-        pageParam match {
-          case Some(value) => 
-            page = value.toInt
-          case _ => 
-            page = 1
+          var existingModel=new OnlineLogisticRegression(numCategories,tagCount.toInt, new L1())
+          var fileInputStream=new FileInputStream(modelInputPath)
+          var dataInputStream=new DataInputStream(fileInputStream)
+          existingModel.readFields(dataInputStream)
+
+          val pageParam: Option[String] = request.getQueryString("page")
+          var page: Int = 0
+          pageParam match {
+            case Some(value) => 
+              page = value.toInt
+            case _ => 
+              page = 1
+          }
+
+          var jsonArray = new JsArray()
+          var lawProposals=LawProposal.findByUserConfiguration(dbUser, page)
+          for (lawProposal <- lawProposals)
+          {
+            var lawVector=convertToVector(Tag.findCountsByLawId(lawProposal.id.get.toInt))
+            var probs=existingModel.classify(lawVector)
+            var predictedRate=probs.maxValueIndex()+1            
+            var representativesRates=congressmanRatePrediction(lawProposal, dbUser)
+            var representativesJson = new JsArray()
+            for (rateTuple <- representativesRates)
+            {
+              var voteJson = Json.obj( "rate" -> "", "predictedRate" -> rateTuple._2)  
+              var congressmanJson = toJson(CongressmanInfo.findByUser(rateTuple._1))
+              var finalJson = Json.obj( "vote" -> voteJson, "congressmanInfo" -> congressmanJson)
+              representativesJson=representativesJson :+ finalJson
+            }           
+            var lawProposalJson = toJson(lawProposal)
+            var voteJson = Json.obj( "rate" -> "", "predictedRate" -> predictedRate)
+
+            var finalJson = Json.obj( "lawProposal" -> lawProposalJson, "vote" -> voteJson, "representatives" -> representativesJson)
+
+
+            jsonArray=jsonArray :+ finalJson
+          }     
+          
+          Future(Ok(jsonArray))
+          
         }
-        Ok(toJson(lawRecommender.recommendLawsForUser(user,page)))      
+        
+    }
+
+  }
+
+  def congressmanRatePrediction(lawProposal: LawProposal, user: User):Array[(User,Int)]={
+    var representatives=UserRepresentative.findByUser(user)
+
+    var rateCongressmen=Array[(User,Int)]() 
+    for (representative <- representatives)
+    {
+      var userObj:User = User.findById(representative.congressman_id).get
+      var modelInputPath=PATH_PREFIX+USER_PREFIX+generatePathFromId(representative.congressman_id)+"/"+MODEL_FILE
+      
+      var existingModel=new OnlineLogisticRegression(numCategories,tagCount.toInt, new L1())
+      var fileInputStream=new FileInputStream(modelInputPath)
+      var dataInputStream=new DataInputStream(fileInputStream)
+      existingModel.readFields(dataInputStream)
+
+      var lawVector=convertToVector(Tag.findCountsByLawId(lawProposal.id.get.intValue))
+      var probs=existingModel.classify(lawVector)
+      var predictedRate=probs.maxValueIndex()+1            
+      var rateTuple=(userObj,predictedRate)
+      rateCongressmen=rateCongressmen :+ rateTuple
+    }
+        
+    rateCongressmen.sortBy(_._2)
+  }
+
+  def predictRateForCongressman() = SecuredAction(ajaxCall = true) { implicit request =>    
+
+    request.user match {
+      case user:Identity => 
+        AsyncResult
+        {
+          request.body.asJson.map { json =>
+            // var lawProposal= (json \ "lawProposal").as[LawProposal]
+            // val pageParam: Option[String] = request.getQueryString("lawProposal")
+            // var dbUser:User=User.findByEmail(user.email).get
+            
+            
+            // var jsonArray = new JsArray()
+            // for (rateTuple <- rateCongressman)
+            // {
+            //   var voteJson = Json.obj( "rate" -> "", "predictedRate" -> rateTuple._2)  
+            //   var congressmanJson = toJson(CongressmanInfo.findByUser(rateTuple._1.asInstanceOf[User]))
+            //   var finalJson = Json.obj( "vote" -> voteJson, "congressmanInfo" -> congressmanJson)
+            // }           
+            
+            // Future(Ok(jsonArray))  
+            Future(Ok("ok"))
+          }.getOrElse{
+            Future(BadRequest("Only JSON accepted"))
+          }
+            
+          
+          
+        }
+        
     }
 
   }
@@ -101,13 +273,13 @@ object UserController extends Controller with securesocial.core.SecureSocial {
         request.body.asJson.map { json =>
 
           (json \ "tags").as[List[JsObject]].map { element =>
-            var tag = element.as[Tag]
+            var comission = element.as[Comission]
             //TODO: Perhaps use map method and then do a match instead of a single comparison
             if ((element \ "enabled").as[Boolean] == true)
             {
-              UserTag.save(User.findByEmail(user.email).get, tag)
+              UserComission.save(User.findByEmail(user.email).get, comission)
             }else{
-              UserTag.deleteByUserAndTag(User.findByEmail(user.email).get, tag)
+              UserComission.deleteByUserAndComission(User.findByEmail(user.email).get, comission)
             }
           }
           
@@ -156,7 +328,7 @@ object UserController extends Controller with securesocial.core.SecureSocial {
     request.user match {
       case user: Identity => 
         var userObj : Option[User] = User.findByEmail(user.email)
-        Ok(toJson(Tag.findByUser(userObj.get)))
+        Ok(toJson(Comission.findByUser(userObj.get)))
     }
   }
 
@@ -195,5 +367,20 @@ object UserController extends Controller with securesocial.core.SecureSocial {
         var userObj = User.findByEmail(user.email).get        
         Ok(toJson(Vote.findByUser(userObj)))
     }
+  }
+
+  def logmsg(message: String)
+  {
+    play.api.Logger.info(message)
+  }
+
+  def errmsg(message: String)
+  {
+    play.api.Logger.error(message)  
+  }
+
+  def warnmsg(message: String)
+  {
+    play.api.Logger.warn(message) 
   }
 }

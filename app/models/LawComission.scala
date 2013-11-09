@@ -28,9 +28,9 @@ import java.util.Date
 import anorm._
 import anorm.SqlParser._
 
-case class LawTag(tag_id: Long, law_proposal_id: Long)
+case class LawComission(law_proposal_id: Long, comission_id: Long)
 
-object LawTag {
+object LawComission {
 
   implicit object PkFormat extends Format[Pk[Long]] {
     def reads(json: JsValue): JsResult[Pk[Long]] = JsSuccess(
@@ -38,68 +38,39 @@ object LawTag {
     def writes(id: Pk[Long]): JsValue = id.map(JsNumber(_)).getOrElse(JsNull)
   }
 
-  implicit val lawTagWrites = Json.writes[LawTag]
+  implicit val lawComissionWrites = Json.writes[LawComission]
 
   val simple = {
-    (get[Long]("tag_id") ~
-      get[Long]("law_proposal_id")) map {
-        case tag_id ~ law_proposal_id =>
-          LawTag(tag_id, law_proposal_id)
+    (get[Long]("law_proposal_id") ~
+      get[Long]("comission_id")) map {
+        case law_proposal_id ~ comission_id =>
+          LawComission(law_proposal_id, comission_id)
       }
   }
 
-  def findByLawProposal(lawProposal: LawProposal): Option[LawTag] = {
+  def findByLawProposal(lawProposal: LawProposal): Option[LawComission] = {
     DB.withConnection { implicit connection =>
-      SQL("select * from law_tags where law_proposal_id={law_proposal_id}").on(
-        'law_proposal_id -> lawProposal.id).as(LawTag.simple singleOpt)
+      SQL("select * from law_proposal_comissions where law_proposal_id={law_proposal_id}").on(
+        'law_proposal_id -> lawProposal.id).as(LawComission.simple singleOpt)
     }
   }
 
-  def findByTag(tag: Tag): Option[LawTag] = {
+  def findByComission(comission: Comission): Option[LawComission] = {
     DB.withConnection { implicit connection =>
-      SQL("select * from law_tags where tag_id={tag_id}").on(
-        'tag_id -> tag.id).as(LawTag.simple singleOpt)
+      SQL("select * from law_proposal_comissions where comission_id={comission_id}").on(
+        'comission_id -> comission.id).as(LawComission.simple singleOpt)
     }
   }  
 
-  def save(tag: Tag, lawProposal: LawProposal) {
+  def save(comission: Comission, lawProposal: LawProposal) {
     DB.withConnection { implicit connection =>
       SQL("""
-			INSERT INTO law_tags(tag_id, law_proposal_id)
-			VALUES({tag_id},{law_proposal_id})
+			INSERT INTO law_proposal_comissions(law_proposal_id, comission_id)
+			VALUES({law_proposal_id},{comission_id})
 			""")
         .on(
-          'tag_id -> tag.id,
+          'comission_id -> comission.id,
           'law_proposal_id -> lawProposal.id).executeInsert()
     }
-  }
-
-  def getCountPairs():List[(Int,Long)] = {
-   DB.withConnection { implicit connection =>
-      SQL("select tag_id, count(*) as conta from law_tags group by tag_id order by tag_id asc").as(int("tag_id") ~ long("conta") map(flatten) *)
-    } 
-  }
-
-  def deleteById(id: Long) {
-    DB.withConnection { implicit connection =>
-      SQL("""
-        DELETE FROM law_tags
-        WHERE id={id}
-        """)
-        .on(
-          'id -> id).executeInsert()
-    }
-  }
-
-  def deleteByLaw(lawId: Long) {
-    DB.withConnection { implicit connection =>
-      SQL("""
-        DELETE FROM law_tags
-        WHERE law_proposal_id={law_proposal_id}
-        """)
-        .on(
-          'law_proposal_id -> lawId).executeInsert()
-    }
-  }
-
+  }  
 }
