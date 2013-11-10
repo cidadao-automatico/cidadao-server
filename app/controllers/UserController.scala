@@ -295,17 +295,11 @@ object UserController extends Controller with securesocial.core.SecureSocial {
     request.user match {
       case user: Identity =>
         request.body.asJson.map { json =>
-
-          (json \ "congressmanList").as[List[JsObject]].map { container =>
-            var congressman = (container \ "user").as[User]
-            if ((container \ "enabled").as[Boolean] == true)
-            { 
-              UserRepresentative.save(User.findByEmail(user.email).get, congressman)
-            } 
-            else
-            {
-              UserRepresentative.deleteByUserAndCongressman(User.findByEmail(user.email).get, congressman)
-            }            
+          var dbUser:User=User.findByEmail(user.email).get
+          UserRepresentative.deleteByUser(dbUser)
+          (json \ "congressmanList").as[List[JsObject]].map { container =>            
+            var congressman = (container \ "user").as[User]            
+            UserRepresentative.save(dbUser, congressman)            
           }
           
           Ok("Ok")          
