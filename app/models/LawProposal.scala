@@ -146,7 +146,7 @@ object LawProposal {
   def findByUserConfiguration(user: User, page: Int): Seq[LawProposal] ={
     DB.withConnection { implicit connection =>
         SQL("""
-      select lp.* from law_proposals lp inner join law_proposal_comissions lpc on lp.id=lpc.law_proposal_id 
+      select distinct lp.* from law_proposals lp inner join law_proposal_comissions lpc on lp.id=lpc.law_proposal_id 
       inner join law_regions lr on lr.id=lp.law_region_id where 
       lpc.comission_id in (select uc.comission_id from user_comissions uc where uc.user_id={user_id}) and 
       lr.id in (select ulr.law_region_id from user_law_regions ulr where ulr.user_id={user_id})

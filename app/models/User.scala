@@ -80,7 +80,7 @@ object User {
 
   def findFirst100Congressman(): Seq[User] = {
     DB.withConnection { implicit connection =>
-      SQL("select * from users where type_code={type_code} limit 100").on('type_code -> CONGRESS_TYPE).as(User.simple *)
+      SQL("select * from users where type_code={type_code}").on('type_code -> CONGRESS_TYPE).as(User.simple *)
     }
   }
 
