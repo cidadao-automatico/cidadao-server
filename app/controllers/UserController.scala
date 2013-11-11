@@ -169,14 +169,14 @@ object UserController extends Controller with securesocial.core.SecureSocial {
             }
 
             var partiesJson=new JsArray()
-            var partiesRates=partiesRatePrediction(lawProposal)
-            for (partyTuple <- partiesRates)
-            {
-              var voteJson = Json.obj( "rate" -> "", "predictedRate" -> partyTuple._2)  
-              var partyJson = toJson(Party.findById(partyTuple._1.id.get))
-              var finalJson = Json.obj( "vote" -> voteJson, "congressmanInfo" -> partyJson)
-              partiesJson=partiesJson :+ finalJson 
-            }
+            // var partiesRates=partiesRatePrediction(lawProposal)
+            // for (partyTuple <- partiesRates)
+            // {
+            //   var voteJson = Json.obj( "rate" -> "", "predictedRate" -> partyTuple._2)  
+            //   var partyJson = toJson(Party.findById(partyTuple._1.id.get))
+            //   var finalJson = Json.obj( "vote" -> voteJson, "congressmanInfo" -> partyJson)
+            //   partiesJson=partiesJson :+ finalJson 
+            // }
 
             var lawProposalJson = toJson(lawProposal)
             var voteJson = Json.obj( "rate" -> "", "predictedRate" -> predictedRate)
