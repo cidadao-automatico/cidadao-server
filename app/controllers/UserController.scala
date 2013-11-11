@@ -108,7 +108,7 @@ object UserController extends Controller with securesocial.core.SecureSocial {
             modelParentFile.mkdirs()
 
             var manualVotes = Vote.findManualByUser(dbUser)
-            var lawTuples = manualVotes.map { vote => (vote.lawProposalId,vote.rate,convertToVector(Tag.findCountsByLawId(vote.lawProposalId.toInt)))}
+            var lawTuples = manualVotes.map { vote => (vote.lawProposalId,vote.rate.get,convertToVector(Tag.findCountsByLawId(vote.lawProposalId.toInt)))}
             for (lawTuple <- lawTuples)
             {
               var wordCount=Tag.totalTagsByLawId(lawTuple._1.intValue())
@@ -166,11 +166,22 @@ object UserController extends Controller with securesocial.core.SecureSocial {
               var congressmanJson = toJson(CongressmanInfo.findByUser(rateTuple._1))
               var finalJson = Json.obj( "vote" -> voteJson, "congressmanInfo" -> congressmanJson)
               representativesJson=representativesJson :+ finalJson
-            }           
+            }
+
+            var partiesJson=new JsArray()
+            var partiesRates=partiesRatePrediction(lawProposal)
+            for (partyTuple <- partiesRates)
+            {
+              var voteJson = Json.obj( "rate" -> "", "predictedRate" -> partyTuple._2)  
+              var partyJson = toJson(Party.findById(partyTuple._1.id.get))
+              var finalJson = Json.obj( "vote" -> voteJson, "congressmanInfo" -> partyJson)
+              partiesJson=partiesJson :+ finalJson 
+            }
+
             var lawProposalJson = toJson(lawProposal)
             var voteJson = Json.obj( "rate" -> "", "predictedRate" -> predictedRate)
 
-            var finalJson = Json.obj( "lawProposal" -> lawProposalJson, "vote" -> voteJson, "representatives" -> representativesJson)
+            var finalJson = Json.obj( "lawProposal" -> lawProposalJson, "vote" -> voteJson, "representatives" -> representativesJson, "parties" -> partiesJson)
 
 
             jsonArray=jsonArray :+ finalJson
@@ -185,27 +196,56 @@ object UserController extends Controller with securesocial.core.SecureSocial {
   }
 
   def congressmanRatePrediction(lawProposal: LawProposal, user: User):Array[(User,Int)]={
-    var representatives=UserRepresentative.findByUser(user)
+    var representatives=UserRepresentative.findByUser(user).map{ rep => rep.congressman_id }
 
     var rateCongressmen=Array[(User,Int)]() 
     for (representative <- representatives)
     {
-      var userObj:User = User.findById(representative.congressman_id).get
-      var modelInputPath=PATH_PREFIX+USER_PREFIX+generatePathFromId(representative.congressman_id)+"/"+MODEL_FILE
-      
-      var existingModel=new OnlineLogisticRegression(numCategories,tagCount.toInt, new L1())
-      var fileInputStream=new FileInputStream(modelInputPath)
-      var dataInputStream=new DataInputStream(fileInputStream)
-      existingModel.readFields(dataInputStream)
-
-      var lawVector=convertToVector(Tag.findCountsByLawId(lawProposal.id.get.intValue))
-      var probs=existingModel.classify(lawVector)
-      var predictedRate=probs.maxValueIndex()+1            
+      var userObj:User = User.findById(representative).get     
+      var predictedRate:Int = Vote.findByLawAndUserIds(lawProposal.id.get, userObj.id.get).get.predictedRate.get
       var rateTuple=(userObj,predictedRate)
       rateCongressmen=rateCongressmen :+ rateTuple
     }
-        
     rateCongressmen.sortBy(_._2)
+    
+    var otherCongressmen=Array[(User,Int)]() 
+    var congressmen=CongressmanInfo.all().map{ cong => cong.userId }
+    congressmen=congressmen.diff(representatives)
+    for (congressman <- congressmen)
+    {
+      var userObj:User = User.findById(congressman).get
+      var predictedRate:Int = Vote.findByLawAndUserIds(lawProposal.id.get, userObj.id.get).get.predictedRate.get
+      var rateTuple=(userObj,predictedRate)
+      otherCongressmen=otherCongressmen :+ rateTuple 
+    }
+        
+    otherCongressmen.sortBy(_._2)
+    rateCongressmen ++ otherCongressmen
+  }
+
+  def partiesRatePrediction(lawProposal: LawProposal):Array[(Party,Int)]={
+    var parties:Seq[Party]=Party.all()
+
+    var partiesRate=Array[(Party,Int)]() 
+    var lawVector=convertToVector(Tag.findCountsByLawId(lawProposal.id.get.intValue))
+    for (party <- parties)
+    {
+      var modelInputPath=PATH_PREFIX+PARTY_PREFIX+generatePathFromId(party.id.get)+"/"+MODEL_FILE      
+      var existingModel=new OnlineLogisticRegression(numCategories,tagCount.toInt, new L1())
+
+      var fileInputStream=new FileInputStream(modelInputPath)
+      var dataInputStream=new DataInputStream(fileInputStream)
+      existingModel.readFields(dataInputStream)
+      
+      var probs=existingModel.classify(lawVector)
+      dataInputStream.close()
+      fileInputStream.close()
+      var predictedRate=probs.maxValueIndex()+1            
+      var rateTuple=(party,predictedRate)
+      partiesRate=partiesRate :+ rateTuple
+    }
+        
+    partiesRate.sortBy(_._2)
   }
 
   def predictRateForCongressman() = SecuredAction(ajaxCall = true) { implicit request =>    

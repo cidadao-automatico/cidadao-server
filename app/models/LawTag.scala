@@ -76,7 +76,7 @@ object LawTag {
 
   def getCountPairs():List[(Int,Long)] = {
    DB.withConnection { implicit connection =>
-      SQL("select tag_id, count(*) as conta from law_tags group by tag_id order by tag_id asc").as(int("tag_id") ~ long("conta") map(flatten) *)
+      SQL("select t.id as tid, count(lt.law_proposal_id) as conta from tags t left join law_tags lt on t.id=lt.tag_id group by t.id order by t.id asc").as(int("tags.id") ~ long("conta") map(flatten) *)
     } 
   }
 

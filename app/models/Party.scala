@@ -39,6 +39,7 @@ object Party {
   }
 
   implicit val partyWrites = Json.writes[Party]
+  implicit val partyReads = Json.reads[Party]
 
   val simple = {
     (get[Pk[Long]]("id") ~
@@ -84,6 +85,21 @@ object Party {
     DB.withConnection { implicit connection =>
       SQL("select * from parties where name={name} LIMIT 1").on(
         'name -> name).as(Party.simple singleOpt)
+    }
+
+  }
+
+  def findById(id: Long): Option[Party] = {
+    DB.withConnection { implicit connection =>
+      SQL("select * from parties where id={id} LIMIT 1").on(
+        'id -> id).as(Party.simple singleOpt)
+    }
+
+  }
+
+  def findAll(): Seq[Party] = {
+    DB.withConnection { implicit connection =>
+      SQL("select * from parties").as(Party.simple *)
     }
 
   }

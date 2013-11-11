@@ -28,7 +28,7 @@ import java.util.Date
 import anorm._
 import anorm.SqlParser._
 
-case class Vote(userId: Long, lawProposalId: Long, rate: Int, predictedRate: Option[Int])
+case class Vote(userId: Long, lawProposalId: Long, rate: Option[Int], predictedRate: Option[Int])
 
 object Vote {
 
@@ -44,7 +44,7 @@ object Vote {
   val simple = {
     (get[Long]("user_id") ~
       get[Long]("law_proposal_id") ~
-      get[Int]("rate") ~
+      get[Option[Int]]("rate") ~
       get[Option[Int]]("predicted_rate")) map {
         case user_id ~ law_proposal_id ~ rate ~ predicted_rate =>
           Vote(user_id, law_proposal_id, rate, predicted_rate)

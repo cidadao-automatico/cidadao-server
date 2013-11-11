@@ -109,7 +109,7 @@ object TrainingController extends Controller {
         {
           var manualVotes = Vote.findManualByUser(congressman)
           
-          var lawTuples = manualVotes.map { vote => (vote.lawProposalId,vote.rate,convertToVector(Tag.findCountsByLawId(vote.lawProposalId.toInt)))}
+          var lawTuples = manualVotes.map { vote => (vote.lawProposalId,vote.rate.get,convertToVector(Tag.findCountsByLawId(vote.lawProposalId.toInt)))}
           for (lawTuple <- lawTuples)
           {
             var wordCount=Tag.totalTagsByLawId(lawTuple._1.intValue())
@@ -201,7 +201,7 @@ object TrainingController extends Controller {
         
         var probs=partyModel.classify(lawVector)
         var predictedRate=probs.maxValueIndex()+1
-        logmsg("Classified Law "+ lawProposal.id.get +" for congressman "+congressman.shortName+" with rate: "+predictedRate)
+        // logmsg("Classified Law "+ lawProposal.id.get +" for congressman "+congressman.shortName+" with rate: "+predictedRate)
         Vote.saveWithoutRate(congressman.userId.intValue(),lawProposal.id.get.intValue(),predictedRate)
         // var existingVote=Vote.findByLawAndUserIds(lawProposal.id.get, congressman.userId)
         // existingVote match{
@@ -209,6 +209,7 @@ object TrainingController extends Controller {
         //   case _ => Vote.saveWithoutRate(congressman.userId.intValue(),lawProposal.id.get.intValue(),predictedRate)
         // }
       }
+      logmsg("Terminou de classificar pro deputado: "+congressman.shortName)
       dataInputStream.close()
       fileInputStream.close()
     }
@@ -216,7 +217,7 @@ object TrainingController extends Controller {
 
   def classifyLaws() = Action{
 
-    val cores = 4
+    val cores = 8
     val pool = Executors.newFixedThreadPool(cores)
 
         
