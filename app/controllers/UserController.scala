@@ -208,19 +208,20 @@ object UserController extends Controller with securesocial.core.SecureSocial {
     }
     rateCongressmen.sortBy(_._2)
     
-    var otherCongressmen=Array[(User,Int)]() 
-    var congressmen=CongressmanInfo.all().map{ cong => cong.userId }
-    congressmen=congressmen.diff(representatives)
-    for (congressman <- congressmen)
-    {
-      var userObj:User = User.findById(congressman).get
-      var predictedRate:Int = Vote.findByLawAndUserIds(lawProposal.id.get, userObj.id.get).get.predictedRate.get
-      var rateTuple=(userObj,predictedRate)
-      otherCongressmen=otherCongressmen :+ rateTuple 
-    }
+    // var otherCongressmen=Array[(User,Int)]() 
+    // var congressmen=CongressmanInfo.all().map{ cong => cong.userId }
+    // congressmen=congressmen.diff(representatives)
+    // for (congressman <- congressmen)
+    // {
+    //   var userObj:User = User.findById(congressman).get
+    //   var predictedRate:Int = Vote.findByLawAndUserIds(lawProposal.id.get, userObj.id.get).get.predictedRate.get
+    //   var rateTuple=(userObj,predictedRate)
+    //   otherCongressmen=otherCongressmen :+ rateTuple 
+    // }
         
-    otherCongressmen.sortBy(_._2)
-    rateCongressmen ++ otherCongressmen
+    // otherCongressmen.sortBy(_._2)
+    // rateCongressmen ++ otherCongressmen
+    // rateCongressmen
   }
 
   def partiesRatePrediction(lawProposal: LawProposal):Array[(Party,Int)]={
